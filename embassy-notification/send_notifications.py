@@ -11,23 +11,24 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 
-# Configuration
-SMTP_SERVER = os.getenv("SMTP_SERVER", "smtp.gmail.com")
-SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
-SMTP_USER = os.getenv("SMTP_USER", "")
-SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "")
+# ============================================
+# CONFIGURATION - Edit these values
+# ============================================
+SMTP_SERVER = "smtp.office365.com"  # Outlook/Office 365
+SMTP_PORT = 587
+SMTP_USER = "arhiv1973b@outlook.com"  # Your Outlook email
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "")  # App password or regular password
 
 # Email templates
 SUBJECT = "Legal Case Against Moldova - Human Rights Violations - Request for Support"
 
-BODY_TEMPLATE = """
-Excellency,
+BODY_TEMPLATE = """Excellency,
 
 We respectfully request your attention to a serious case of human rights violations and judicial misconduct by the Republic of Moldova, a member state of the Hague Convention of 1961.
 
 CASE SUMMARY
 ============
-A civil lawsuit has been filed against the State of the Republic of Moldova seeking €500,000 in compensation for damages caused by:
+A civil lawsuit has been filed against the State of the Republic of Moldova seeking EUR 500,000 in compensation for damages caused by:
 
 1. Systematic violation of fair trial rights (Art. 6 ECHR)
 2. Failure to investigate torture allegations (Art. 3 ECHR)
@@ -78,21 +79,22 @@ def load_embassies():
         with open(EMBASSY_DB, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
-                embassies.append(row)
+                if row.get("Email") and row.get("Email").strip():
+                    embassies.append(row)
     except FileNotFoundError:
         print(f"Warning: {EMBASSY_DB} not found")
     return embassies
 
 
-def send_email(to_email, country):
+def send_email(to_email, country, from_email):
     """Send notification email to embassy"""
-    if not SMTP_USER or not SMTP_PASSWORD:
-        print(f"⚠️ SMTP not configured. Would send to {country}: {to_email}")
+    if not SMTP_PASSWORD:
+        print(f"⚠️ SMTP password not set. Would send to {country}: {to_email}")
         return False
 
     try:
         msg = MIMEMultipart()
-        msg["From"] = SMTP_USER
+        msg["From"] = from_email
         msg["To"] = to_email
         msg["Subject"] = SUBJECT
 
@@ -116,25 +118,46 @@ def main():
     print("DIPLOMATIC NOTIFICATION SENDER")
     print("=" * 60)
     print(f"Started: {datetime.now()}")
+    print(f"From: {SMTP_USER}")
     print()
 
     embassies = load_embassies()
-    print(f"Loaded {len(embassies)} embassy contacts")
+    print(f"Loaded {len(embassies)} embassy contacts with emails")
 
-    if not SMTP_USER:
-        print("\n⚠️ SMTP not configured!")
-        print("Set environment variables:")
-        print("  SMTP_USER=your-email@gmail.com")
-        print("  SMTP_PASSWORD=your-app-password")
-        print("\nTo send test emails, run with configured SMTP")
+    if not SMTP_PASSWORD:
+        print("\n⚠️ SMTP_PASSWORD not set!")
+        print("Set environment variable:")
+        print("  export SMTP_PASSWORD='your-password'")
+        print("\nRun script again after setting password")
+        return
 
-    # Show first 5 embassies as preview
-    print("\nPreview (first 5 embassies):")
-    for embassy in embassies[:5]:
+    # Show embassies that will be notified
+    print("\nEmbassies that will receive notification:")
+    for embassy in embassies:
         print(f"  - {embassy.get('Country', 'Unknown')}: {embassy.get('Email', 'N/A')}")
 
     print("\n" + "=" * 60)
-    print("To send all notifications, configure SMTP and run again")
+
+    # Send confirmation
+    confirm = input(f"Send to {len(embassies)} embassies? (yes/no): ")
+    if confirm.lower() != "yes":
+        print("Cancelled.")
+        return
+
+    success = 0
+    failed = 0
+
+    for embassy in embassies:
+        email = embassy.get("Email", "").strip()
+        country = embassy.get("Country", "Unknown")
+
+        if email and send_email(email, country, SMTP_USER):
+            success += 1
+        else:
+            failed += 1
+
+    print("\n" + "=" * 60)
+    print(f"COMPLETED: {success} sent, {failed} failed")
     print("=" * 60)
 
 
