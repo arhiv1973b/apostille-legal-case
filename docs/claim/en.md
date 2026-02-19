@@ -4,17 +4,17 @@
 
 ---
 
-**Date:** ******\_\_\_******
+**Date:19\february\2026
 
-**Plaintiff:** ****************\_****************
-Address: ****************\_\_\_****************
-Tel.: ****************\_\_\_\_****************
+**Plaintiff:** Alexei\Artur\Maceret
+Address: M4D2024 Moldova, Chishinau, str. A. Doga,30 ap.38
+Tel.: (+373)78238410
 
 **Defendant:** State of the Republic of Moldova
 via Ministry of Justice of the Republic of Moldova
 Address: MD-2012, Chisinau, 31 August 1989 str., 82
 
-**Claim Amount:** €500,000 (five hundred thousand euros)
+Claim Amount: €500,000 (five hundred thousand euros)
 
 ---
 
@@ -158,8 +158,8 @@ The Plaintiff requests the court to:
 1. Accept the lawsuit for proceedings
 2. Recover from the Defendant to the Plaintiff material damage in the amount of **€446,880** (four hundred forty-six thousand eight hundred euros)
 3. Recover from the Defendant moral damage in the amount of **€60,000** (sixty thousand euros)
-4. Recover from the Defendant court fees in the amount of ****\_** EUR**
-5. Recover from the Defendant representative service costs in the amount of ****\_** EUR**
+4. Recover from the Defendant court fees in the amount of ****\_** EUR** (to be determined)
+5. Recover from the Defendant representative service costs in the amount of ****\_** EUR** (to be determined)
 
 ---
 
@@ -172,7 +172,7 @@ The Plaintiff requests the court to:
 
 ---
 
-**Plaintiff:** ************\_\_\_************ / ******\_\_\_\_****** /
+**Plaintiff:** Maceret\Alexei_
 (signature) (Full Name)
 
 ---
