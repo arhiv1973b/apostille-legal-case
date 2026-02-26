@@ -36,7 +36,7 @@ On **6 August 1997**, the Chișinău Court (Judge C.P. Ciachir) substituted a to
 The illegal record persisted in the MAI database, producing:
 
 - **2002/2003:** Conviction based on poisoned root
-- **2014/2016:** Additional conviction without rehabilitation
+- **2011/2016:** Additional conviction without rehabilitation
 - **2023:** "Cazier" certificate (15.08.2023) — perpetuating the illegality
 
 ### 3. The 2024 Justice Simulation
