@@ -164,6 +164,47 @@
         background: rgba(0, 255, 136, 0.3);
         color: #00ff88;
       }
+      .tag-art7 {
+        background: rgba(255, 215, 0, 0.3);
+        color: #ffd700;
+      }
+
+      .row-extreme {
+        background: linear-gradient(
+          90deg,
+          rgba(139, 0, 0, 0.4) 0%,
+          transparent 100%
+        ) !important;
+        border-left: 4px solid #ff0000;
+        animation: pulse-red 2s infinite;
+      }
+      @keyframes pulse-red {
+        0%,
+        100% {
+          box-shadow: inset 0 0 0 rgba(255, 0, 0, 0);
+        }
+        50% {
+          box-shadow: inset 5px 0 10px rgba(255, 0, 0, 0.4);
+        }
+      }
+      .crime-label {
+        background: #ff0000;
+        color: white;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 0.7em;
+        font-weight: bold;
+        animation: blink 1s infinite;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
 
       .unclear-sig {
         color: #ff6b6b;
@@ -333,16 +374,26 @@
 
         data.apostille_mapping.forEach((item, index) => {
           const row = document.createElement('tr');
+          const isExtreme = item.status === 'CRIME_AGAINST_HUMANITY';
+
+          if (isExtreme) {
+            row.classList.add('row-extreme');
+          }
+
           const tags = item.echr_articles
             .map((a) => `<span class="tag tag-${a}">${a.toUpperCase()}</span>`)
             .join('');
 
+          const crimeBadge = isExtreme
+            ? '<span class="crime-label">CRIME AGAINST HUMANITY</span>'
+            : '';
+
           row.innerHTML = `
                     <td>${index + 1}</td>
-                    <td class="unclear-sig">${item.id}</td>
+                    <td class="unclear-sig">${item.id} ${crimeBadge}</td>
                     <td>${item.date}</td>
                     <td>${tags}</td>
-                    <td>${violationLabels[item.violation]}</td>
+                    <td>${violationLabels[item.violation] || item.type || 'N/A'}</td>
                 `;
           tbody.appendChild(row);
         });
