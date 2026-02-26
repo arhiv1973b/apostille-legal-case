@@ -6,9 +6,21 @@
     "total_apostilles": 90,
     "unclear_signatures": 13,
     "root_case": "1997-CI-0608",
-    "total_violations": 18
+    "total_violations": 19
   },
   "apostille_mapping": [
+    {
+      "id": "MURDER-2022",
+      "date": "16.03.2022",
+      "type": "Murder of Witness - Galina Markov",
+      "status": "CRIME_AGAINST_HUMANITY",
+      "echr_articles": [
+        "art3",
+        "art7"
+      ],
+      "description": "Убийство Марковой Галины - свидетеля по делу. Виновник: Moldova Authorities. Доказательство: CO2S9BA3JX6H1",
+      "case_number": "MURDER-2022"
+    },
     {
       "id": "DLTP7B8ZHWGQ7",
       "date": "08.07.2022",
@@ -230,6 +242,11 @@
       "name": "Rome Statute - Complementarity",
       "violations_count": 1,
       "description": "International Criminal Court jurisdiction activation"
+    },
+    "art7": {
+      "name": "Crimes Against Humanity",
+      "violations_count": 1,
+      "description": "Rome Statute Article 7 - Systematic attack against civilian population"
     }
   },
   "algorithm": {
