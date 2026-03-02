@@ -6,7 +6,7 @@
     "total_apostilles": 90,
     "unclear_signatures": 13,
     "root_case": "1997-CI-0608",
-    "total_violations": 19
+    "total_violations": 20
   },
   "apostille_mapping": [
     {
@@ -21,7 +21,6 @@
     {
       "id": "DLTP7B8ZHWGQ7",
       "date": "08.07.2022",
-      "status": "CRIME_AGAINST_HUMANITY",
       "echr_articles": ["art3", "art6", "art13"],
       "violation": "torture_no_investigation"
     },
@@ -58,7 +57,6 @@
     {
       "id": "403WF02QGRCI1",
       "date": "30.01.2023",
-      "status": "CRIME_AGAINST_HUMANITY",
       "echr_articles": ["art3", "art6", "art13"],
       "violation": "systemic_impunity"
     },
@@ -103,7 +101,7 @@
       "date": "06.08.1997",
       "authority": "Judecătoria sect. Centru (C.P. Ciachir)",
       "type": "Administrative Substitution (ROOT_POISON)",
-      "status": "CRIME_AGAINST_HUMANITY",
+      "status": "ROOT",
       "echr_articles": ["art3", "art6"],
       "description": "Подмена уголовного преступления (пытки) на административное хулиганство (ст.164 CCA) для легализации первичного насилия.",
       "case_number": "1997-CI-0608"
@@ -147,13 +145,34 @@
       "echr_articles": ["art3", "art6", "art8", "art13"],
       "description": "Ультиматум МВД РМ о немедленном удалении записей из базы данных. Требование expungement на основе jus cogens.",
       "file": "MAI Ultimatum - Cere .signed.pdf"
+    },
+    {
+      "id": "ECHR-COMPLAINT-2026",
+      "date": "02.03.2026",
+      "type": "ECHR Complaint / Жалоба в ЕСПЧ",
+      "status": "FILED",
+      "echr_articles": ["art3", "art5", "art6", "art13"],
+      "description": "Жалоба в ЕСПЧ о системных нарушениях: пытки (1997), отсутствие расследования, блокировка реабилитации, убийство свидетеля. Требование: 220 000 EUR.",
+      "file": "ECHR_complaint_filled.md",
+      "compensation": "220000 EUR",
+      "key_violations": [
+        "torture_1997",
+        "no_investigation",
+        "blocked_rehabilitation",
+        "witness_murder"
+      ]
     }
   ],
   "echr_articles": {
     "art3": {
       "name": "Prohibition of Torture",
-      "violations_count": 16,
+      "violations_count": 17,
       "description": "No one shall be subjected to torture or to inhuman or degrading treatment or punishment"
+    },
+    "art5": {
+      "name": "Right to Liberty and Security",
+      "violations_count": 1,
+      "description": "Everyone has the right to liberty and security of person"
     },
     "art6": {
       "name": "Right to a Fair Trial",

@@ -95,45 +95,6 @@
         color: #888;
         margin-bottom: 20px;
       }
-      .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 15px;
-        margin-bottom: 30px;
-      }
-      @media (max-width: 480px) {
-        .stats-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      .stat-btn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(145deg, #2a2a2a, #333);
-        border: 2px solid #b22222;
-        border-radius: 10px;
-        padding: 20px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-      .stat-btn:hover {
-        background: linear-gradient(145deg, #b22222, #8b1a1a);
-        transform: translateY(-3px);
-        box-shadow: 0 5px 20px rgba(178, 34, 34, 0.4);
-      }
-      .stat-btn .number {
-        font-size: 32px;
-        font-weight: bold;
-        color: #fff;
-      }
-      .stat-btn .label {
-        font-size: 12px;
-        color: #aaa;
-        text-align: center;
-        margin-top: 5px;
-      }
       footer {
         border-top: 1px solid #444;
         padding-top: 20px;
@@ -207,7 +168,7 @@
           <span class="number">1997</span>
           <span class="label">Год начала дела</span>
         </a>
-        <a href="Downloads/Apostilles/apostilles.csv" class="stat-btn" target="_blank">
+        <a href="Downloads/apostile_results_final_secure.csv" class="stat-btn" target="_blank">
           <span class="number">90</span>
           <span class="label">Полных апостилей</span>
         </a>
@@ -219,10 +180,6 @@
           <span class="number">14.4%</span>
           <span class="label">Процент неудач проверки</span>
         </a>
-        <a href="Downloads/MURDER_2022_MARKOV.md" class="stat-btn" target="_blank">
-          <span class="number">2022</span>
-          <span class="label">Убийство свидетеля</span>
-        </a>
       </div>
 
       <div class="total-count" id="total-count-label">
@@ -233,6 +190,39 @@
         <h2 id="triggers-title">📌 Документы-триггеры (Цепь нарушений)</h2>
         <div id="evidence-container">
           <p style="color: #888">Загрузка данных...</p>
+        </div>
+      </section>
+
+      <section class="evidence-section" id="echr-section" style="border-top: 3px solid #0066cc; margin-top: 40px; padding-top: 20px;">
+        <h2 style="color: #0066cc; border-left: 4px solid #0066cc; padding-left: 15px; margin-bottom: 20px;">
+          ⚖️ Жалоба в ЕСПЧ (ECHR Complaint 2026)
+        </h2>
+        <div class="evidence-card" style="border-left-color: #0066cc;">
+          <h3>Европейский Суд по правам человека</h3>
+          <p class="meta">
+            <strong>Дата подачи:</strong> 02.03.2026 | 
+            <strong>Статус:</strong> ПОДАНА | 
+            <strong>Референс:</strong> CASE-MACHERET-1997-2026-ECHR
+          </p>
+          <p style="margin: 15px 0;">
+            <strong>Нарушенные статьи ЕКПЧ:</strong> Ст. 3 (пытки), Ст. 5 (свобода), Ст. 6 (справедливый суд), Ст. 13 (эффективное средство защиты)
+          </p>
+          <p style="margin: 15px 0;">
+            <strong>Требование компенсации:</strong> 220 000 EUR<br>
+            • Материальный ущерб: 100 000 EUR<br>
+            • Моральный вред: 100 000 EUR<br>
+            • Судебные расходы: 20 000 EUR
+          </p>
+          <p style="margin: 15px 0;">
+            <strong>Ключевые нарушения:</strong><br>
+            • Пытки 1997-1998 (дело №1-568/98)<br>
+            • Отсутствие расследования<br>
+            • Блокировка реабилитации<br>
+            • Убийство свидетеля (2022)
+          </p>
+          <a href="Downloads/ECHR_complaint_filled.md" target="_blank" style="background: #0066cc;">
+            📄 Открыть жалобу (MD)
+          </a>
         </div>
       </section>
 
