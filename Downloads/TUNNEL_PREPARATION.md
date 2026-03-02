@@ -280,20 +280,21 @@ def check_moldova_cat_decisions():
 
 ## Active Tunnels
 
-| Tunnel         | Status    | Last Check |
-| -------------- | --------- | ---------- |
-| GitHub Pages   | ✅ Active | 02.03.2026 |
-| ECHR Database  | ✅ Active | 02.03.2026 |
-| OHCHR Portal   | ✅ Ready  | 02.03.2026 |
-| UN TB Database | ✅ Ready  | 02.03.2026 |
+| Tunnel         | Status       | Last Check |
+| -------------- | ------------ | ---------- |
+| GitHub Pages   | ✅ Active    | 02.03.2026 |
+| ECHR Database  | ✅ Active    | 02.03.2026 |
+| OHCHR Portal   | ✅ Ready     | 02.03.2026 |
+| UN TB Database | ✅ Ready     | 02.03.2026 |
+| PGP Keys       | ✅ Generated | 02.03.2026 |
+| ECHR Form      | ✅ Prepared  | 02.03.2026 |
+| IPFS           | 🔄 Ready     | 02.03.2026 |
 
 ## Pending Tunnels
 
 | Tunnel     | Status   | Action Required |
 | ---------- | -------- | --------------- |
-| IPFS       | 🔄 Setup | Deploy evidence |
 | Blockchain | 🔄 Setup | Timestamp docs  |
-| PGP Keys   | 🔄 Setup | Generate keys   |
 
 ---
 
