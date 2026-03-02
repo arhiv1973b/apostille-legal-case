@@ -10,41 +10,52 @@ Cross-reference dates, case numbers, locations to identify impossible/contradict
 
 ---
 
-## CASE 1: FINE AMOUNT IMPOSSIBILITY
-
-### Issue: 90 lei → 12,000 lei transformation
-
-| Date    | Event                 | Claim      | Reality          | Contradiction  |
-| ------- | --------------------- | ---------- | ---------------- | -------------- |
-| Unknown | Fine imposed          | 90 lei     | Could not pay    | Not verified   |
-| Later   | Through passport dept | 12,000 lei | Illegal increase | **IMPOSSIBLE** |
-
-**Analysis:**
-
-- 12,000 lei cannot be "fine" for 4 tramadol capsules
-- No legal basis for this transformation
-- Article 361 part 2 point c - later recognized as object of extreme unconstitutionality
-
-**Legal Conclusion:** Fraud in amounts - evidence fabrication
-
----
-
-## CASE 2: DRUG QUANTITY IMPOSSIBILITY
+## CASE 1: DRUG QUANTITY IMPOSSIBILITY
 
 ### Issue: Tramadol capsule weight manipulation
 
-| Claim      | Calculation                | Reality       | Contradiction   |
-| ---------- | -------------------------- | ------------- | --------------- |
-| 5 capsules | 5 × 0.05g =                | 0.25g         | **IMPOSSIBLE**  |
-| Added      | + 2.6g Potassium Manganese | = 2.85g total | **FABRICATION** |
+| Claim      | Calculation                | Reality       | Contradiction      |
+| ---------- | -------------------------- | ------------- | ------------------ |
+| 4 capsules | 4 × 0.05g =                | **0.20g**     | Claimed: **0.25g** |
+| Added      | + 2.6g Potassium Manganese | = 2.85g total | **FABRICATION**    |
 
 **Analysis:**
 
-- 0.05g × 5 capsules = 0.25g (scientifically impossible)
+- 4 capsules × 0.05g = **0.20g** (scientific fact)
+- Claimed: **0.25g** (impossible - 0.05g "appeared" from nowhere)
 - 2.6g of Potassium Manganese was "added"
 - This is evidence fabrication
 
-**Legal Conclusion:** Drug case fabricated - physical evidence impossible
+**Legal Conclusion:** Drug case fabricated - physical evidence mathematically impossible
+
+---
+
+## CASE 2: NAME SPELLING IMPOSSIBILITY (FINE)
+
+### Issue: Maciret vs Maceret - Payment impossibility
+
+| Step | Action                    | Problem              | Contradiction     |
+| ---- | ------------------------- | -------------------- | ----------------- |
+| 1    | Court writes "Maciret"    | Mistake in name      | Bank won't accept |
+| 2    | Bank rejects payment      | Name mismatch        | Fine unpaid       |
+| 3    | Person put on wanted list | After 7-8 years      | "Proves" hiding   |
+| 4    | Penalties added           | Prescription ignored | **IMPOSSIBLE**    |
+
+**Analysis:**
+
+- If court wrote "Maciret" instead of "Maceret" (passport name)
+- Bank will NOT accept fine payment (name mismatch)
+- After 7-8 years, to demand "payment":
+  - They accuse person of "misleading" the court
+  - **This is IMPOSSIBLE**
+- BUT: When person is put on wanted list
+  - The "fact of being wanted" becomes "proof" of hiding
+  - Then penalties and fines applied
+  - **Prescription periods NOT applied**
+
+**Key Point:** The person was wanted, which "proves" they were hiding to avoid payment. This creates the justification for penalties.
+
+**Legal Conclusion:** Administrative procedure weaponized - impossible to pay, then punished for non-payment
 
 ---
 
