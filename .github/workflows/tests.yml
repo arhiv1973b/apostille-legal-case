@@ -1,4 +1,4 @@
-name: Python Tests
+name: CI/CD Pipeline
 
 on:
   push:
@@ -8,6 +8,38 @@ on:
 
 jobs:
   test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+      fail-fast: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pytest-cov mypy pyright
+
+      - name: Run pytest with coverage
+        run: |
+          pytest --cov=./ --cov-report=xml --cov-report=term --cov-branch || true
+        continue-on-error: true
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report-${{ matrix.python-version }}
+          path: coverage.xml
+
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,27 +52,62 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install pytest pytest-cov mypy pyright
-
-      - name: Run pytest with coverage
-        run: |
-          pytest --cov=./ --cov-report=xml --cov-report=term --cov-branch || true
-        continue-on-error: true
+        run: pip install mypy pyright
 
       - name: Run mypy
-        run: mypy tri_instance_ai_coordinator.py || true
+        run: mypy . || true
+        continue-on-error: true
 
       - name: Run pyright
-        run: pyright || true
+        run: pyright . || true
+        continue-on-error: true
 
-      - name: Upload coverage report
+  security:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install safety bandit
+
+      - name: Run security checks
+        run: |
+          echo "=== Security Audit ===" 
+          safety check || true
+          bandit -r . -f json -o bandit-report.json || true
+
+      - name: Upload security report
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-report
-          path: coverage.xml
+          name: security-report
+          path: bandit-report.json
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
-        if: success()
+  deploy:
+    needs: [test, lint]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy
+        run: echo "Deploy step"
+
+  summary:
+    needs: [test, lint, security]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create summary
+        run: |
+          echo "## CI/CD Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- Tests: Completed" >> $GITHUB_STEP_SUMMARY
+          echo "- Lint: Completed" >> $GITHUB_STEP_SUMMARY
+          echo "- Security: Completed" >> $GITHUB_STEP_SUMMARY
