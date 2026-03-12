@@ -30,7 +30,6 @@ The Ministry of Justice has demonstrated an inability to manage the integrity of
 IV. DAMAGE CALCULATION
 A. Direct Material Damage
 | No. | Expense Item | Amount (EUR) |
-|---|---|---|
 | 1 | State fees for apostilles (90 × €5) | 450 |
 | 2 | Notary services (90 × €15) | 1,350 |
 | 3 | Translator services (90 × €30) | 2,700 |
@@ -39,7 +38,6 @@ A. Direct Material Damage
 | Total |  | 10,080 |
 B. Lost Profits & Systemic Losses
 | No. | Item | Calculation | Amount (EUR) |
-|---|---|---|---|
 | 1 | Loss of professional activity | 29 years × €600 × 12 months | 208,800 |
 | 2 | Property/Business Loss | Certified Assessment | 70,000 |
 | 3 | Forced Legal Costs | 29 years × €2,000/year | 58,000 |
@@ -47,7 +45,6 @@ B. Lost Profits & Systemic Losses
 | Total |  |  | 436,800 |
 C. Moral Damage
 | No. | Basis | Amount (EUR) |
-|---|---|---|
 | 1 | 29 years of judicial persecution & torture | 60,000 |
 D. SUMMARY
  * Direct Material Damage: €10,080
@@ -66,6 +63,7 @@ The Plaintiff requests the Court to:
  * Recover from the Defendant (State Treasury) the amount of €440,000 for material damage and lost profits.
  * Recover from the Defendant the amount of €60,000 for moral damages.
  * Recognize the state's financial liability for the failure to uphold international standards regarding the e-apostille and the rehabilitation of victims of torture.
-Plaintiff: __________________________
+Plaintiff: 
 Maceret Alexei
-(Signature)
+(Signature) 
+A©tor
