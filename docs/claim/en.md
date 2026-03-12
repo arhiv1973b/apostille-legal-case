@@ -68,3 +68,4 @@ Maceret Alexei
 (Signature) A©tor
 
 [apostille_registry_working_1.signed.pdf](https://github.com/user-attachments/files/25944332/apostille_registry_working_1.signed.pdf)
+https://arhiv1973b.github.io/apostille-mirror/
