@@ -1,4 +1,4 @@
-CIVIL LAWSUIT
+International CIVIL LAWSUIT
 Compensation for Damage Caused by Illegal Actions (Inaction) of State Bodies of the Republic of Moldova
 Date: 12 March 2026
 Plaintiff: Alexei Artur Maceret (A©tor)
@@ -67,3 +67,4 @@ Plaintiff:
 Maceret Alexei
 (Signature) 
 A©tor
+[apostille_registry_working_1.signed.pdf](https://github.com/user-attachments/files/25944332/apostille_registry_working_1.signed.pdf)
