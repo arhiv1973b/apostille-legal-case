@@ -1,8 +1,8 @@
 CIVIL LAWSUIT
 Compensation for Damage Caused by Illegal Actions (Inaction) of State Bodies of the Republic of Moldova
-Date: 19 February 2026
+Date: 12 March 2026
 Plaintiff: Alexei Artur Maceret (A©tor)
-Address: M4D2024 Moldova, Chisinau, str. A. Doga, 30 ap. 38
+Address: MD2024 Moldova, Chisinau, str. A. Doga, 30 ap. 38
 Tel.: (+373) 78238410
 Defendant: State of the Republic of Moldova
 via the Ministry of Finance of the Republic of Moldova
