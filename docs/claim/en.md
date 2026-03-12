@@ -65,6 +65,6 @@ The Plaintiff requests the Court to:
  * Recognize the state's financial liability for the failure to uphold international standards regarding the e-apostille and the rehabilitation of victims of torture.
 Plaintiff: 
 Maceret Alexei
-(Signature) 
-A©tor
+(Signature) A©tor
+
 [apostille_registry_working_1.signed.pdf](https://github.com/user-attachments/files/25944332/apostille_registry_working_1.signed.pdf)
