@@ -6,8 +6,9 @@
 **Proper Respondent:** Republic of Moldova — Ministry of Finance (Serviciul Fiscal de Stat, Direcția Rîșcani)
 **Improper Intervening Party:** Ministry of Justice / ARIJ (acknowledged debt but did not perform payment — substitution of debtor)  
 **Claim Amount:** €500,000  
-**Period:** 1997–2026  
-**Date Filed:** 2024  
+**Period:** 1997–2026
+**Note:** Judgment 1а-42/09 dated 03.02.2009 = criminal conviction (basis of rehabilitation claim); Constitutional Court petition = 24.10.2019  
+**Date Filed:** 2026  
 
 ---
 
@@ -77,15 +78,17 @@ Between 1997 and 2026, the Republic of Moldova issued **90 apostilles** to the C
 - Multiple apostilles lack proper authentication seals as required by the Convention
 - No corrective mechanism was ever offered or applied despite formal complaints
 
-### 3.2 Constitutional Court Refusal — 09.02.2009
+### 3.2 Constitutional Court Petition — 24.10.2019 (registered: Intrare Nr. 100cg)
 
-On 09 February 2009, the Claimant filed an application before the Constitutional Court of the Republic of Moldova. The Court refused to hear the application **on language grounds**, in direct violation of:
+On 24 October 2019, the Claimant filed an application before the Constitutional Court (registered: Curtea de Apel Chișinău, Intrare Nr. 15749, 24.10.2019; Constitutional Court, Intrare Nr. 100cg, 2019) of the Republic of Moldova. The petition concerned the unconstitutionality of criminal proceedings in which Macheret was convicted on the basis of an invalid normative act (Hotarire nr.79/nr.43, criminal case 1а-42/09, judgment 03.02.2009). The Court was petitioned to establish legal rehabilitation pursuant to Art. 121(2) of the Constitutional Jurisdiction Code. The application was filed in Russian (the only language accessible to the claimant as a Group 1 disability holder), requesting translation — this was refused, violating:
 
 - ECHR Article 6 — Right to a fair trial
-- ECHR Article 13 — Right to an effective remedy
-- Vienna Convention Article 85 — Equal authenticity of treaty languages
+- ECHR Article 13 — Right to an effective remedy  
+- Law No. 60 of Moldova — equal rights of persons with disabilities in courts
 
-This refusal represents a fundamental denial of access to justice and is void under jus cogens principles.
+This refusal on language grounds constitutes a fundamental denial of access to justice and is void under jus cogens principles.
+
+**Note:** The 2009 date referenced elsewhere in documents refers to the criminal conviction judgment No. 1а-42/09 dated 03.02.2009 — NOT a Constitutional Court filing. The Constitutional Court petition was filed in 2019.
 
 ### 3.3 Ministry of Health Obstruction — 02.05.2019
 
@@ -114,7 +117,7 @@ If a new peremptory norm of general international law emerges, any existing act 
 ### 4.4 ECHR Articles 3, 6, 13
 
 - **Article 3** — The systematic denial of rights through invalid documents constitutes inhuman treatment within the meaning of this Article
-- **Article 6** — The Constitutional Court refusal on language grounds (2009) constitutes a violation of the right to a fair trial
+- **Article 6** — The Constitutional Court refusal on language grounds (2019, case filed 24.10.2019) constitutes a violation of the right to a fair trial
 - **Article 13** — No effective domestic remedy has been made available for 29 years of violations
 
 ---
@@ -146,7 +149,7 @@ The Claimant respectfully requests:
 ## VII. EVIDENCE
 
 1. 90 original apostille documents (1997–2026)
-2. Constitutional Court Decision — refusal document (09.02.2009)
+2. Constitutional Court Petition — registered 24.10.2019, Intrare Nr. 100cg; Curtea de Apel Chișinău Intrare Nr. 15749
 3. Ministry of Health correspondence (02.05.2019)
 4. Toderița case documentation (05.12.2019)
 5. Statistical analysis of signature clarity defects
@@ -167,5 +170,5 @@ This claim is submitted under:
 ---
 
 *Claimant: Macheret Alexei Artur*  
-*Date: 2024*  
+*Date: 2026*  
 *Reference: https://github.com/arhiv1973b/apostille-legal-case/issues/1*

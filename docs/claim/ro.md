@@ -6,8 +6,9 @@
 **Pârât propriu:** Republica Moldova — Ministerul Finanțelor (Serviciul Fiscal de Stat, Direcția Rîșcani)
 **Parte intervenientă necorespunzătoare:** Ministerul Justiției / ARIJ (a recunoscut datoria, dar nu a executat plata — substituire de debitor)  
 **Suma revendicată:** €500.000  
-**Perioadă:** 1997–2026  
-**Data depunerii:** 2024  
+**Perioadă:** 1997–2026
+**Notă:** Sentința 1а-42/09 din 03.02.2009 = condamnare penală (baza cererii de reabilitare); Sesizarea CC = 24.10.2019, înregistrat Nr. 100cg  
+**Data depunerii:** 2026  
 
 ---
 
@@ -77,7 +78,7 @@ Executarea efectivă a obligației bănești a fost realizată de Serviciul Fisc
 - Mai multe apostile nu au sigilii de autentificare corespunzătoare
 - Niciun mecanism corectiv nu a fost oferit sau aplicat, în ciuda plângerilor formale
 
-### 3.2 Refuzul Curții Constituționale — 09.02.2009
+### 3.2 Sesizarea Curții Constituționale — 24.10.2019 (înregistrat: Intrare Nr. 100cg)
 
 La 9 februarie 2009, Reclamantul a depus o cerere la Curtea Constituțională a Republicii Moldova. Curtea a refuzat să examineze cererea **pe motive lingvistice**, cu încălcarea directă a:
 
@@ -153,5 +154,5 @@ Reclamantul solicită respectuos:
 ---
 
 *Reclamant: Macheret Alexei Artur*  
-*Data: 2024*  
+*Data: 2026*  
 *Referință: https://github.com/arhiv1973b/apostille-legal-case/issues/1*
