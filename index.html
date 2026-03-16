@@ -154,7 +154,7 @@
     <div class="counter" id="main-counter">00:00:00</div>
     <p>Time elapsed since case filing under jus cogens framework</p>
     <button class="activate-btn" onclick="activateJusCogens()">⚡ Activate Jus Cogens Protocol</button>
-    <button class="activate-btn" onclick="sendAllNotifications()">🌍 Notify All 129 States</button>
+    <!-- REMOVED: fake mass-notification button — security risk / ложное самоназначение -->
     <div id="activation-status" style="margin-top:1rem;font-size:0.9rem;"></div>
   </div>
 
@@ -524,21 +524,11 @@
   }
 
   function sendAllNotifications() {
-    const allButtons = document.querySelectorAll('.country-btn:not(.notified)');
-    let count = 0;
-    allButtons.forEach(btn => {
-      const name = btn.textContent.replace(/^[🇦-🇿\s✓⚠️]+/, '').trim();
-      if (!notifiedCountries.includes(name)) {
-        notifiedCountries.push(name);
-        btn.classList.add('notified');
-        count++;
-      }
-    });
-    document.getElementById('country-count').textContent = notifiedCountries.length;
-    document.getElementById('activation-status').innerHTML =
-      '🌍 ' + count + ' additional states notified. Total: ' + notifiedCountries.length + ' states.';
-    document.getElementById('notified-list').textContent =
-      'All 129 member states notified under jus cogens framework';
+    // DISABLED: this function falsely claimed mass diplomatic notifications
+    // Real notifications must be sent individually through official diplomatic channels
+    // Реальные дипломатические уведомления направляются только через официальные каналы
+    alert('ВНИМАНИЕ: Дипломатические уведомления направляются официальными каналами.\nДанная функция деактивирована во избежание ложных заявлений.\n\nWARNING: Diplomatic notifications must be sent through official channels only.\nThis function has been disabled to prevent false claims.');
+    return false;
   }
 
   // Timeline filter
