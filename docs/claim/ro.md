@@ -3,7 +3,8 @@
 
 **Referință dosar:** Cauza Apostilă — Cadrul Juridic Jus Cogens  
 **Reclamant:** Macheret Alexei Artur, Republica Moldova  
-**Pârât:** Republica Moldova (Ministerul Justiției)  
+**Pârât propriu:** Republica Moldova — Ministerul Finanțelor (Serviciul Fiscal de Stat, Direcția Rîșcani)
+**Parte intervenientă necorespunzătoare:** Ministerul Justiției / ARIJ (a recunoscut datoria, dar nu a executat plata — substituire de debitor)  
 **Suma revendicată:** €500.000  
 **Perioadă:** 1997–2026  
 **Data depunerii:** 2024  
@@ -32,6 +33,34 @@ Prezenta acțiune civilă privește emiterea sistematică de apostile defectuoas
 3. Convenției Europene a Drepturilor Omului, Art. 3, 6 și 13
 
 ---
+
+
+---
+
+## III-A. PÂRÂT NECORESPUNZĂTOR — ANALIZĂ JURIDICĂ
+
+### Faptul substituirii debitorului
+
+| Autoritate | Acțiune | Data | Document |
+|------------|---------|------|----------|
+| ARIJ / Ministerul Justiției | A recunoscut plata excedentară de 50 lei | 02.09.2021 | Scrisoarea nr. 12-25/1988, Director Nicolaescu G. |
+| Serviciul Fiscal de Stat | A efectuat efectiv restituirea | 01.10.2021 | Ordinul de plată nr. 0600013037 |
+| Ministerul Finanțelor (Direcția Rîșcani) | A notificat despre executare | octombrie 2021 | Scrisoarea nr. 26/2-7/4-13-SS, Șef Căuș V. |
+
+### Calificare juridică
+
+**Ministerul Justiției / ARIJ — Pârât necorespunzător:**
+ARIJ nu a avut competența de a restitui taxa de stat prin propriile conturi. Recunoscând datoria, a redirecționat executarea la SFS — săvârșind astfel o intervenție frauduloasă care a indus reclamantul în eroare cu privire la identitatea pârâtului corespunzător. Aceasta încalcă art. 13 CEDO (dreptul la un remediu efectiv) și art. 49 din Convenția de la Viena (frauda în executarea obligațiilor internaționale).
+
+**Ministerul Finanțelor / SFS — Pârât propriu:**
+Executarea efectivă a obligației bănești a fost realizată de Serviciul Fiscal de Stat (Direcția Rîșcani) prin ordinul de plată nr. 0600013037. Ministerul Finanțelor, ca autoritate superioară a SFS, răspunde pentru executarea corespunzătoare. Toate pretențiile financiare din prezenta acțiune trebuie îndreptate împotriva Ministerului Finanțelor.
+
+**Încălcări ale normelor jus cogens:**
+- Art. 6 CEDO: reclamantul nu a putut ști cărei autorități să i se adreseze — trei organe diferite implicate într-o singură obligație
+- Art. 13 CEDO: lipsa unui remediu efectiv din cauza incertitudinii privind identitatea pârâtului
+- Convenția de la Viena art. 26 (pacta sunt servanda): Moldova nu a asigurat executarea printr-un singur organ responsabil
+- Convenția de la Viena art. 49: fraudă instituțională — Ministerul Justiției a acceptat cererea, a recunoscut datoria, apoi a redirecționat executarea fără notificare
+
 
 ## III. EXPUNEREA FAPTELOR
 

@@ -3,7 +3,8 @@
 
 **Case Reference:** Apostille Legal Case — Jus Cogens Framework  
 **Claimant:** Macheret Alexei Artur, Republic of Moldova  
-**Respondent:** Republic of Moldova (Ministry of Justice)  
+**Proper Respondent:** Republic of Moldova — Ministry of Finance (Serviciul Fiscal de Stat, Direcția Rîșcani)
+**Improper Intervening Party:** Ministry of Justice / ARIJ (acknowledged debt but did not perform payment — substitution of debtor)  
 **Claim Amount:** €500,000  
 **Period:** 1997–2026  
 **Date Filed:** 2024  
@@ -32,6 +33,34 @@ This civil action concerns the systematic issuance of defective apostilles by th
 3. The European Convention on Human Rights, Articles 3, 6, and 13
 
 ---
+
+
+---
+
+## III-A. IMPROPER RESPONDENT — LEGAL ANALYSIS
+
+### Fact of Debtor Substitution
+
+| Authority | Action | Date | Document |
+|-----------|--------|------|----------|
+| ARIJ / Ministry of Justice | Acknowledged overpayment of 50 lei | 02.09.2021 | Letter No. 12-25/1988, Director Nicolaescu G. |
+| Serviciul Fiscal de Stat | Actually performed the refund | 01.10.2021 | Payment order No. 0600013037 |
+| Ministry of Finance (Direcția Rîșcani) | Notified of execution | October 2021 | Letter No. 26/2-7/4-13-SS, Head Căuș V. |
+
+### Legal Qualification
+
+**Ministry of Justice / ARIJ — Improper Respondent:**
+ARIJ lacked authority to refund the state fee through its own accounts. Having acknowledged the debt, it redirected execution to SFS — thereby committing fraudulent intervention that misled the claimant as to the identity of the proper respondent. This violates ECHR Art. 13 (right to an effective remedy) and Vienna Convention Art. 49 (fraud in the performance of international obligations).
+
+**Ministry of Finance / SFS — Proper Respondent:**
+Actual performance of the monetary obligation was carried out by Serviciul Fiscal de Stat (Direcția Rîșcani) under payment order No. 0600013037. The Ministry of Finance as the superior authority of SFS bears responsibility for proper execution. All financial claims under this lawsuit must be directed against the Ministry of Finance.
+
+**Jus Cogens Violations:**
+- ECHR Art. 6: the claimant could not know which authority to address — three different bodies involved in a single obligation
+- ECHR Art. 13: no effective remedy due to uncertainty as to the identity of the respondent
+- Vienna Convention Art. 26 (pacta sunt servanda): Moldova failed to ensure performance through a single accountable body
+- Vienna Convention Art. 49: institutional fraud — Ministry of Justice accepted the claim, acknowledged the debt, then redirected performance without notification
+
 
 ## III. STATEMENT OF FACTS
 
