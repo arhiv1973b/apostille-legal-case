@@ -1,73 +1,43 @@
-# DIPLOMATIC NOTIFICATION
+# Diplomatic Notification — Apostille Legal Case
 
-## Request for Support and Intervention
-
-**To:** Embassies and Consulates of Hague Convention Member States
-
-**Subject:** Legal Case Against Republic of Moldova - Human Rights Violations - Request for Support
-
----
-
-Excellency,
-
-We respectfully request your attention to a serious case of human rights violations and judicial misconduct by the Republic of Moldova, a member state of the Hague Convention of 1961.
+**TO:** Embassy / Permanent Mission  
+**FROM:** Macheret Alexei Artur, Republic of Moldova  
+**RE:** Civil Case — Apostille Violations — Jus Cogens Notification  
+**DATE:** 2026
 
 ---
 
-## CASE SUMMARY
+## Subject: Notification Pursuant to Jus Cogens Framework
 
-A civil lawsuit has been filed against the State of the Republic of Moldova seeking **€500,000** in compensation for damages caused by:
+This notification is submitted pursuant to:
+- Vienna Convention on the Law of Treaties (1969), Art. 53 & 64
+- Hague Convention Abolishing Legalisation (1961)
+- European Convention on Human Rights, Art. 3, 6, 13
 
-1. **Systematic violation of fair trial rights** (Art. 6 ECHR)
-2. **Failure to investigate torture allegations** (Art. 3 ECHR)
-3. **Denial of effective remedy** (Art. 13 ECHR)
-4. **Illegal apostille certification** of court decisions
+## Summary of Violations
 
-The case involves **90 apostilles** issued during 2021-2023, with **14.4% having unreadable signatures** ("unclear signature"), indicating systemic procedural violations.
+The Republic of Moldova has systematically processed **90 apostilles** (1997–2026) in violation of Hague Convention Art. 3 authentication standards. **14.4% of apostilles bear unclear official signatures**.
 
----
+Constitutional remedies were denied in 2009 on language grounds, violating:
+- ECHR Art. 6 (Right to fair trial)
+- ECHR Art. 13 (Right to effective remedy)
+- Vienna Convention Art. 85 (Equal language authenticity)
 
-## LEGAL BASIS
+## Jus Cogens Application
 
-- European Convention on Human Rights
-- Hague Convention of 1961 (Apostille)
-- Civil Code of the Republic of Moldova
-- Rome Statute of the International Criminal Court (Art. 17)
+Under Vienna Convention Art. 53, any act conflicting with peremptory norms of international law is **void**. Moldova's actions constitute a systemic violation of jus cogens norms binding on all states.
 
----
+**Claim:** €500,000 for period 1997–2026.
 
-## REQUEST
+## Request
 
-We kindly request:
+Your government's diplomatic attention to these violations and support for the claimant's right to effective international remedy is respectfully requested.
 
-1. **Review** of this case documentation
-2. **Support** for human rights monitoring
-3. **Diplomatic intervention** if violations are confirmed
-4. **Communication** to your government about this matter
+**Reference:** https://github.com/arhiv1973b/apostille-legal-case/issues/1  
+**Website:** https://arhiv1973b.github.io/apostille-legal-case/
 
 ---
 
-## DOCUMENTATION
-
-All case documents are available at:
-**https://github.com/arhiv1973b/apostille-legal-case**
-
-Translations into official languages are being prepared.
-
----
-
-## CONTACT
-
-[To be added]
-
----
-
-We count on your support in ensuring justice and accountability.
-
-Respectfully,
-
-**Plaintiff**
-
----
-
-_This notification is sent to all 126 member states of the Hague Convention of 1961_
+*Macheret Alexei Artur*  
+*arhiv240@gmail.com*  
+*Chișinău, Republic of Moldova, 2026*
