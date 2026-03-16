@@ -18,9 +18,14 @@ Cetățean al Republicii Moldova
 Contact: arhiv240@gmail.com  
 GitHub: https://github.com/arhiv1973b/apostille-legal-case  
 
-**Pârât:** Republica Moldova  
-Reprezentat de: Ministerul Justiției al Republicii Moldova  
-Adresa: Piața Marii Adunări Naționale 1, Chișinău, Moldova  
+**Pârât propriu:** Ministerul Finanțelor al Republicii Moldova
+Organ executant: Serviciul Fiscal de Stat, Direcția Rîșcani
+Adresa: str. Constantin Tănase 9, MD-2005, mun. Chișinău, Moldova
+Temei: Ordinul de plată nr. 0600013037 din 01.10.2021
+
+**Parte intervenientă necorespunzătoare:** Ministerul Justiției / ARIJ
+Adresa: str. 31 August 1989 nr. 82, MD-2012, Chișinău
+Temei: A recunoscut datoria, a redirecționat la SFS fără notificare — art.13 CEDO + art.49 Convenția de la Viena
 
 ---
 

@@ -18,9 +18,14 @@ Citizen of the Republic of Moldova
 Contact: arhiv240@gmail.com  
 GitHub: https://github.com/arhiv1973b/apostille-legal-case  
 
-**Respondent:** Republic of Moldova  
-Represented by: Ministry of Justice of the Republic of Moldova  
-Address: Piața Marii Adunări Naționale 1, Chișinău, Moldova  
+**Proper Respondent:** Ministry of Finance of the Republic of Moldova
+Executing body: Serviciul Fiscal de Stat, Direcția Rîșcani
+Address: str. Constantin Tănase 9, MD-2005, Chișinău, Moldova
+Basis: Payment order No. 0600013037 dated 01.10.2021
+
+**Improper Intervening Party:** Ministry of Justice / ARIJ
+Address: str. 31 August 1989 nr. 82, MD-2012, Chișinău, Moldova
+Basis: Acknowledged debt, redirected to SFS without notice — ECHR Art.13 + Vienna Conv. Art.49
 
 ---
 
