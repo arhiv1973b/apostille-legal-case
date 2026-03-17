@@ -72,7 +72,7 @@ Executarea efectivă a obligației bănești a fost realizată de Serviciul Fisc
 
 ### 3.1 Încălcări privind apostilele (1997–2026)
 
-Între 1997 și 2026, Republica Moldova a emis Reclamantului **90 de apostile**. Analiza statistică a acestor documente relevă:
+Între 1997 și 2026, Republica Moldova a emis Reclamantului **97 de apostile**. Analiza statistică a acestor documente relevă:
 
 - **13 apostile (14,4%)** au semnături oficiale neclare sau ilizibile, cu încălcarea Art. 3 al Convenției de la Haga
 - Mai multe apostile nu au sigilii de autentificare corespunzătoare

@@ -72,9 +72,11 @@ Actual performance of the monetary obligation was carried out by Serviciul Fisca
 
 ### 3.1 Apostille Violations (1997–2026)
 
-Between 1997 and 2026, the Republic of Moldova issued **90 apostilles** to the Claimant. Statistical analysis of these documents reveals:
+Between 1997 and 2026, the Republic of Moldova issued **97 apostilles** to the Claimant. Statistical analysis of these documents reveals:
 
-- **13 apostilles (14.4%)** bear unclear or illegible official signatures in violation of Hague Convention Art. 3
+- **13 apostilles (13.4%)** bear illegible signatures ("semnatura indescifrabila") per official registry dated 17.02.2026
+- **1 additional apostille** (No. 5OTZ38FVFN8R2, 29.12.2021) — field 10 (digital signature) empty in violation of mandatory apostille form
+- **Total defective: 14/97 = 14.4%** — Hague Convention Art. 3 violation
 - Multiple apostilles lack proper authentication seals as required by the Convention
 - No corrective mechanism was ever offered or applied despite formal complaints
 
