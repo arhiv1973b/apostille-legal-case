@@ -1,3 +1,8 @@
+# 🛡️ VERIFIED EVIDENCE VAULT — CASE-MACHERET-1997-2026
+
+> **NOTICE:** This repository is locked under Jus Cogens Integrity Protocol. See [NOTICE_OF_INTEGRITY.md](./NOTICE_OF_INTEGRITY.md) for verification details.
+
+---
 # LEGAL CASE: APOSTILLE DAMAGE CLAIM — MACERET v. REPUBLIC OF MOLDOVA
 
 ## Case Reference: Apostille-Claim-2026
