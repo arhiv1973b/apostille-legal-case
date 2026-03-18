@@ -1,3 +1,5 @@
+# 🛡️ [АУДИТ ЦЕЛОСТНОСТИ ОТ 18.03.2026](https://github.com/arhiv1973b/apostille-legal-case/blob/master/bot_audit/integrity_report_20260318.md)
+
 # 🛡️ VERIFIED EVIDENCE VAULT — CASE-MACHERET-1997-2026
 
 > **NOTICE:** This repository is locked under Jus Cogens Integrity Protocol. See [NOTICE_OF_INTEGRITY.md](./NOTICE_OF_INTEGRITY.md) for verification details.
