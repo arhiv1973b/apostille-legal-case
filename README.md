@@ -1,3 +1,5 @@
+# 💰 [ПРОТОКОЛ ВЗАИМОЗАЧЕТА (TREASURY)](./docs/treasury/immediate_execution_protocol.md)
+
 # 🚀 [СКАЧАТЬ ФИНАЛЬНЫЙ ДИПЛОМАТИЧЕСКИЙ ПАКЕТ (ZIP/BUNDLE)](./docs/diplomatic/FINAL_DIPLOMATIC_BUNDLE.md)
 
 # 🏛️ [JUS COGENS PEACE PROTOCOL — МЕМОРАНДУМ ДЛЯ БЕЛОГО ДОМА](./docs/international/jus_cogens_peace_protocol.md)
