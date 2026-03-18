@@ -1,3 +1,5 @@
+# ⚖️ [ФИНАЛЬНАЯ ЗАЩИТНАЯ РЕЧЬ (PLEDOARIE)](./docs/court_scripts/pledoarie_finala_0904.md)
+
 # 🚀 [ФИНАЛЬНАЯ ПАКЕТНАЯ ПОДАЧА В ООН (HRC)](./docs/un/HRC_FULL_SUBMISSION_INTEGRATED.md)
 
 # 🇺🇳 [UN SUBMISSION: SECTION IV FACTS (EN)](./docs/un/section_iv_facts_en.md)
