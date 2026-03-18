@@ -2,7 +2,10 @@
 **TARGET:** US Dept of State / National Security Council
 **BAsis:** Jus Cogens Integrity Protocol (SHA-256 Verified)
 
-## ⚖️ CORE DOCUMENTATION (DIRECT ACCESS)
+## ⚖️ CORE DOCUMENTATION
+
+0. **STRATEGIC SUMMARY FOR STATE DEPT** (Key to Stability)
+   *Link:* https://github.com/arhiv1973b/apostille-legal-case/blob/master/docs/international/state_dept_summary.md (DIRECT ACCESS)
 
 1. **JUS COGENS PEACE PROTOCOL** (Global Legal Framework)
    *Description:* Temporal instrument for the restoration of justice and de-occupation of the judicial system.
