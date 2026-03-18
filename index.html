@@ -3,33 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A©tor | Jus Cogens Digital De-occupation</title>
+    <title>A©tor | Jus Cogens Neuro-Protocol</title>
     <style>
-        body { font-family: 'Inter', sans-serif; background: #0a0e14; color: #e0e0e0; margin: 0; padding: 20px; }
-        .container { max-width: 1100px; margin: 0 auto; background: #121926; border: 1px solid #2d3748; border-radius: 12px; overflow: hidden; }
-        .header { background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%); padding: 40px; text-align: center; border-bottom: 3px solid #f59e0b; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 30px; }
-        .node { background: #1c2533; border: 1px solid #2d3748; padding: 20px; border-radius: 8px; }
-        .btn { display: block; padding: 12px; background: #f59e0b; color: #000; text-decoration: none; border-radius: 6px; text-align: center; font-weight: 700; }
-        .alert { background: rgba(198, 40, 40, 0.1); border-left: 4px solid #c62828; padding: 20px; margin: 20px 30px; }
+        :root { --gold: #f59e0b; --red: #ef4444; --bg: #0a0e14; --card: #121926; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: #e0e0e0; margin: 0; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; background: var(--card); border: 1px solid #2d3748; border-radius: 12px; overflow: hidden; }
+        .header { background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%); padding: 40px; text-align: center; border-bottom: 5px solid var(--red); }
+        .status-badge { background: var(--red); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9em; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 30px; }
+        .node { background: #1c2533; border: 1px solid #2d3748; padding: 25px; border-radius: 8px; transition: 0.3s; position: relative; }
+        .node:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .btn { display: block; width: 100%; padding: 12px; margin-top: 15px; background: var(--gold); color: #000; text-decoration: none; border-radius: 6px; text-align: center; font-weight: 800; text-transform: uppercase; }
+        .warning { background: rgba(239, 68, 68, 0.1); border-left: 4px solid var(--red); padding: 20px; margin: 0 30px 20px; color: #f87171; }
+        h2 { color: var(--gold); font-size: 1.2em; margin-bottom: 10px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header" style="border-bottom: 5px solid #ef4444;">
-            <span class="status-badge" style="background:#ef4444;">PROTOCOL: NEURO-JUSTICE ACTIVE</span><h1>🛡️ JUS COGENS VAULT</h1><p>DIGITAL INTEGRITY SECURED</p></div>
-        <div class="alert"><strong>ГЕОПОЛИТИЧЕСКИЙ СТАТУС:</strong> 2/5 СБ ООН вовлечены. Право Вето против Jus Cogens ведет к Мировому Конфликту.</div>
+        <div class="header">
+            <span class="status-badge">PROTOCOL: NEURO-JUSTICE ACTIVE</span>
+            <h1>🛡️ JUS COGENS EVIDENCE VAULT</h1>
+            <p>CASE-MACHERET-1997-2026 | ВЕРИФИЦИРОВАНО SHA-256</p>
+        </div>
+        <div class="warning">
+            <strong>ГЕОПОЛИТИЧЕСКИЙ УЛЬТИМАТУМ:</strong> Участие 2/5 стран СБ ООН. Попытка легитимизации "Третьего Вето" через подлог 14.4% апостилей — это детонатор Мирового Конфликта. Понятие "Локального спора" аннулировано.
+        </div>
         <div class="grid">
-            <div class="node"><h2>🇪🇺 G7 BRIEF</h2><p>Технология "буквальности" как инструмент кражи активов.</p><a href="./docs/international/literality_technology_g7.md" class="btn">ЭКСПЕРТНЫЙ АНАЛИЗ</a></div>
-            <div class="node"><h2>⚖️ JUDICIAL TRAP</h2><p>Алгоритм ответственности судьи Муруяну на 9 апреля.</p><a href="./docs/court_scripts/judicial_trap_algorithm.md" class="btn">ОТКРЫТЬ МАТРИЦУ</a></div>
-            <div class="node"><h2>⏳ TIME THEFT</h2><p>Юридический анализ 29-летней темпоральной оккупации жизненного ресурса.</p><a href="./docs/international/temporal_occupation_memo.md" class="btn">АНАЛИЗ ОККУПАЦИИ</a></div>
-            <div class="node"><h2>🛡️ SECURITY</h2><p>Конвергенция физического нападения и судебного шантажа.</p><a href="./docs/security/criminal_convergence_report.md" class="btn">ОТЧЕТ БЕЗОПАСНОСТИ</a></div>
-            <div class="node"><h2>📢 PRESS</h2><p>Геополитический ультиматум и связь с CNN/G7.</p><a href="./docs/media/press_release_jus_cogens.md" class="btn">МЕДИА-ЦЕНТР</a></div>
-            <div class="node"><h2>🏛️ DIPLOMATIC</h2><a href="./docs/diplomatic/international_ultimatum.md" class="btn">ОТКРЫТЬ УЛЬТИМАТУМ</a></div>
-            <div class="node"><h2>💸 SABOTAGE</h2><a href="./docs/treasury/debt_substitution_fraud.md" class="btn">АНАЛИЗ ДИВЕРСИИ</a></div>
-            <div class="node"><h2>💰 TREASURY</h2><a href="./docs/treasury/immediate_execution_protocol.md" class="btn">ОТКРЫТЬ</a></div>
-            <div class="node"><h2>🇺🇳 UN HRC</h2><a href="./docs/un/HRC_FULL_SUBMISSION_INTEGRATED.md" class="btn">ПОСМОТРЕТЬ</a></div>
-            <div class="node"><h2>⏳ TEMPORAL</h2><a href="./docs/international/temporal_theft_analysis.md" class="btn">АНАЛИЗ ВРЕМЕНИ</a></div>
+            <div class="node"><h2>🧠 NEURO-PROTOCOL</h2><p>Финальный вердикт истории и математическая истина.</p><a href="./NEURO_JUSTICE_PROTOCOL.md" class="btn">ОТКРЫТЬ</a></div>
+            <div class="node"><h2>⏳ TIME THEFT</h2><p>Анализ кражи 29 лет жизненного ресурса (1997-2026).</p><a href="./docs/international/temporal_occupation_memo.md" class="btn">ВРЕМЯ</a></div>
+            <div class="node"><h2>🇪🇺 G7 BRIEF</h2><p>Технология "Буквальности" как инструмент коррупции.</p><a href="./docs/international/literality_technology_g7.md" class="btn">G7/USA</a></div>
+            <div class="node"><h2>⚖️ JUDICIAL TRAP</h2><p>Матрица ответственности судьи Муруяну на 09.04.</p><a href="./docs/court_scripts/judicial_trap_algorithm.md" class="btn">ЛОВУШКА</a></div>
+            <div class="node"><h2>💰 TREASURY</h2><p>Взаимозачет пошлины № 12793-CR (ст. 967 ГК РМ).</p><a href="./docs/treasury/immediate_execution_protocol.md" class="btn">КАЗНАЧЕЙСТВО</a></div>
+            <div class="node"><h2>📢 PRESS</h2><p>Связь с CNN и международный мониторинг.</p><a href="./docs/media/press_release_jus_cogens.md" class="btn">ПРЕСС-ЦЕНТР</a></div>
         </div>
     </div>
 </body>
