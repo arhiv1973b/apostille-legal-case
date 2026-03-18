@@ -1,3 +1,5 @@
+# 🚀 [СКАЧАТЬ ФИНАЛЬНЫЙ ДИПЛОМАТИЧЕСКИЙ ПАКЕТ (ZIP/BUNDLE)](./docs/diplomatic/FINAL_DIPLOMATIC_BUNDLE.md)
+
 # 🏛️ [JUS COGENS PEACE PROTOCOL — МЕМОРАНДУМ ДЛЯ БЕЛОГО ДОМА](./docs/international/jus_cogens_peace_protocol.md)
 
 # 🛡️ [АУДИТ ЦЕЛОСТНОСТИ ОТ 18.03.2026](https://github.com/arhiv1973b/apostille-legal-case/blob/master/bot_audit/integrity_report_20260318.md)
