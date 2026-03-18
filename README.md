@@ -20,7 +20,7 @@
 **Plaintiff:** Maceret Alexei Artur (A©tor)
 **Claim Amount:** €500,000
 **Period:** 1997–2026 (29 years)
-**Apostilles Processed:** 90 documents (2021–2023)
+**Apostilles Processed:** 97 documents (2021–2023)
 
 ---
 
