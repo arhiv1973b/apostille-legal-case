@@ -3,45 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A©tor | Jus Cogens Neuro-Protocol</title>
+    <title>A©tor | Jus Cogens Evidence Vault</title>
     <style>
-        :root { --gold: #f59e0b; --red: #ef4444; --bg: #0a0e14; --card: #121926; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: #e0e0e0; margin: 0; padding: 20px; }
-        .container { max-width: 1200px; margin: 0 auto; background: var(--card); border: 1px solid #2d3748; border-radius: 12px; overflow: hidden; }
-        .header { background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%); padding: 40px; text-align: center; border-bottom: 5px solid var(--red); }
-        .status-badge { background: var(--red); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9em; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 30px; }
-        .node { background: #1c2533; border: 1px solid #2d3748; padding: 25px; border-radius: 8px; transition: 0.3s; position: relative; }
-        .node:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .btn { display: block; width: 100%; padding: 12px; margin-top: 15px; background: var(--gold); color: #000; text-decoration: none; border-radius: 6px; text-align: center; font-weight: 800; text-transform: uppercase; }
-        .warning { background: rgba(239, 68, 68, 0.1); border-left: 4px solid var(--red); padding: 20px; margin: 0 30px 20px; color: #f87171; }
-        h2 { color: var(--gold); font-size: 1.2em; margin-bottom: 10px; }
+        :root { --gold: #f59e0b; --red: #ef4444; --bg: #0a0e14; --card: #121926; --blue: #1e40af; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: #e0e0e0; margin: 0; padding: 20px; line-height: 1.5; }
+        .container { max-width: 1200px; margin: 0 auto; background: var(--card); border: 1px solid #2d3748; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .header { background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%); padding: 30px; text-align: center; border-bottom: 5px solid var(--red); }
+        .status-badge { background: var(--red); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.8em; text-transform: uppercase; }
+        .warning-box { background: rgba(239, 68, 68, 0.1); border-left: 4px solid var(--red); padding: 20px; margin: 20px; color: #f87171; font-size: 0.9em; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; padding: 20px; }
+        .node { background: #1c2533; border: 1px solid #2d3748; padding: 20px; border-radius: 8px; transition: 0.2s; }
+        .node:hover { border-color: var(--gold); transform: translateY(-3px); }
+        .btn { display: block; width: 100%; padding: 10px; margin-top: 15px; background: var(--gold); color: #000; text-decoration: none; border-radius: 4px; text-align: center; font-weight: bold; font-size: 0.9em; }
+        .btn-blue { background: var(--blue); color: white; }
+        .footer { padding: 20px; text-align: center; font-size: 0.7em; color: #4a5568; background: #070b10; }
+        h2 { color: var(--gold); font-size: 1.1em; margin: 0 0 10px 0; }
+        p { font-size: 0.85em; color: #a0aec0; margin: 0; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <span class="status-badge">PROTOCOL: NEURO-JUSTICE ACTIVE</span>
-            <h1>🛡️ JUS COGENS EVIDENCE VAULT</h1>
-            <p>CASE-MACHERET-1997-2026 | ВЕРИФИЦИРОВАНО SHA-256</p>
+            <span class="status-badge">NEURO-JUSTICE PROTOCOL ACTIVE</span>
+            <h1 style="margin:15px 0 5px 0;">🛡️ JUS COGENS EVIDENCE VAULT</h1>
+            <p style="color:white; opacity:0.8;">CASE-MACHERET-1997-2026 | VERIFIED SHA-256</p>
         </div>
-        <div class="warning">
-            <strong>ГЕОПОЛИТИЧЕСКИЙ УЛЬТИМАТУМ:</strong> Участие 2/5 стран СБ ООН. Попытка легитимизации "Третьего Вето" через подлог 14.4% апостилей — это детонатор Мирового Конфликта. Понятие "Локального спора" аннулировано.
+        
+        <div class="warning-box">
+            <strong>ГЕОПОЛИТИЧЕСКИЙ УЛЬТИМАТУМ:</strong> Участие 2/5 стран СБ ООН. Попытка легитимизации "Третьего Вето" через подлог международных документов — начало Мирового Конфликта.
         </div>
+
         <div class="grid">
-            <div class="node" style="border-color:#f59e0b;"><h2>🗺️ WAR MAP</h2><p>Алгоритм действий в зале суда на 9 апреля.</p><a href="./docs/court_scripts/war_map_09apr.md" class="btn" style="background:#f59e0b; color:black;">ШПАРГАЛКА</a></div>
-            <div class="node" style="border-color:#1e40af;"><h2>🇪🇺 EMBASSY PORTAL</h2><p>Протокол уведомления посольств G7 и ЕС.</p><a href="./docs/diplomatic/embassy_notification_protocol.md" class="btn" style="background:#1e40af; color:white;">ОТКРЫТЬ ШАБЛОН</a></div>
-            <div class="node" style="border-color:#c62828;"><h2>👤 RESPONSIBILITY</h2><p>Реестр персональной ответственности должностных лиц.</p><a href="./docs/registry/personal_responsibility_map.md" class="btn" style="background:#c62828; color:white;">ОТКРЫТЬ РЕЕСТР</a></div>
-            <div class="node" style="border-color:#f59e0b;"><h2>🔥 TECH CHALLENGE</h2><p>Протокол технического вызова для суда 9 апреля.</p><a href="./docs/court_scripts/technical_challenge_protocol.md" class="btn" style="background:#f59e0b; color:black;">ЗАПУСТИТЬ ВЫЗОВ</a></div>
-            <div class="node" style="border-color:#1e40af;"><h2>🇺🇳 UN FINAL NOTE</h2><p>Нота Генсеку ООН о прецеденте "Анонимного правосудия".</p><a href="./docs/un/final_note_un_secretary_general.md" class="btn" style="background:#1e40af; color:white;">ОТКРЫТЬ НОТУ</a></div>
-            <div class="node" style="border-color:#ef4444;"><h2>🔍 OCR SABOTAGE</h2><p>Доказательство мануализации текстов 1-568/98 и блокады перевода.</p><a href="./NEURO_JUSTICE_PROTOCOL.md" class="btn" style="background:#ef4444; color:white;">АНАЛИЗ ПОДЛОГА</a></div>
-            <div class="node"><h2>🧠 NEURO-PROTOCOL</h2><p>Финальный вердикт истории и математическая истина.</p><a href="./NEURO_JUSTICE_PROTOCOL.md" class="btn">ОТКРЫТЬ</a></div>
-            <div class="node"><h2>⏳ TIME THEFT</h2><p>Анализ кражи 29 лет жизненного ресурса (1997-2026).</p><a href="./docs/international/temporal_occupation_memo.md" class="btn">ВРЕМЯ</a></div>
-            <div class="node"><h2>🇪🇺 G7 BRIEF</h2><p>Технология "Буквальности" как инструмент коррупции.</p><a href="./docs/international/literality_technology_g7.md" class="btn">G7/USA</a></div>
-            <div class="node"><h2>⚖️ JUDICIAL TRAP</h2><p>Матрица ответственности судьи Муруяну на 09.04.</p><a href="./docs/court_scripts/judicial_trap_algorithm.md" class="btn">ЛОВУШКА</a></div>
-            <div class="node"><h2>💰 TREASURY</h2><p>Взаимозачет пошлины № 12793-CR (ст. 967 ГК РМ).</p><a href="./docs/treasury/immediate_execution_protocol.md" class="btn">КАЗНАЧЕЙСТВО</a></div>
-            <div class="node"><h2>📢 PRESS</h2><p>Связь с CNN и международный мониторинг.</p><a href="./docs/media/press_release_jus_cogens.md" class="btn">ПРЕСС-ЦЕНТР</a></div>
+            <div class="node"><h2>🗺️ WAR MAP</h2><p>Алгоритм действий в суде 09.04.2026.</p><a href="./docs/court_scripts/war_map_09apr.md" class="btn">ОТКРЫТЬ</a></div>
+            <div class="node"><h2>🔥 TECH CHALLENGE</h2><p>Протокол технического вызова (OCR/Подпись).</p><a href="./docs/court_scripts/technical_challenge_protocol.md" class="btn">ЗАПУСТИТЬ</a></div>
+            <div class="node"><h2>👤 RESPONSIBILITY</h2><p>Реестр персональной ответственности лиц.</p><a href="./docs/registry/personal_responsibility_map.md" class="btn" style="background:#c62828; color:white;">РЕЕСТР</a></div>
+            <div class="node"><h2>🇪🇺 EMBASSY PORTAL</h2><p>Уведомления посольств G7 и ЕС.</p><a href="./docs/diplomatic/embassy_notification_protocol.md" class="btn btn-blue">DIPLOMATIC</a></div>
+            <div class="node"><h2>🧠 NEURO-PROTOCOL</h2><p>Финальный вердикт и математическая истина.</p><a href="./NEURO_JUSTICE_PROTOCOL.md" class="btn">ВЕРДИКТ</a></div>
+            <div class="node"><h2>💰 TREASURY</h2><p>Взаимозачет пошлины (ст. 967 ГК РМ).</p><a href="./docs/treasury/immediate_execution_protocol.md" class="btn">ОПЛАТА</a></div>
+            <div class="node"><h2>📢 PRESS KIT</h2><p>Информация для СМИ и CNN.</p><a href="./PRESS_KIT.html" class="btn">ДЛЯ ПРЕССЫ</a></div>
+            <div class="node"><h2>📋 SUMMARY</h2><p>Сводный отчет для судьи Муруяну.</p><a href="./JUDICIAL_SUMMARY_REPORT.md" class="btn">ОТЧЕТ</a></div>
         </div>
+        <div class="footer">ID: CASE-MACHERET-2026 | HASH_CHAIN_LOCKED | 2026-03-18</div>
     </div>
 </body>
 </html>
