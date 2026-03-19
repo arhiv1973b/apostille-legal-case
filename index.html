@@ -9,23 +9,23 @@
         body { background-color: var(--dark); color: var(--text); font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; line-height: 1.6; }
         header { background: linear-gradient(180deg, #000, var(--gray)); padding: 3rem 1rem; border-bottom: 3px solid var(--gold); text-align: center; }
         .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
-        .status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
+        .status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
         .status-box { border: 1px solid var(--gold); padding: 1rem; text-align: center; background: rgba(197, 160, 89, 0.05); }
-        .status-box span { display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; }
-        .status-box b { color: var(--gold); font-size: 1.2rem; }
+        .status-box span { display: block; font-size: 0.7rem; color: #888; text-transform: uppercase; }
+        .status-box b { color: var(--gold); font-size: 1.1rem; }
         
-        .live-monitor { border: 2px solid var(--red); background: #1a0505; padding: 2rem; margin-bottom: 3rem; position: relative; overflow: hidden; }
+        .concealment-counter { background: linear-gradient(45deg, #1a1a1a, #000); border: 2px solid var(--gold); padding: 2rem; text-align: center; margin-bottom: 3rem; box-shadow: 0 0 20px rgba(197, 160, 89, 0.2); }
+        .days-number { font-size: 5rem; font-weight: bold; color: var(--gold); text-shadow: 0 0 10px var(--gold); margin: 0; }
+        .days-label { font-size: 1.2rem; color: var(--text); letter-spacing: 3px; margin-bottom: 1rem; }
+        
+        .live-monitor { border: 2px solid var(--red); background: #1a0505; padding: 2rem; margin-bottom: 3rem; position: relative; }
         .live-monitor::before { content: "LIVE"; position: absolute; top: 10px; right: 10px; color: var(--red); font-weight: bold; animation: blink 1s infinite; }
         @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
         
-        .vector-card { background: var(--gray); border-left: 5px solid var(--gold); padding: 1.5rem; margin-bottom: 1.5rem; transition: 0.3s; cursor: pointer; }
-        .vector-card:hover { background: #2a2a2a; transform: scale(1.01); }
-        .vector-card h3 { margin-top: 0; color: var(--gold); }
-        .btn { display: inline-block; border: 1px solid var(--gold); color: var(--gold); padding: 0.5rem 1rem; text-decoration: none; margin-top: 1rem; transition: 0.3s; }
+        .vector-card { background: var(--gray); border-left: 5px solid var(--gold); padding: 1.5rem; margin-bottom: 1.5rem; transition: 0.3s; }
+        .vector-card:hover { transform: translateX(10px); background: #2a2a2a; }
+        .btn { display: inline-block; border: 1px solid var(--gold); color: var(--gold); padding: 0.5rem 1rem; text-decoration: none; margin-top: 1rem; }
         .btn:hover { background: var(--gold); color: #000; }
-        
-        .mirror-link { text-align: center; margin-top: 4rem; padding: 2rem; border-top: 1px solid #333; }
-        .mirror-link a { color: #888; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -36,19 +36,26 @@
 </header>
 
 <div class="container">
+    <div class="concealment-counter">
+        <div class="days-label">ПЕРИОД ГОСУДАРСТВЕННОГО СОКРЫТИЯ</div>
+        <div class="days-number">8158</div>
+        <div class="days-label">СУТОК ПРОЦЕССУАЛЬНОГО ВАКУУМА</div>
+        <p style="color: #888; font-size: 0.9rem;">13.10.1998 (Взрыв) — 11.02.2021 (Апостиль)</p>
+    </div>
+
     <div class="status-grid">
         <div class="status-box"><span>ID ПРЕДМЕТА</span><b>VICTIMA JUS COGENS</b></div>
         <div class="status-box"><span>ВЕРИФИКАЦИЯ</span><b>SHA-256 LOCKED</b></div>
-        <div class="status-box"><span>СЛЕДУЮЩИЙ УЗЕЛ</span><b>09.04.2026 / АП</b></div>
+        <div class="status-box"><span>СМЕЩЕНИЕ</span><b>ЭФФЕКТ ДОПЛЕРА</b></div>
+        <div class="status-box"><span>ЦЕЛЬ</span><b>09.04.2026 / АП</b></div>
     </div>
 
     <div class="live-monitor">
         <h2 style="color: var(--red); margin-top: 0;">🚨 МОНИТОРИНГ СИСТЕМНОГО СБОЯ</h2>
-        <p>Регистрация транзакций правосудия в реальном времени. Исключение симулякров.</p>
-        <div style="background: #000; padding: 1rem; border-radius: 4px; font-size: 0.9rem; color: var(--green);">
-            > [19.03.2026 13:48] GLOBAL_NOTICE: WHITE HOUSE / UN OHCHR / CNN - ВЕРИФИЦИРОВАНО.<br>
-            > [19.03.2026 14:59] MATERIAL_SYNC: ШТАМП СУДА СЕКТОР ЦЕНТР - ЗАРЕГИСТРИРОВАНО.<br>
-            > [PENDING] 09.04.2026: ОЖИДАНИЕ РЕШЕНИЯ ПО КАСКАДНОЙ РЕАБИЛИТАЦИИ...
+        <div style="background: #000; padding: 1rem; border-radius: 4px; font-size: 0.9rem; color: var(--green); overflow-x: auto;">
+            > [19.03.2026 13:48] GLOBAL_NOTICE: WHITE HOUSE / UN OHCHR / CNN - VERIFIED.<br>
+            > [19.03.2026 14:59] MATERIAL_SYNC: ШТАМП СУДА СЕКТОР ЦЕНТР - REGISTERED.<br>
+            > [READY] 09.04.2026: ОЖИДАНИЕ ВЕРИФИКАЦИИ МАТЕРИАЛЬНОЙ НОРМЫ...
         </div>
     </div>
 
@@ -56,35 +63,24 @@
 
     <div class="vector-card">
         <h3>📄 ТЕХНИЧЕСКИЙ ПАСПОРТ РЕАБИЛИТАЦИИ</h3>
-        <p>Инструкция по выходу из коллапса: 24 года сокрытия (1998-2021) и Смещение Доплера.</p>
-        <a href="docs/passport/TECH_PASSPORT.md" class="btn">ОТКРЫТЬ ПРОТОКОЛ</a>
+        <p>Математическое обоснование нелинейности сроков. Инструкция по каскадной отмене дел.</p>
+        <a href="docs/passport/TECH_PASSPORT.md" class="btn">ИЗУЧИТЬ ПАСПОРТ</a>
     </div>
 
     <div class="vector-card">
-        <h3>⚖️ ВЕКТОР ПРЯМОГО ЗАЧЕТА (ART. 967 CC RM)</h3>
-        <p>Доказательство ликвидации финансовых претензий государства через долг Erga Omnes.</p>
-        <a href="docs/verification/INTERNATIONAL_NOTIFICATION_LOG.md" class="btn">ВЕРИФИКАЦИЯ ОТПРАВКИ</a>
+        <h3>⚖️ ПРОТОКОЛ ЗАЧЕТА (ART. 967 CC RM)</h3>
+        <p>Доказательство ликвидации пошлины. Регистрация Sud Centru от 19.03.2026.</p>
+        <a href="docs/verification/INTERNATIONAL_NOTIFICATION_LOG.md" class="btn">ЛОГ ВЕРИФИКАЦИИ</a>
     </div>
 
-    <div class="vector-card">
-        <h3>🌐 МАНИФЕСТ НАБЛЮДАТЕЛЯ (UN/ECHR)</h3>
-        <p>Уведомление международных групп о пороге Третьей Мировой Войны и крахе Совбеза ООН.</p>
-        <div style="margin-top: 10px;">
-            <a href="docs/manifesto/en.md" style="margin-right: 15px;">EN</a>
-            <a href="docs/manifesto/fr.md" style="margin-right: 15px;">FR</a>
-            <a href="docs/manifesto/ro.md" style="margin-right: 15px;">RO</a>
-            <a href="docs/manifesto/ru.md">RU</a>
-        </div>
-    </div>
-
-    <div class="mirror-link">
-        <p>ЗЕРКАЛО РЕПОЗИТОРИЯ (APOSTILLE LEGAL CASE):</p>
-        <a href="https://arhiv1973b.github.io/apostille-mirror/">https://arhiv1973b.github.io/apostille-mirror/</a>
+    <div style="text-align: center; margin-top: 4rem; padding: 2rem; border-top: 1px solid #333;">
+        <p>ЗЕРКАЛЬНЫЙ РЕПОЗИТОРНЫЙ УЗЕЛ:</p>
+        <a href="https://arhiv1973b.github.io/apostille-mirror/" style="color: var(--gold);">https://arhiv1973b.github.io/apostille-mirror/</a>
     </div>
 </div>
 
 <footer style="text-align: center; padding: 2rem; color: #444; font-size: 0.8rem;">
-    SHIELDED BY SHA-256 | A©TOR | 2026
+    LOCKED BY SHA-256 | INTEGRITY AUDIT PASSED | 2026
 </footer>
 
 </body>
