@@ -14,3 +14,4 @@
 **КЛЮЧИ ЦЕЛОСТНОСТИ:** Maceret, Jus Cogens, Manual Forgery, 1-568/98, No-Russian, Veto.
 ---
 **VERIFIED_BY_A©TOR: [Content:SECURED] [OCR-Block:PROVEN] [Passive-Corruption:LOCKED]**
+STATUS: SYSTEM_IMITATION_DETECTED
