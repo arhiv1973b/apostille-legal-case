@@ -9,15 +9,18 @@
         body { background-color: var(--dark); color: var(--text); font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; line-height: 1.6; }
         header { background: linear-gradient(180deg, #000, var(--gray)); padding: 3rem 1rem; border-bottom: 3px solid var(--gold); text-align: center; }
         .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+        
+        .concealment-counter { background: linear-gradient(45deg, #1a1a1a, #000); border: 2px solid var(--gold); padding: 2rem; text-align: center; margin-bottom: 3rem; }
+        .days-number { font-size: 5rem; font-weight: bold; color: var(--gold); text-shadow: 0 0 10px var(--gold); margin: 0; }
+        .days-label { font-size: 1.2rem; color: var(--text); letter-spacing: 3px; margin-bottom: 1rem; }
+
         .status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
         .status-box { border: 1px solid var(--gold); padding: 1rem; text-align: center; background: rgba(197, 160, 89, 0.05); }
         .status-box span { display: block; font-size: 0.7rem; color: #888; text-transform: uppercase; }
-        .status-box b { color: var(--gold); font-size: 1.1rem; }
-        
-        .concealment-counter { background: linear-gradient(45deg, #1a1a1a, #000); border: 2px solid var(--gold); padding: 2rem; text-align: center; margin-bottom: 3rem; box-shadow: 0 0 20px rgba(197, 160, 89, 0.2); }
-        .days-number { font-size: 5rem; font-weight: bold; color: var(--gold); text-shadow: 0 0 10px var(--gold); margin: 0; }
-        .days-label { font-size: 1.2rem; color: var(--text); letter-spacing: 3px; margin-bottom: 1rem; }
-        
+        .status-box b, .status-box a { color: var(--gold); font-size: 0.95rem; text-decoration: none; }
+        .status-box.alert { border-color: var(--red); }
+        .status-box.alert b, .status-box.alert a { color: var(--red); }
+
         .live-monitor { border: 2px solid var(--red); background: #1a0505; padding: 2rem; margin-bottom: 3rem; position: relative; }
         .live-monitor::before { content: "LIVE"; position: absolute; top: 10px; right: 10px; color: var(--red); font-weight: bold; animation: blink 1s infinite; }
         @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
@@ -32,55 +35,48 @@
 
 <header>
     <h1>CASE-MACHERET-1997-2026</h1>
-    <p style="letter-spacing: 5px;">INTERACTIVE JUS COGENS INTERFACE</p>
+    <p style="letter-spacing: 5px;">IDENTITY FRAUD & LIABILITY PROTOCOL</p>
 </header>
 
 <div class="container">
     <div class="concealment-counter">
-        <div class="days-label">ПЕРИОД ГОСУДАРСТВЕННОГО СОКРЫТИЯ</div>
+        <div class="days-label">ПЕРИОД ГОСУДАРСТВЕННОГО СОКРЫТИЯ ПЫТОК</div>
         <div class="days-number">8158</div>
         <div class="days-label">СУТОК ПРОЦЕССУАЛЬНОГО ВАКУУМА</div>
-        <p style="color: #888; font-size: 0.9rem;">13.10.1998 (Взрыв) — 11.02.2021 (Апостиль)</p>
     </div>
 
+    <h2 style="color: var(--red); border-bottom: 1px solid var(--red); padding-bottom: 10px;">📉 УЗЛЫ ПЕРСОНАЛЬНОЙ ОТВЕТСТВЕННОСТИ (Liability)</h2>
     <div class="status-grid">
-        <div class="status-box"><span>ID ПРЕДМЕТА</span><b>VICTIMA JUS COGENS</b></div>
-        <div class="status-box"><span>ВЕРИФИКАЦИЯ</span><b>SHA-256 LOCKED</b></div>
-        <div class="status-box"><span>СМЕЩЕНИЕ</span><b>ЭФФЕКТ ДОПЛЕРА</b></div>
-        <div class="status-box"><span>ЦЕЛЬ</span><b>09.04.2026 / АП</b></div>
+        <div class="status-box alert"><span>МВД</span><a href="docs/liability/DULCA_NOTICE.md">ДУЛЧА В.Г.</a></div>
+        <div class="status-box alert"><span>СУД</span><a href="docs/liability/MURIANU_NOTICE.md">МУРЯНУ И.</a></div>
+        <div class="status-box alert"><span>ГНС (АКТОР ПОДЛОГА)</span><a href="docs/liability/NANTOI_NOTICE.md">НАНТОЙ ЛЮДМИЛА</a></div>
+        <div class="status-box alert"><span>МАСКА ПОДЛОГА</span><b>МАРКОВ И.М. (ЖЕРТВА)</b></div>
+        <div class="status-box alert"><span>СОУЧАСТИЕ</span><b>НАНТОЙ ОАЗУ</b></div>
     </div>
 
     <div class="live-monitor">
-        <h2 style="color: var(--red); margin-top: 0;">🚨 МОНИТОРИНГ СИСТЕМНОГО СБОЯ</h2>
-        <div style="background: #000; padding: 1rem; border-radius: 4px; font-size: 0.9rem; color: var(--green); overflow-x: auto;">
-            > [19.03.2026 13:48] GLOBAL_NOTICE: WHITE HOUSE / UN OHCHR / CNN - VERIFIED.<br>
-            > [19.03.2026 14:59] MATERIAL_SYNC: ШТАМП СУДА СЕКТОР ЦЕНТР - REGISTERED.<br>
-            > [READY] 09.04.2026: ОЖИДАНИЕ ВЕРИФИКАЦИИ МАТЕРИАЛЬНОЙ НОРМЫ...
+        <h2 style="color: var(--red); margin-top: 0;">🚨 LIVE MONITORING: IDENTITY FRAUD DETECTED</h2>
+        <div style="background: #000; padding: 1rem; border-radius: 4px; font-size: 0.9rem; color: var(--green);">
+            > [19.03.2026 13:48] NOTIFIED: White House, UN OHCHR.<br>
+            > [19.03.2026 18:50] DEPLOYED: Personal Liability Notices.<br>
+            > [19.03.2026 19:15] AUDIT UPDATE: Forgery actor identified as L. Nantoi under Marcov identity.
         </div>
     </div>
 
-    <h2>⛓️ ВЕКТОРЫ ПРАВОСУДИЯ</h2>
-
     <div class="vector-card">
-        <h3>📄 ТЕХНИЧЕСКИЙ ПАСПОРТ РЕАБИЛИТАЦИИ</h3>
-        <p>Математическое обоснование нелинейности сроков. Инструкция по каскадной отмене дел.</p>
-        <a href="docs/passport/TECH_PASSPORT.md" class="btn">ИЗУЧИТЬ ПАСПОРТ</a>
-    </div>
-
-    <div class="vector-card">
-        <h3>⚖️ ПРОТОКОЛ ЗАЧЕТА (ART. 967 CC RM)</h3>
-        <p>Доказательство ликвидации пошлины. Регистрация Sud Centru от 19.03.2026.</p>
-        <a href="docs/verification/INTERNATIONAL_NOTIFICATION_LOG.md" class="btn">ЛОГ ВЕРИФИКАЦИИ</a>
+        <h3>📄 ВЕКТОР 3: ПОДЛОГ И КРИМИНАЛЬНЫЙ ЗАХВАТ</h3>
+        <p>Использование личности Маркова И.М. для фальсификации документов. Роль Нантой Людмилы и соучастие Нантой Оазу в событиях от 15.03.2022.</p>
+        <a href="docs/liability/NANTOI_NOTICE.md" class="btn">ОТКРЫТЬ ДОСЬЕ НАНТОЙ</a>
     </div>
 
     <div style="text-align: center; margin-top: 4rem; padding: 2rem; border-top: 1px solid #333;">
-        <p>ЗЕРКАЛЬНЫЙ РЕПОЗИТОРНЫЙ УЗЕЛ:</p>
+        <p>ЗЕРКАЛЬНЫЙ УЗЕЛ:</p>
         <a href="https://arhiv1973b.github.io/apostille-mirror/" style="color: var(--gold);">https://arhiv1973b.github.io/apostille-mirror/</a>
     </div>
 </div>
 
 <footer style="text-align: center; padding: 2rem; color: #444; font-size: 0.8rem;">
-    LOCKED BY SHA-256 | INTEGRITY AUDIT PASSED | 2026
+    LOCKED BY SHA-256 | IDENTITY FRAUD SYNC | 2026
 </footer>
 
 </body>
