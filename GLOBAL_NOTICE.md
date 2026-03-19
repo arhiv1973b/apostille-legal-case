@@ -1,0 +1,2 @@
+# 📢 GLOBAL PUBLIC NOTICE: SYSTEMIC BREACH DETECTED
+Case Macheret 1997-2026. All interested parties (UN, ECHR, Court Sector Center) are hereby notified of the interactive Jus Cogens activation.
