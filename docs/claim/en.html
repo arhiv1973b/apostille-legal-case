@@ -29,7 +29,7 @@ nav a:hover{color:#c8a84b;border-color:rgba(200,168,75,.3)}
 </head>
 <body>
 <nav>
-  <a href="../../index.html">← Главная</a>
+  <a href="../../../../index.html">← Главная</a>
   <a href="ru.html">RU</a>
   <a href="en.html">EN</a>
   <a href="ro.html">RO</a>
@@ -37,7 +37,7 @@ nav a:hover{color:#c8a84b;border-color:rgba(200,168,75,.3)}
 <div class="warn">⚠ ЮРИДИЧЕСКИЙ ДОКУМЕНТ · LEGAL DOCUMENT · DOCUMENT JURIDIC — Legal document. Proper respondent: Ministry of Finance of Moldova. Ministry of Justice = improper intervening party.</div>
 <div id="content">Загрузка...</div>
 <script>
-fetch('en.md')
+fetch('en.html')
   .then(r => r.text())
   .then(text => {
     document.getElementById('content').innerHTML = marked.parse(text);
