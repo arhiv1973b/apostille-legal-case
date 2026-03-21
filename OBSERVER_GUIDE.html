@@ -3,115 +3,491 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>INTERNATIONAL OBSERVER GUIDE — CASE-MACHERET-1997-2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+<title>OBSERVER GUIDE — CASE-MACHERET-1997-2026 | UN OHCHR / G7</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@600;900&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #030a0f; --panel: #071624; --border: #0e3a5c;
-    --accent: #00c6ff; --red: #ff2244; --gold: #f0c040; --text: #c8e0f0;
-  }
-  body { background: var(--bg); color: var(--text); font-family: 'Rajdhani', sans-serif; margin: 0; padding: 20px; }
-  .guide-wrap { max-width: 1000px; margin: 0 auto; border: 1px solid var(--border); background: var(--panel); padding: 40px; box-shadow: 0 0 30px rgba(0,198,255,0.1); }
-  
-  .lang-switcher { margin-bottom: 30px; display: flex; gap: 10px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
-  .lang-btn { background: none; border: 1px solid var(--accent); color: var(--accent); padding: 5px 15px; cursor: pointer; font-family: 'Orbitron', sans-serif; font-size: 0.8rem; }
-  .lang-btn.active { background: var(--accent); color: #000; }
-
-  section { margin-top: 40px; display: none; }
-  section.active { display: block; }
-
-  h1 { font-family: 'Orbitron', sans-serif; color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 10px; }
-  h2 { color: var(--gold); font-family: 'Orbitron', sans-serif; font-size: 1.2rem; margin-top: 30px; }
-  .legal-box { border-left: 4px solid var(--red); padding: 15px; background: rgba(255,0,0,0.05); margin: 20px 0; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  
-  @media print {
-    .lang-switcher { display: none; }
-    section { display: block !important; page-break-after: always; color: #000; }
-    .guide-wrap { border: none; box-shadow: none; background: #fff; color: #000; }
-    h1, h2 { color: #000; border-bottom-color: #000; }
-    .legal-box { border-color: #000; background: #eee; }
-  }
+:root{
+  --bg:#02070c;--panel:#050f18;--panel2:#060e16;--border:#0b2a42;--border2:#0d3858;
+  --gold:#c8960a;--gold2:#f0c040;--red:#cc1133;--red2:#ff2244;
+  --cyan:#00aad4;--cyan2:#40ccff;--green:#00cc66;--purple:#9922cc;
+  --text:#c0d8ec;--text2:#7aa0bc;--muted:#2e5570;
+  --font-mono:'Share Tech Mono',monospace;
+  --font-serif:'Playfair Display',Georgia,serif;
+  --font-head:'Orbitron',sans-serif;
+  --font-body:'Rajdhani',sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.7;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;z-index:500;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,170,212,.011) 2px,rgba(0,170,212,.011) 4px);}
+body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(rgba(0,170,212,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,170,212,.022) 1px,transparent 1px);
+  background-size:50px 50px;}
+.langbar{position:sticky;top:0;z-index:100;background:rgba(2,7,12,.97);border-bottom:1px solid var(--border2);backdrop-filter:blur(14px);display:flex;align-items:center;padding:0 18px;overflow-x:auto;gap:0;}
+.lb{padding:12px 16px;font-family:var(--font-head);font-size:10px;font-weight:700;letter-spacing:2px;color:var(--muted);background:none;border:none;border-bottom:3px solid transparent;cursor:pointer;transition:color .2s,border-color .2s;white-space:nowrap;}
+.lb:hover{color:var(--cyan2);}
+.lb.on{color:var(--gold2);border-bottom-color:var(--gold2);}
+.lb-sep{color:var(--border2);padding:0 3px;flex-shrink:0;font-size:11px;}
+.lb-ref{margin-left:auto;font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:1px;white-space:nowrap;padding-left:14px;flex-shrink:0;}
+.lp{display:none;}.lp.on{display:block;}
+.w{max-width:1000px;margin:0 auto;padding:28px 20px 70px;position:relative;z-index:1;}
+.cover{border:1px solid var(--gold);background:linear-gradient(135deg,rgba(200,150,10,.08),rgba(0,0,0,.01));padding:38px 42px;margin-bottom:22px;position:relative;clip-path:polygon(0 0,calc(100% - 26px) 0,100% 26px,100% 100%,26px 100%,0 calc(100% - 26px));overflow:hidden;}
+.cover::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);}
+.cover-label{font-family:var(--font-mono);font-size:10px;color:var(--gold);letter-spacing:3px;margin-bottom:10px;}
+.cover-title{font-family:var(--font-serif);font-size:clamp(20px,3.5vw,34px);font-weight:900;color:#fff;line-height:1.2;margin-bottom:8px;}
+.cover-title em{color:var(--gold2);font-style:italic;}
+.cover-sub{font-family:var(--font-mono);font-size:12px;color:var(--cyan);letter-spacing:1.5px;margin-bottom:18px;}
+.cover-recipients{display:flex;flex-wrap:wrap;gap:7px;}
+.tg{display:inline-block;font-family:var(--font-mono);font-size:10px;padding:3px 9px;letter-spacing:1px;font-weight:700;}
+.tg-y{background:rgba(200,150,10,.1);border:1px solid rgba(200,150,10,.3);color:var(--gold2);}
+.tg-b{background:rgba(0,170,212,.1);border:1px solid rgba(0,170,212,.28);color:var(--cyan2);}
+.tg-r{background:rgba(255,34,68,.1);border:1px solid rgba(255,34,68,.3);color:var(--red2);}
+.tg-g{background:rgba(0,204,102,.09);border:1px solid rgba(0,204,102,.26);color:var(--green);}
+.tg-p{background:rgba(153,34,204,.1);border:1px solid rgba(153,34,204,.28);color:#cc66ff;}
+.tg-x{background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted);}
+.sh{display:flex;align-items:center;gap:12px;margin:34px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+.sh-num{font-family:var(--font-head);font-size:10px;color:var(--gold);background:rgba(200,150,10,.1);border:1px solid rgba(200,150,10,.25);padding:3px 10px;letter-spacing:2px;flex-shrink:0;}
+.sh-title{font-family:var(--font-serif);font-size:clamp(15px,2.5vw,20px);font-weight:700;color:#fff;}
+.sh-title em{color:var(--gold2);font-style:italic;}
+.panel{border:1px solid var(--border);background:var(--panel);margin-bottom:12px;position:relative;overflow:hidden;}
+.panel::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.4;}
+.ph{padding:10px 18px;background:rgba(200,150,10,.04);border-bottom:1px solid var(--border);font-family:var(--font-head);font-size:11px;font-weight:700;color:var(--gold2);letter-spacing:2px;text-transform:uppercase;}
+.pb{padding:16px 18px;}
+.steps{display:flex;flex-direction:column;gap:0;margin:10px 0;}
+.step{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(11,42,66,.6);align-items:flex-start;}
+.step:last-child{border-bottom:none;}
+.step-n{width:28px;height:28px;background:var(--gold);color:#000;font-family:var(--font-head);font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.step-body{flex:1;}
+.step-title{font-weight:700;color:var(--text);font-size:15px;margin-bottom:3px;}
+.step-desc{font-family:var(--font-mono);font-size:12px;color:var(--text2);line-height:1.6;}
+.step-desc strong{color:var(--text);}
+.step-desc em{color:var(--gold2);font-style:normal;}
+.vmap{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin:12px 0;}
+.vnode{border:1px solid var(--border);background:var(--panel2);padding:13px 15px;position:relative;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);text-decoration:none;display:block;transition:border-color .2s,background .2s;}
+.vnode:hover{border-color:var(--border2);background:rgba(200,150,10,.04);}
+.vnode-label{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:1.5px;margin-bottom:3px;}
+.vnode-name{font-family:var(--font-head);font-size:12px;font-weight:700;color:var(--gold2);margin-bottom:4px;}
+.vnode-desc{font-family:var(--font-mono);font-size:11px;color:var(--text2);line-height:1.4;}
+.vnode.red{border-color:rgba(255,34,68,.25);}
+.vnode.red .vnode-name{color:var(--red2);}
+.vnode.cyan{border-color:rgba(0,170,212,.22);}
+.vnode.cyan .vnode-name{color:var(--cyan2);}
+.vnode.green{border-color:rgba(0,204,102,.22);}
+.vnode.green .vnode-name{color:var(--green);}
+.lchain{display:flex;flex-direction:column;gap:0;margin:12px 0;padding-left:30px;position:relative;}
+.lchain::before{content:'';position:absolute;left:9px;top:18px;bottom:18px;width:2px;background:linear-gradient(180deg,var(--gold2),rgba(200,150,10,.1));}
+.lc{position:relative;padding:10px 0;font-size:13px;line-height:1.6;}
+.lc::before{content:'';position:absolute;left:-25px;top:14px;width:12px;height:12px;border:2px solid var(--gold);background:var(--bg);border-radius:50%;}
+.lc-label{font-family:var(--font-mono);font-size:10px;color:var(--gold);letter-spacing:1.5px;margin-bottom:2px;}
+.lc-text{color:var(--text);}
+.lc-text strong{color:var(--red2);}
+.axiom{background:rgba(200,150,10,.06);border-left:4px solid var(--gold2);padding:16px 22px;margin:18px 0;font-family:var(--font-serif);font-size:clamp(14px,2vw,17px);font-style:italic;color:#e0cc90;line-height:1.7;position:relative;}
+.axiom::before{content:'"';font-size:55px;color:var(--gold);opacity:.25;position:absolute;top:-8px;left:8px;font-family:Georgia;line-height:1;}
+.axiom cite{display:block;margin-top:8px;font-family:var(--font-mono);font-size:10px;font-style:normal;color:var(--gold);letter-spacing:1.5px;}
+.ctable{width:100%;border-collapse:collapse;font-family:var(--font-mono);font-size:12px;margin:12px 0;}
+.ctable th{text-align:left;padding:9px 14px;background:rgba(200,150,10,.07);border:1px solid var(--border);color:var(--gold2);letter-spacing:1.5px;font-size:10px;text-transform:uppercase;}
+.ctable td{padding:9px 14px;border:1px solid var(--border);color:var(--text2);vertical-align:top;line-height:1.5;}
+.ctable tr:hover td{background:rgba(200,150,10,.03);}
+.ctable a{color:var(--cyan2);text-decoration:none;}
+.ctable a:hover{text-decoration:underline;}
+.ctable .cc{color:var(--gold2);font-weight:700;}
+.brow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;font-family:var(--font-body);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all .18s;position:relative;overflow:hidden;white-space:nowrap;}
+.btn::after{content:'';position:absolute;top:50%;left:-60%;width:40%;height:100%;background:rgba(255,255,255,.08);transform:translateY(-50%) skewX(-20deg);transition:left .3s;}
+.btn:hover::after{left:120%;}
+.btn-gold{background:linear-gradient(135deg,#5a3800,#c8960a);color:#000;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);}
+.btn-gold:hover{background:linear-gradient(135deg,#7a5000,#f0c040);transform:translateY(-1px);}
+.btn-cyan{background:linear-gradient(135deg,#003355,#00aad4);color:#000;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);}
+.btn-cyan:hover{transform:translateY(-1px);}
+.btn-red{background:linear-gradient(135deg,#550012,#cc1133);color:#fff;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);}
+.btn-red:hover{transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:var(--cyan2);border:1px solid rgba(0,170,212,.3);}
+.btn-ghost:hover{background:rgba(0,170,212,.08);border-color:var(--cyan2);transform:translateY(-1px);}
+.btn-sm{padding:7px 13px;font-size:11px;}
+.btn-lg{padding:14px 28px;font-size:15px;}
+.btn-block{width:100%;justify-content:center;}
+.deadline{background:rgba(255,34,68,.08);border:2px solid rgba(255,34,68,.5);border-left:5px solid var(--red2);padding:16px 20px;margin:18px 0;font-family:var(--font-mono);font-size:12px;}
+.deadline strong{color:var(--red2);font-size:15px;display:block;margin-bottom:6px;}
+.print-note{background:rgba(0,204,102,.05);border:1px solid rgba(0,204,102,.2);padding:12px 16px;font-family:var(--font-mono);font-size:11px;color:var(--green);margin:14px 0;}
+.div{height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent);margin:26px 0;}
+.footer{margin-top:40px;padding:16px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:1px;}
+.footer a{color:var(--cyan2);text-decoration:none;}
+@media(max-width:640px){
+  .cover{padding:20px 16px;}
+  .vmap{grid-template-columns:1fr;}
+  .brow{flex-direction:column;}
+  .brow .btn{width:100%;justify-content:center;}
+}
+@media print{
+  body::before,body::after,.langbar{display:none;}
+  .lp{display:block!important;}
+  .brow{display:none;}
+  body{background:#fff;color:#000;}
+  .cover{border-color:#000;background:#f9f9f9;}
+  .cover-title,.sh-title{color:#000;}
+}
 </style>
 </head>
 <body>
-<div class="guide-wrap">
-  <div class="lang-switcher">
-    <button class="lang-btn active" onclick="setLang('en')">ENGLISH</button>
-    <button class="lang-btn" onclick="setLang('ru')">РУССКИЙ</button>
-    <button class="lang-btn" onclick="setLang('ro')">ROMÂNĂ</button>
-    <button class="lang-btn" onclick="setLang('fr')">FRANÇAIS</button>
-  </div>
-
-  <section id="en" class="active">
-    <h1>INTERNATIONAL OBSERVER GUIDE</h1>
-    <p><strong>CASE ID:</strong> CASE-MACHERET-1997-2026 | <strong>STATUS:</strong> PRIORITY AUDIT</p>
-    
-    <h2>§ 01 — THE AXIOM</h2>
-    <p>The Evidence Vault is a decentralized cryptographic repository documenting systemic human rights violations. The core axiom: an apostille on a forged document is a continuation of the crime, not its legalization.</p>
-
-    <div class="legal-box">
-      <h2>§ 02 — CORE EVIDENCE TRIAD</h2>
-      <ul>
-        <li><strong>1998:</strong> Acts of torture and illegal detention (Art. 3 ECHR).</li>
-        <li><strong>8158 DAYS:</strong> Systematic denial of justice and non-rehabilitation.</li>
-        <li><strong>2022:</strong> Systemic identity theft and forgery to block rehabilitation.</li>
-      </ul>
-    </div>
-
-    <h2>§ 03 — ACCESS PROTOCOL</h2>
-    <ol>
-      <li>Verify CASE_PASSPORT.html for cryptographic seals.</li>
-      <li>Examine JUS_COGENS_PROOF_MACHERET.html for legal basis.</li>
-      <li>Review FORGERY_DECONSTRUCTION_ACT.html for technical proof.</li>
-    </ol>
-
-    <h2>§ 04 — OFFICIAL CHANNELS</h2>
-    <p>Reporting to: UN OHCHR, INTERPOL, ICC OTP, ECHR.</p>
-  </section>
-
-  <section id="ru">
-    <h1>РУКОВОДСТВО МЕЖДУНАРОДНОГО НАБЛЮДАТЕЛЯ</h1>
-    <p><strong>ID ДЕЛА:</strong> CASE-MACHERET-1997-2026 | <strong>СТАТУС:</strong> ПРИОРИТЕТНЫЙ АУДИТ</p>
-    
-    <h2>§ 01 — АКСИОМА</h2>
-    <p>Хранилище улик — это децентрализованный криптографический реестр нарушений прав человека. Аксиома: апостиль на подложном документе является продолжением преступления, а не его легализацией.</p>
-
-    <div class="legal-box">
-      <h2>§ 02 — ТРИАДА ДОКАЗАТЕЛЬСТВ</h2>
-      <ul>
-        <li><strong>1998:</strong> Факты пыток и незаконного лишения свободы (ст. 3 ЕКПЧ).</li>
-        <li><strong>8158 ДНЕЙ:</strong> Систематический отказ в правосудии и реабилитации.</li>
-        <li><strong>2022:</strong> Системный подлог личности для блокировки реабилитации.</li>
-      </ul>
-    </div>
-
-    <h2>§ 06 — ДЕДЛАЙН: 09.04.2026</h2>
-    <p>Окончательный срок для принятия юрисдикционного решения национальными органами перед полной международной эскалацией.</p>
-  </section>
-
-  <section id="ro">
-    <h1>GHIDUL OBSERVATORULUI INTERNAȚIONAL</h1>
-    <p><strong>CASE ID:</strong> CASE-MACHERET-1997-2026 | <strong>STATUS:</strong> AUDIT PRIORITAR</p>
-    <h2>§ 05 — INSTRUMENTE JURIDICE</h2>
-    <p>Jus Cogens, Erga Omnes, Statutul de la Roma (Art. 17), CEDO.</p>
-  </section>
-
-  <section id="fr">
-    <h1>GUIDE DE L'OBSERVATEUR INTERNATIONAL</h1>
-    <h2>§ 07 — CANAUX OFFICIELS</h2>
-    <p>Signalement: INTERPOL, ONU (HCDH), CPI, CEDH.</p>
-  </section>
-
+<div class="langbar">
+  <button class="lb on" onclick="lang('en',this)">🇬🇧 ENGLISH</button>
+  <span class="lb-sep">|</span>
+  <button class="lb" onclick="lang('ru',this)">🇷🇺 РУССКИЙ</button>
+  <span class="lb-sep">|</span>
+  <button class="lb" onclick="lang('ro',this)">🇷🇴 ROMÂNĂ</button>
+  <span class="lb-sep">|</span>
+  <button class="lb" onclick="lang('fr',this)">🇫🇷 FRANÇAIS</button>
+  <span class="lb-ref">OBSERVER GUIDE · CASE-MACHERET-1997–2026</span>
 </div>
-
+<div class="lp on" id="lp-en">
+<div class="w">
+<div class="cover">
+  <div class="cover-label">// INTERNATIONAL OBSERVER GUIDE · FOR IMMEDIATE DISTRIBUTION</div>
+  <div class="cover-title">Evidence Vault:<br><em>Case Macheret 1997–2026</em></div>
+  <div class="cover-sub">JUS COGENS VIOLATION · IDENTITY FRAUD · INSTITUTIONAL IMPUNITY · 8,158 DAYS</div>
+  <div class="cover-recipients">
+    <span class="tg tg-b">UN OHCHR</span>
+    <span class="tg tg-y">G7 EMBASSIES</span>
+    <span class="tg tg-r">INTERPOL</span>
+    <span class="tg tg-g">ICC / OTP</span>
+    <span class="tg tg-p">ECHR</span>
+    <span class="tg tg-x">CSM / MOJ MOLDOVA</span>
+  </div>
+</div>
+<div class="sh"><span class="sh-num">§ 01</span><div class="sh-title">What This Vault Is — <em>and Why It Matters</em></div></div>
+<div class="panel">
+  <div class="ph">PURPOSE OF THIS GUIDE</div>
+  <div class="pb">
+    <p style="margin-bottom:10px;">This document is a structured briefing for international observers, diplomatic missions, and monitoring bodies. It provides direct access to a verified digital archive documenting <strong>systematic Jus Cogens violations</strong> in the Republic of Moldova spanning 1997–2026.</p>
+    <div class="axiom">
+      The apostille certifies the authenticity of an official's signature. It does not certify the lawfulness of the content of a judicial act. The content of 90 apostilled decisions is: systematic avoidance of torture allegations.
+      <cite>— Apostille Archive Commentary · Case Macheret</cite>
+    </div>
+    <p>The archive is <strong>not a private complaint</strong>. It is a structured evidentiary dataset intended to enable independent verification of whether the Republic of Moldova meets the complementarity threshold of <strong>Article 17 of the Rome Statute</strong>.</p>
+  </div>
+</div>
+<div class="sh"><span class="sh-num">§ 02</span><div class="sh-title">The <em>Three-Fact</em> Evidentiary Core</div></div>
+<div class="lchain">
+  <div class="lc">
+    <div class="lc-label">FACT 1 — DOCUMENTED TORTURE</div>
+    <div class="lc-text">Torture facts recorded in Case No. 1-568/98. Apostille certifies authenticity of the judicial document. <strong>Jus Cogens norm triggered — no statute of limitations applies.</strong></div>
+  </div>
+  <div class="lc">
+    <div class="lc-label">FACT 2 — 8,158 DAYS WITHOUT GENUINE INVESTIGATION</div>
+    <div class="lc-text">90 apostilled judicial decisions: cross-reference of dates, signatories, and procedural language reveals a recurring pattern — <strong>complaints dismissed without examination of torture evidence.</strong> Each day of silence is an independent Jus Cogens violation.</div>
+  </div>
+  <div class="lc">
+    <div class="lc-label">FACT 3 — CRIMINAL CASCADE (15 MARCH 2022)</div>
+    <div class="lc-text">Identity fraud: Liudmila Nantoi used the identity of I.M. Marcov (after his incapacitation/death) to seize inheritance assets at Miron Costin St. <strong>Graphological analysis (Vector 3) confirms forgery. This act was made possible by the preceding 8,158-day vacuum of impunity.</strong></div>
+  </div>
+</div>
+<div class="sh"><span class="sh-num">§ 03</span><div class="sh-title">How to Access the Evidence — <em>Step-by-Step</em></div></div>
+<div class="panel">
+  <div class="ph">OBSERVER ACCESS PROTOCOL</div>
+  <div class="pb">
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div class="step-body">
+          <div class="step-title">Open the Main Evidence Vault</div>
+          <div class="step-desc">Navigate to <em>https://arhiv1973b.github.io/apostille-legal-case/</em> — the primary hub containing all evidentiary nodes. The vault is public, cryptographically fixed via Git blockchain, and requires no login.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div class="step-body">
+          <div class="step-title">Read the Jus Cogens Proof Document (4 languages)</div>
+          <div class="step-desc">Navigate to <em>jus-cogens-proof-macheret.html</em> — the primary legal argument document. Available in Russian, Romanian, English, and French. Contains the 6-step evidentiary chain from documented torture to criminal cascade.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div class="step-body">
+          <div class="step-title">Review the Apostille Registry (90 documents)</div>
+          <div class="step-desc">Navigate to <em>https://arhiv1973b.github.io/apostille-archive-english/</em> — full registry of 90 apostilled judicial documents. Cross-reference decision dates, signatories, and case numbers. Each document is downloadable as PDF.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">4</div>
+        <div class="step-body">
+          <div class="step-title">Examine the Forensic Deconstruction Act</div>
+          <div class="step-desc">Navigate to <em>FORGERY_DECONSTRUCTION_EN.html</em> — the forensic analysis of the 15 March 2022 identity fraud. Documents the mechanism, evidence (graphological Vector 3), and causal chain. Available for official submission to INTERPOL/UN.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">5</div>
+        <div class="step-body">
+          <div class="step-title">Review Personal Liability Notices</div>
+          <div class="step-desc">Three identified actors: <em>NANTOI_NOTICE.html</em> (perpetrator), <em>MURIANU_NOTICE.html</em> (judicial obstruction), <em>DULCA_NOTICE.html</em> (procedural vacuum). Each notice contains legal qualification and evidence basis.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">6</div>
+        <div class="step-body">
+          <div class="step-title">Use Official Reporting Channels</div>
+          <div class="step-desc">All pages contain direct links to <strong>INTERPOL Contact</strong>, <strong>UN OHCHR</strong>, <strong>ICC OTP</strong>, and <strong>ECHR</strong> submission portals. The vault is designed for direct referral without intermediaries.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sh"><span class="sh-num">§ 04</span><div class="sh-title">Vault Map — <em>All Evidence Nodes</em></div></div>
+<div class="vmap">
+  <a class="vnode" href="https://arhiv1973b.github.io/apostille-legal-case/" target="_blank">
+    <div class="vnode-label">PRIMARY HUB</div>
+    <div class="vnode-name">⌂ EVIDENCE VAULT</div>
+    <div class="vnode-desc">Main index. All nodes accessible from here.</div>
+  </a>
+  <a class="vnode" href="https://arhiv1973b.github.io/apostille-legal-case/jus-cogens-proof-macheret.html" target="_blank">
+    <div class="vnode-label">LEGAL ARGUMENT · 4 LANGUAGES</div>
+    <div class="vnode-name">📜 JUS COGENS PROOF</div>
+    <div class="vnode-desc">Theory → Fact. 6-step evidentiary chain. 82KB.</div>
+  </a>
+  <a class="vnode" href="https://arhiv1973b.github.io/apostille-archive-english/" target="_blank">
+    <div class="vnode-label">90 APOSTILLED DOCUMENTS</div>
+    <div class="vnode-name cyan">📂 APOSTILLE REGISTRY</div>
+    <div class="vnode-desc">Full registry 1997–2026. PDF downloads. Pattern analysis.</div>
+  </a>
+  <a class="vnode" href="https://arhiv1973b.github.io/apostille-legal-case/FORGERY_DECONSTRUCTION_EN.html" target="_blank">
+    <div class="vnode-label">FORENSICS · ENGLISH (UN)</div>
+    <div class="vnode-name red">🔍 FORGERY DECONSTRUCTION ACT</div>
+    <div class="vnode-desc">Identity fraud · Vector 3 · 15.03.2022. INTERPOL ready.</div>
+  </a>
+  <a class="vnode" href="https://arhiv1973b.github.io/apostille-legal-case/NANTOI_NOTICE.html" target="_blank">
+    <div class="vnode-label">PERPETRATOR · GNS</div>
+    <div class="vnode-name red">🚨 NANTOI LIUDMILA — NOTICE</div>
+    <div class="vnode-desc">Art. 361 Criminal Code RM · Identity Theft · INTERPOL.</div>
+  </a>
+  <a class="vnode" href="https://arhiv1973b.github.io/apostille-legal-case/MURIANU_NOTICE.html" target="_blank">
+    <div class="vnode-label">JUDICIAL OBSTRUCTION</div>
+    <div class="vnode-name">⚖ MURIANU I. — NOTICE</div>
+    <div class="vnode-desc">Art. 17 ICC · Simulation of justice · 90 apostilles.</div>
+  </a>
+  <a class="vnode" href="https://arhiv1973b.github.io/apostille-legal-case/DULCA_NOTICE.html" target="_blank">
+    <div class="vnode-label">PROCEDURAL VACUUM · MVD</div>
+    <div class="vnode-name">🏛 DULCA V.G. — NOTICE</div>
+    <div class="vnode-desc">8,158 days without response. CAT UN · ECHR Art.3.</div>
+  </a>
+  <a class="vnode" href="https://arhiv1973b.github.io/apostille-legal-case/ICC_COMMUNICATION_BRIDGE.html" target="_blank">
+    <div class="vnode-label">ART. 17 ROME STATUTE</div>
+    <div class="vnode-name cyan">🏛 ICC COMMUNICATION BRIDGE</div>
+    <div class="vnode-desc">Complementarity node. OTP submission gateway.</div>
+  </a>
+  <a class="vnode" href="https://arhiv1973b.github.io/apostille-legal-case/CASE_PASSPORT.html" target="_blank">
+    <div class="vnode-label">VERIFICATION DOCUMENT</div>
+    <div class="vnode-name green">🪪 DIGITAL CASE PASSPORT</div>
+    <div class="vnode-desc">SHA-256 verified. For court and diplomatic use.</div>
+  </a>
+</div>
+<div class="sh"><span class="sh-num">§ 05</span><div class="sh-title">Legal Basis — <em>Key Instruments</em></div></div>
+<table class="ctable">
+  <thead><tr><th>INSTRUMENT</th><th>APPLICATION TO THIS CASE</th><th>STATUS</th></tr></thead>
+  <tbody>
+    <tr><td class="cc">Jus Cogens (ILC)</td><td>Absolute prohibition of torture — no derogation, no limitation period. 8,158 days of state silence = 8,158 independent violations.</td><td><span class="tg tg-r">ACTIVE</span></td></tr>
+    <tr><td class="cc">Erga Omnes (ICJ 1970)</td><td>State obligation to the international community — not only to the victim. Any state may demand investigation.</td><td><span class="tg tg-b">TRIGGERED</span></td></tr>
+    <tr><td class="cc">Art. 17 Rome Statute</td><td>ICC jurisdiction activated when state is unwilling or unable to genuinely investigate. Archive provides evidence for this threshold.</td><td><span class="tg tg-r">ACTIVATED</span></td></tr>
+    <tr><td class="cc">ECHR Art. 3</td><td>Absolute prohibition of torture + procedural obligation to investigate. No derogation permitted.</td><td><span class="tg tg-y">APPLICABLE</span></td></tr>
+    <tr><td class="cc">UN CAT Art. 12–13</td><td>Obligation to immediately and effectively investigate torture allegations. No time limit.</td><td><span class="tg tg-y">APPLICABLE</span></td></tr>
+    <tr><td class="cc">Hague Convention 1961</td><td>Apostille certifies authenticity of official signature. Content of 90 certified decisions: systematic avoidance of torture review.</td><td><span class="tg tg-g">VERIFIED · 90 DOCS</span></td></tr>
+  </tbody>
+</table>
+<div class="sh"><span class="sh-num">§ 06</span><div class="sh-title">Deadline & <em>Escalation Protocol</em></div></div>
+<div class="deadline">
+  <strong>⚠ CRITICAL DEADLINE: 09 APRIL 2026</strong>
+  Failure of the Republic of Moldova to initiate a genuine investigation by 09.04.2026 activates <strong>Global Sanction Vector 11</strong>. The vault will be transmitted to all G7 diplomatic missions, UN Special Rapporteur on Torture, ICC OTP, and ECHR. Any judicial act simulating due process after this date will be documented as additional evidence of Art. 17 threshold being met.
+</div>
+<div class="sh"><span class="sh-num">§ 07</span><div class="sh-title">Official <em>Reporting Channels</em></div></div>
+<table class="ctable">
+  <thead><tr><th>BODY</th><th>CONTACT</th><th>REFERENCE</th></tr></thead>
+  <tbody>
+    <tr><td class="cc">UN OHCHR</td><td><a href="https://www.ohchr.org/en/contact-us" target="_blank">ohchr.org/en/contact-us</a></td><td>Jus Cogens / CAT / ICCPR</td></tr>
+    <tr><td class="cc">INTERPOL</td><td><a href="https://www.interpol.int/en/Contacts/Contact-INTERPOL" target="_blank">interpol.int/Contacts</a></td><td>Identity Theft · Art.361 RM</td></tr>
+    <tr><td class="cc">ICC / OTP</td><td><a href="https://www.icc-cpi.int/about/otp/how-the-otp-works" target="_blank">icc-cpi.int/otp</a></td><td>Art. 17 Rome Statute</td></tr>
+    <tr><td class="cc">ECHR</td><td><a href="https://www.echr.coe.int/Pages/home.aspx?p=applicants" target="_blank">echr.coe.int/applicants</a></td><td>Art. 3 — Torture prohibition</td></tr>
+    <tr><td class="cc">ILC (Jus Cogens)</td><td><a href="https://legal.un.org/ilc/guide/1_14.shtml" target="_blank">legal.un.org/ilc/guide/1_14</a></td><td>Peremptory norms reference</td></tr>
+  </tbody>
+</table>
+<div class="print-note">🖨 This document is optimized for printing. Use Ctrl+P / Cmd+P — headers, tables, and legal chains will render correctly for physical distribution to embassies and court submissions.</div>
+<div class="brow">
+  <a class="btn btn-gold btn-lg" href="https://arhiv1973b.github.io/apostille-legal-case/" target="_blank">⌂ OPEN EVIDENCE VAULT</a>
+  <a class="btn btn-cyan" href="https://arhiv1973b.github.io/apostille-legal-case/jus-cogens-proof-macheret.html" target="_blank">📜 JUS COGENS PROOF</a>
+  <a class="btn btn-red btn-sm" href="https://arhiv1973b.github.io/apostille-legal-case/FORGERY_DECONSTRUCTION_EN.html" target="_blank">🔍 FORENSIC ACT (EN)</a>
+  <a class="btn btn-ghost btn-sm" href="https://arhiv1973b.github.io/apostille-archive-english/" target="_blank">📂 90 APOSTILLES</a>
+  <button class="btn btn-ghost btn-sm" onclick="window.print()">🖨 PRINT GUIDE</button>
+  <button class="btn btn-ghost btn-sm" onclick="shareGuide()">📤 SHARE</button>
+</div>
+<div class="footer">
+  <span>OBSERVER GUIDE · CASE-MACHERET-1997–2026</span>
+  <span><a href="https://legal.un.org/ilc/guide/1_14.shtml" target="_blank">ILC JUS COGENS</a> · <a href="https://arhiv1973b.github.io/apostille-archive-english/" target="_blank">90 APOSTILLES</a> · <a href="https://arhiv1973b.github.io/apostille-legal-case/" target="_blank">EVIDENCE VAULT</a></span>
+  <span>🔒 SHA-256 · GIT BLOCKCHAIN · 2026</span>
+</div>
+</div>
+</div>
+<div class="lp" id="lp-ru">
+<div class="w">
+<div class="cover">
+  <div class="cover-label">// ИНСТРУКЦИЯ ДЛЯ МЕЖДУНАРОДНОГО НАБЛЮДАТЕЛЯ · К НЕМЕДЛЕННОМУ РАСПРОСТРАНЕНИЮ</div>
+  <div class="cover-title">Цифровое хранилище улик:<br><em>Дело Мачерет 1997–2026</em></div>
+  <div class="cover-sub">НАРУШЕНИЕ JUS COGENS · ПОДЛОГ ЛИЧНОСТИ · ИНСТИТУЦИОНАЛЬНАЯ БЕЗНАКАЗАННОСТЬ · 8158 СУТОК</div>
+  <div class="cover-recipients">
+    <span class="tg tg-b">UN OHCHR</span><span class="tg tg-y">ПОСОЛЬСТВА G7</span><span class="tg tg-r">INTERPOL</span><span class="tg tg-g">МУС / OTP</span><span class="tg tg-p">ЕКПЧ</span><span class="tg tg-x">ВСМ / МЮ РМ</span>
+  </div>
+</div>
+<div class="sh"><span class="sh-num">§ 01</span><div class="sh-title">Что такое это хранилище — <em>и почему оно важно</em></div></div>
+<div class="panel">
+  <div class="ph">НАЗНАЧЕНИЕ ДОКУМЕНТА</div>
+  <div class="pb">
+    <p style="margin-bottom:10px;">Данный документ представляет собой структурированный брифинг для международных наблюдателей, дипломатических миссий и мониторинговых органов. Он обеспечивает прямой доступ к верифицированному цифровому архиву, документирующему <strong>систематические нарушения Jus Cogens</strong> в Республике Молдова за период 1997–2026.</p>
+    <div class="axiom">
+      Апостиль удостоверяет подлинность подписи должностного лица. Он не удостоверяет законность содержания судебного акта. Содержание 90 апостилированных решений: систематическое уклонение от рассмотрения фактов пыток.
+      <cite>— Комментарий к архиву апостилей · Дело Мачерет</cite>
+    </div>
+    <p>Архив — это <strong>не частная жалоба</strong>. Это структурированный набор доказательных данных, позволяющий независимо верифицировать, соответствует ли Республика Молдова порогу дополнительности <strong>статьи 17 Римского статута МУС</strong>.</p>
+  </div>
+</div>
+<div class="sh"><span class="sh-num">§ 02</span><div class="sh-title">Три доказательных факта — <em>ядро дела</em></div></div>
+<div class="lchain">
+  <div class="lc"><div class="lc-label">ФАКТ 1 — ЗАДОКУМЕНТИРОВАННЫЕ ПЫТКИ</div><div class="lc-text">Факты пыток зафиксированы в Деле № 1-568/98. Апостиль удостоверяет подлинность судебного документа. <strong>Норма Jus Cogens активирована — срока давности не существует.</strong></div></div>
+  <div class="lc"><div class="lc-label">ФАКТ 2 — 8158 СУТОК БЕЗ ПОДЛИННОГО РАССЛЕДОВАНИЯ</div><div class="lc-text">90 апостилированных решений: перекрёстный анализ выявляет повторяющийся паттерн — <strong>жалобы отклоняются без анализа доказательств пыток.</strong> Каждые сутки молчания — самостоятельное нарушение Jus Cogens.</div></div>
+  <div class="lc"><div class="lc-label">ФАКТ 3 — КРИМИНАЛЬНЫЙ КАСКАД (15.03.2022)</div><div class="lc-text">Подлог личности: Нантой Людмила использовала личность Маркова И.М. для захвата наследственного имущества (ул. Мирон Костин). <strong>Графологическая экспертиза (Вектор 3) подтверждает подлог. Этот акт стал возможен только благодаря 8158 суткам вакуума безнаказанности.</strong></div></div>
+</div>
+<div class="sh"><span class="sh-num">§ 03</span><div class="sh-title">Как получить доступ к доказательствам — <em>пошагово</em></div></div>
+<div class="panel">
+  <div class="ph">ПРОТОКОЛ ДОСТУПА НАБЛЮДАТЕЛЯ</div>
+  <div class="pb">
+    <div class="steps">
+      <div class="step"><div class="step-n">1</div><div class="step-body"><div class="step-title">Открыть главное хранилище улик</div><div class="step-desc">Перейти на <em>https://arhiv1973b.github.io/apostille-legal-case/</em> — главный хаб. Хранилище публично, криптографически зафиксировано в Git и не требует авторизации.</div></div></div>
+      <div class="step"><div class="step-n">2</div><div class="step-body"><div class="step-title">Прочитать документ-доказательство Jus Cogens (4 языка)</div><div class="step-desc">Перейти на <em>jus-cogens-proof-macheret.html</em>. Содержит 6-звенную доказательную цепь от задокументированных пыток до криминального каскада.</div></div></div>
+      <div class="step"><div class="step-n">3</div><div class="step-body"><div class="step-title">Изучить реестр апостилей (90 документов)</div><div class="step-desc">Перейти на <em>https://arhiv1973b.github.io/apostille-archive-english/</em> — полный реестр. Перекрёстный анализ дат, подписантов и процессуальных формулировок. Каждый документ доступен для скачивания в PDF.</div></div></div>
+      <div class="step"><div class="step-n">4</div><div class="step-body"><div class="step-title">Изучить Акт деконструкции подлога</div><div class="step-desc">Перейти на <em>FORGERY_DECONSTRUCTION_ACT.html</em> — криминалистический анализ подлога от 15.03.2022. Готов для официальной подачи в INTERPOL/PG.</div></div></div>
+      <div class="step"><div class="step-n">5</div><div class="step-body"><div class="step-title">Изучить личные уведомления об ответственности</div><div class="step-desc">Три идентифицированных актора: <em>NANTOI_NOTICE.html</em> (исполнитель), <em>MURIANU_NOTICE.html</em> (судебная блокировка), <em>DULCA_NOTICE.html</em> (процессуальный вакуум).</div></div></div>
+      <div class="step"><div class="step-n">6</div><div class="step-body"><div class="step-title">Использовать официальные каналы уведомления</div><div class="step-desc">Все страницы содержат прямые ссылки на официальные порталы <strong>INTERPOL</strong>, <strong>UN OHCHR</strong>, <strong>МУС OTP</strong> и <strong>ЕКПЧ</strong>.</div></div></div>
+    </div>
+  </div>
+</div>
+<div class="deadline">
+  <strong>⚠ КРИТИЧЕСКИЙ ДЕДЛАЙН: 09 АПРЕЛЯ 2026</strong>
+  Отсутствие подлинного расследования активирует <strong>Global Sanction Vector 11</strong>. Хранилище будет передано всем миссиям G7, Специальному докладчику ООН по пыткам, OTP МУС и ЕКПЧ.
+</div>
+<div class="brow">
+  <a class="btn btn-gold btn-lg" href="https://arhiv1973b.github.io/apostille-legal-case/" target="_blank">⌂ ОТКРЫТЬ ХРАНИЛИЩЕ</a>
+  <a class="btn btn-cyan" href="https://arhiv1973b.github.io/apostille-legal-case/jus-cogens-proof-macheret.html" target="_blank">📜 JUS COGENS</a>
+  <a class="btn btn-red btn-sm" href="https://arhiv1973b.github.io/apostille-legal-case/FORGERY_DECONSTRUCTION_ACT.html" target="_blank">🔍 АКТ (РУ)</a>
+  <a class="btn btn-ghost btn-sm" href="https://arhiv1973b.github.io/apostille-archive-english/" target="_blank">📂 90 АПОСТИЛЕЙ</a>
+  <button class="btn btn-ghost btn-sm" onclick="window.print()">🖨 РАСПЕЧАТАТЬ</button>
+</div>
+<div class="footer">
+  <span>ИНСТРУКЦИЯ НАБЛЮДАТЕЛЯ · CASE-MACHERET-1997–2026</span>
+  <span><a href="https://legal.un.org/ilc/guide/1_14.shtml" target="_blank">ILC JUS COGENS</a> · <a href="https://arhiv1973b.github.io/apostille-archive-english/" target="_blank">90 АПОСТИЛЕЙ</a></span>
+  <span>🔒 SHA-256 · GIT · 2026</span>
+</div>
+</div>
+</div>
+<div class="lp" id="lp-ro">
+<div class="w">
+<div class="cover">
+  <div class="cover-label">// GHID PENTRU OBSERVATORUL INTERNAȚIONAL · DISTRIBUȚIE IMEDIATĂ</div>
+  <div class="cover-title">Baza de probe digitale:<br><em>Cazul Macheret 1997–2026</em></div>
+  <div class="cover-sub">ÎNCĂLCARE JUS COGENS · FURT DE IDENTITATE · IMPUNITATE INSTITUȚIONALĂ · 8.158 ZILE</div>
+  <div class="cover-recipients">
+    <span class="tg tg-b">HCDH ONU</span><span class="tg tg-y">AMBASADE G7</span><span class="tg tg-r">INTERPOL</span><span class="tg tg-g">CPI / OTP</span><span class="tg tg-p">CEDH</span><span class="tg tg-x">CSM / MJ RM</span>
+  </div>
+</div>
+<div class="sh"><span class="sh-num">§ 01</span><div class="sh-title">Ce este această bază de probe — <em>și de ce contează</em></div></div>
+<div class="panel">
+  <div class="ph">SCOPUL ACESTUI GHID</div>
+  <div class="pb">
+    <p style="margin-bottom:10px;">Acest document este un briefing structurat pentru observatori internaționali, misiuni diplomatice și organe de monitorizare. Oferă acces direct la o arhivă digitală verificată care documentează <strong>încălcări sistematice ale normelor Jus Cogens</strong> în Republica Moldova în perioada 1997–2026.</p>
+    <div class="axiom">
+      Apostila certifică autenticitatea semnăturii unui funcționar. Nu certifică legalitatea conținutului unui act judiciar. Conținutul celor 90 de decizii apostilate: evitarea sistematică a examinării alegațiilor de tortură.
+      <cite>— Comentariul Arhivei Apostilelor · Cazul Macheret</cite>
+    </div>
+  </div>
+</div>
+<div class="sh"><span class="sh-num">§ 02</span><div class="sh-title">Cele Trei Fapte Probatorii — <em>nucleul cazului</em></div></div>
+<div class="lchain">
+  <div class="lc"><div class="lc-label">FAPT 1 — TORTURĂ DOCUMENTATĂ</div><div class="lc-text">Faptele de tortură sunt consemnate în Dosarul nr. 1-568/98. Apostila certifică autenticitatea documentului judiciar. <strong>Norma Jus Cogens activată — nu există termen de prescripție.</strong></div></div>
+  <div class="lc"><div class="lc-label">FAPT 2 — 8.158 ZILE FĂRĂ INVESTIGARE AUTENTICĂ</div><div class="lc-text">90 de decizii apostilate: analiza încrucișată revelează un tipar recurent — <strong>plângerile sunt respinse fără examinarea probelor de tortură.</strong> Fiecare zi de tăcere este o nouă încălcare independentă a Jus Cogens.</div></div>
+  <div class="lc"><div class="lc-label">FAPT 3 — CASCADĂ CRIMINALĂ (15.03.2022)</div><div class="lc-text">Furt de identitate: Nantoi Liudmila a utilizat identitatea lui Marcov I.M. pentru a confisca bunuri succesorale (str. Miron Costin). <strong>Expertiza grafologică (Vector 3) confirmă falsul.</strong></div></div>
+</div>
+<div class="deadline">
+  <strong>⚠ TERMEN CRITIC: 09 APRILIE 2026</strong>
+  Absența unei investigații autentice activează <strong>Global Sanction Vector 11</strong>. Arhiva va fi transmisă misiunilor G7, Raportorului Special ONU privind tortura, OTP al CPI și CEDH.
+</div>
+<div class="brow">
+  <a class="btn btn-gold btn-lg" href="https://arhiv1973b.github.io/apostille-legal-case/" target="_blank">⌂ DESCHIDE VAULT</a>
+  <a class="btn btn-cyan" href="https://arhiv1973b.github.io/apostille-legal-case/LISTA_PROBE_DIGITALE.html" target="_blank">🇷🇴 LISTĂ PROBE</a>
+  <a class="btn btn-red btn-sm" href="https://arhiv1973b.github.io/apostille-legal-case/FORGERY_DECONSTRUCTION_ACT.html" target="_blank">🔍 ACT DECONSTRUCȚIE</a>
+  <a class="btn btn-ghost btn-sm" href="https://arhiv1973b.github.io/apostille-archive-english/" target="_blank">📂 90 APOSTILE</a>
+  <button class="btn btn-ghost btn-sm" onclick="window.print()">🖨 TIPĂRIRE</button>
+</div>
+<div class="footer">
+  <span>GHID OBSERVATOR · CASE-MACHERET-1997–2026</span>
+  <span><a href="https://legal.un.org/ilc/guide/1_14.shtml" target="_blank">ILC JUS COGENS</a> · <a href="https://arhiv1973b.github.io/apostille-archive-english/" target="_blank">90 APOSTILE</a></span>
+  <span>🔒 SHA-256 · GIT · 2026</span>
+</div>
+</div>
+</div>
+<div class="lp" id="lp-fr">
+<div class="w">
+<div class="cover">
+  <div class="cover-label">// GUIDE POUR L'OBSERVATEUR INTERNATIONAL · DISTRIBUTION IMMÉDIATE</div>
+  <div class="cover-title">Coffre-fort de preuves numériques :<br><em>Affaire Macheret 1997–2026</em></div>
+  <div class="cover-sub">VIOLATION JUS COGENS · USURPATION D'IDENTITÉ · IMPUNITÉ INSTITUTIONNELLE · 8 158 JOURS</div>
+  <div class="cover-recipients">
+    <span class="tg tg-b">HCDH ONU</span><span class="tg tg-y">AMBASSADES G7</span><span class="tg tg-r">INTERPOL</span><span class="tg tg-g">CPI / BDP</span><span class="tg tg-p">CEDH</span><span class="tg tg-x">CSM / MJ RM</span>
+  </div>
+</div>
+<div class="sh"><span class="sh-num">§ 01</span><div class="sh-title">Ce coffre-fort — <em>et pourquoi il est essentiel</em></div></div>
+<div class="panel">
+  <div class="ph">OBJET DE CE GUIDE</div>
+  <div class="pb">
+    <p style="margin-bottom:10px;">Ce document est un briefing structuré destiné aux observateurs internationaux, missions diplomatiques et organes de surveillance. Il donne accès à une archive numérique vérifiée documentant des <strong>violations systématiques des normes Jus Cogens</strong> en République de Moldova de 1997 à 2026.</p>
+    <div class="axiom">
+      L'apostille certifie l'authenticité de la signature d'un fonctionnaire. Elle ne certifie pas la légalité du contenu d'un acte judiciaire. Le contenu des 90 décisions apostillées : évitement systématique de l'examen des allégations de torture.
+      <cite>— Commentaire des Archives d'Apostilles · Affaire Macheret</cite>
+    </div>
+  </div>
+</div>
+<div class="sh"><span class="sh-num">§ 02</span><div class="sh-title">Les Trois Faits Probatoires — <em>le cœur de l'affaire</em></div></div>
+<div class="lchain">
+  <div class="lc"><div class="lc-label">FAIT 1 — TORTURE DOCUMENTÉE</div><div class="lc-text">Les faits de torture sont consignés dans le Dossier n° 1-568/98. L'apostille certifie l'authenticité du document judiciaire. <strong>Norme Jus Cogens activée — aucune prescription n'est applicable.</strong></div></div>
+  <div class="lc"><div class="lc-label">FAIT 2 — 8 158 JOURS SANS ENQUÊTE AUTHENTIQUE</div><div class="lc-text">90 décisions apostillées : l'analyse croisée révèle un schéma récurrent — <strong>plaintes rejetées sans examen des preuves de torture.</strong> Chaque jour de silence est une nouvelle violation indépendante du Jus Cogens.</div></div>
+  <div class="lc"><div class="lc-label">FAIT 3 — CASCADE CRIMINELLE (15.03.2022)</div><div class="lc-text">Usurpation d'identité : Nantoi Liudmila a utilisé l'identité de Marcov I.M. pour saisir des biens successoraux (rue Miron Costin). <strong>L'expertise graphologique (Vecteur 3) confirme le faux.</strong></div></div>
+</div>
+<div class="deadline">
+  <strong>⚠ ÉCHÉANCE CRITIQUE : 09 AVRIL 2026</strong>
+  L'absence d'une enquête authentique active le <strong>Global Sanction Vector 11</strong>. L'archive sera transmise aux missions G7, au Rapporteur Spécial de l'ONU sur la torture, au BDP de la CPI et à la CEDH.
+</div>
+<div class="brow">
+  <a class="btn btn-gold btn-lg" href="https://arhiv1973b.github.io/apostille-legal-case/" target="_blank">⌂ OUVRIR LE VAULT</a>
+  <a class="btn btn-cyan" href="https://arhiv1973b.github.io/apostille-legal-case/jus-cogens-proof-macheret.html" target="_blank">📜 JUS COGENS</a>
+  <a class="btn btn-red btn-sm" href="https://arhiv1973b.github.io/apostille-legal-case/FORGERY_DECONSTRUCTION_FR.html" target="_blank">🔍 ACTE (FR)</a>
+  <a class="btn btn-ghost btn-sm" href="https://arhiv1973b.github.io/apostille-archive-english/" target="_blank">📂 90 APOSTILLES</a>
+  <button class="btn btn-ghost btn-sm" onclick="window.print()">🖨 IMPRIMER</button>
+</div>
+<div class="footer">
+  <span>GUIDE OBSERVATEUR · CASE-MACHERET-1997–2026</span>
+  <span><a href="https://legal.un.org/ilc/guide/1_14.shtml" target="_blank">CDI JUS COGENS</a> · <a href="https://arhiv1973b.github.io/apostille-archive-english/" target="_blank">90 APOSTILLES</a></span>
+  <span>🔒 SHA-256 · GIT · 2026</span>
+</div>
+</div>
+</div>
 <script>
-  function setLang(langId) {
-    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById(langId).classList.add('active');
-    event.target.classList.add('active');
-  }
+function lang(l,btn){
+  document.querySelectorAll('.lp').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.lb').forEach(b=>b.classList.remove('on'));
+  document.getElementById('lp-'+l).classList.add('on');
+  btn.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function shareGuide(){
+  const url='https://arhiv1973b.github.io/apostille-legal-case/OBSERVER_GUIDE.html';
+  if(navigator.share){navigator.share({title:'Observer Guide — Case Macheret',url});}
+  else{navigator.clipboard?.writeText(url).then(()=>alert('URL copied:\n'+url));}
+}
 </script>
 </body>
 </html>
