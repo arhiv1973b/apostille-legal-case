@@ -3,31 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <title>CRIMINAL REPORT GATEWAY — CASE-MACHERET-1997-2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 <style>
-  body { background: #050000; color: #ff2244; font-family: 'Share Tech Mono', monospace; padding: 40px; }
-  .box { border: 2px solid #ff2244; padding: 30px; background: rgba(255,0,0,0.05); max-width: 900px; margin: 0 auto; }
-  h1 { font-family: 'Orbitron', sans-serif; text-transform: uppercase; letter-spacing: 3px; }
-  .fact-item { border-left: 3px solid #ff2244; padding-left: 15px; margin: 15px 0; color: #fff; }
-  .btn-send { display: inline-block; padding: 15px 25px; border: 1px solid #00c6ff; color: #00c6ff; text-decoration: none; font-weight: bold; margin-top: 20px; }
+  :root { --red: #ff2244; --cyan: #00c6ff; --bg: #050000; }
+  body { background: var(--bg); color: #fff; font-family: 'Share Tech Mono', monospace; padding: 40px; }
+  .gateway-box { border: 2px solid var(--red); padding: 40px; background: rgba(255,0,0,0.03); max-width: 1000px; margin: 0 auto; box-shadow: 0 0 30px rgba(255,0,0,0.1); }
+  h1 { font-family: 'Orbitron', sans-serif; color: var(--red); text-transform: uppercase; border-bottom: 1px solid var(--red); padding-bottom: 15px; }
+  .crime-node { background: #110000; border-left: 4px solid var(--red); padding: 20px; margin: 25px 0; }
+  .crime-node h3 { color: var(--red); margin-top: 0; }
+  .btn-group { display: flex; gap: 20px; margin-top: 30px; }
+  .btn { flex: 1; padding: 15px; text-align: center; text-decoration: none; font-weight: bold; border: 1px solid var(--cyan); color: var(--cyan); }
+  .btn-red { border-color: var(--red); color: var(--red); }
+  .btn:hover { background: rgba(0,198,255,0.1); }
 </style>
 </head>
 <body>
-<div class="box">
-  <h1>УВЕДОМЛЕНИЕ О ТЯЖКИХ ПРЕСТУПЛЕНИЯХ</h1>
-  <p><strong>СТАТУС:</strong> ЭСКАЛАЦИЯ JUS COGENS</p>
-  <div class="fact-item">
-    <strong>ОБЪЕКТ 1: ПОДЛОГ ЛИЧНОСТИ (15.03.2022)</strong><br>
-    Доказанный факт использования фиктивных данных Маркова И.М. для блокировки реабилитации.
+<div class="gateway-box">
+  <h1>REPORTING GATEWAY: SERIOUS CRIMES</h1>
+  <p>Данный узел предназначен для экстренной передачи текста по нерасследуемым преступлениям (1997–2026).</p>
+
+  <div class="crime-node">
+    <h3>📍 ОБЪЕКТ: ПОДЛОГ И КРАЖА ЛИЧНОСТИ (ID THEFT)</h3>
+    <p>Фактическая база: Использование данных Маркова И.М. официальными лицами ГНС (Нантой Л.) от 15.03.2022 для симуляции юридических процессов.</p>
   </div>
-  <div class="fact-item">
-    <strong>ОБЪЕКТ 2: ПОКУШЕНИЯ И НЕРАССЛЕДУЕМЫЕ СМЕРТИ</strong><br>
-    Системное игнорирование фактов физического устранения свидетелей в период 1997–2026 гг.
+
+  <div class="crime-node">
+    <h3>📍 ОБЪЕКТ: ПОКУШЕНИЯ И УБИЙСТВА (COLD CASES)</h3>
+    <p>Фактическая база: Систематическое отсутствие расследований по фактам физического устранения свидетелей и покушений на жизнь A©tor в условиях правового вакуума.</p>
   </div>
-  <hr style="border:0; border-top:1px solid #333;">
-  <p>Данный текст и ссылки на Evidence Vault (90 апостилей) подготовлены для передачи в ICC OTP и INTERPOL General Secretariat.</p>
-  <a href="https://www.interpol.int/en/Contacts/Contact-INTERPOL" class="btn-send">ОТПРАВИТЬ В ИНТЕРПОЛ</a>
-  <a href="index.html" class="btn-send" style="border-color:#555; color:#555;">ВЕРНУТЬСЯ</a>
+
+  <div class="btn-group">
+    <a href="https://www.interpol.int/en/Contacts/Contact-INTERPOL" target="_blank" class="btn btn-red">ОТПРАВИТЬ В INTERPOL</a>
+    <a href="https://www.icc-cpi.int/about/otp" target="_blank" class="btn">В МУС (ICC OTP)</a>
+  </div>
+  <a href="index.html" style="display:block; margin-top:30px; color:#555; text-align:center; text-decoration:none;">← ВЕРНУТЬСЯ В VAULT</a>
 </div>
 </body>
 </html>

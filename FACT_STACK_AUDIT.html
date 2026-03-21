@@ -2,24 +2,42 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>FACT STACK AUDIT — CASE-MACHERET-1997-2026</title>
+<title>FACT STACK AUDIT — GLOBAL REPOSITORY SYNC</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@600&display=swap" rel="stylesheet">
 <style>
-  body { background: #030a0f; color: #c8e0f0; font-family: sans-serif; padding: 40px; }
-  .stack-wrap { max-width: 1000px; margin: 0 auto; }
-  .layer { border-bottom: 1px solid #1a2a3a; padding: 20px 0; }
-  .layer span { color: #00c6ff; font-family: monospace; }
+  body { background: #030a0f; color: #c8e0f0; font-family: 'Rajdhani', sans-serif; padding: 40px; }
+  .stack-container { max-width: 1100px; margin: 0 auto; }
+  .fact-layer { border: 1px solid #1a2a3a; background: #071624; padding: 25px; margin-bottom: 20px; position: relative; }
+  .fact-layer::before { content: 'VERIFIED'; position: absolute; top: 10px; right: 10px; font-size: 0.7rem; color: #00ff88; border: 1px solid #00ff88; padding: 2px 5px; }
+  .tag { font-family: 'Share Tech Mono', monospace; color: #00c6ff; margin-right: 15px; }
+  h2 { color: #f0c040; margin-top: 0; }
 </style>
 </head>
 <body>
-<div class="stack-wrap">
-  <h1>Стек фактов (Full Repository Audit)</h1>
-  <div class="layer"><span>[FACT 01]</span> 90 апостилированных документов (1997-2026) — Статус: ВЕРИФИЦИРОВАНО.</div>
-  <div class="layer"><span>[FACT 02]</span> Акт деконструкции подлога 15.03.2022 — Статус: Forensic Ready.</div>
-  <div class="layer"><span>[FACT 03]</span> Подтверждение доставки в AFP (21.03.2026 15:51) — Статус: Зафиксировано.</div>
-  <div class="layer"><span>[FACT 04]</span> Доказательство Jus Cogens (82K) — Статус: Jus Cogens Priority.</div>
-  <div class="layer"><span>[FACT 05]</span> Личная ответственность: Нантой, Муряну, Дулча — Статус: Уведомлены.</div>
-  <br>
-  <a href="index.html" style="color:#00c6ff;">← Назад в Vault</a>
+<div class="stack-container">
+  <h1>📚 ВЕКТОР 22: КОНСОЛИДИРОВАННЫЙ СТЕК ФАКТОВ</h1>
+  
+  <div class="fact-layer">
+    <h2><span class="tag">[BRANCH: MASTER]</span> 90 АПОСТИЛЕЙ</h2>
+    <p>Полная хронология системного бездействия (8158 суток). Верифицировано государственными печатями.</p>
+  </div>
+
+  <div class="fact-layer">
+    <h2><span class="tag">[BRANCH: MASTER]</span> АКТ ДЕКОНСТРУКЦИИ (15.03.2022)</h2>
+    <p>Forensic-отчет о подмене личности. База для ст. 361 УК РМ и международных ордеров.</p>
+  </div>
+
+  <div class="fact-layer" style="border-color: #ff2244;">
+    <h2><span class="tag">[BRANCH: NOTES]</span> ЭСКАЛАЦИЯ AFP (21.03.2026)</h2>
+    <p>Подтвержденный факт уведомления мировых СМИ (Receipt ID: 1551). Выход из национальной юрисдикции.</p>
+  </div>
+
+  <div class="fact-layer">
+    <h2><span class="tag">[BRANCH: MASTER]</span> JUS COGENS PROOF (пытки 1998)</h2>
+    <p>Документальная связь между преступлениями против человечности и текущим правовым статусом.</p>
+  </div>
+
+  <a href="index.html" style="color: #00c6ff; text-decoration: none; font-weight: bold;">← ВЕРНУТЬСЯ К ТЕРМИНАЛУ</a>
 </div>
 </body>
 </html>
