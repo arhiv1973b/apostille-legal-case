@@ -758,10 +758,10 @@ body::after {
     <a class="btn btn-red btn-block" href="https://arhiv1973b.github.io/apostille-legal-case/FORGERY_DECONSTRUCTION_ACT.html" target="_blank">
       ⚖ АКТ ДЕКОНСТРУКЦИИ ПОДЛОГА
     </a>
-    <a class="btn btn-purple btn-block" href="https://www.interpol.iContacts/Contact-INTERPOL" target="_blank">
+    <a class="btn btn-purple btn-block" href="https://www.interpol.int/en/Who-we-are/Contact-INTERPOL" target="_blank">
       🔵 ПЕРЕДАТЬ В INTERPOL
     </a>
-    <a class="btn btn-yellow btn-block" href="https://www.ohchr.ocontact-us" target="_blank">
+    <a class="btn btn-yellow btn-block" href="https://https://www.ohchr.org/en/contact-us" target="_blank">
       🌍 UN OHCHR — ЖАЛОБА
     </a>
     <a class="btn btn-ghost btn-block" href="https://legal.un.org/ilc/guide/1_14.shtml" target="_blank">
@@ -875,7 +875,7 @@ body::after {
           🚨 ПОЛНОЕ УВЕДОМЛЕНИЕ
         </a>
         <div class="btn-row">
-          <a class="btn btn-purple btn-sm" href="https://www.interpol.iContacts/Contact-INTERPOL" target="_blank">
+          <a class="btn btn-purple btn-sm" href="https://www.interpol.int/en/Who-we-are/Contact-INTERPOL" target="_blank">
             🔵 INTERPOL
           </a>
           <a class="btn btn-yellow btn-sm" href="https://arhiv1973b.github.io/apostille-legal-case/FORGERY_DECONSTRUCTION_ACT.html" target="_blank">
@@ -948,7 +948,7 @@ body::after {
         <a class="btn btn-purple btn-sm" href="https://arhiv1973b.github.io/apostille-legal-case/FORGERY_DECONSTRUCTION_ACT.html" target="_blank">
           📄 АКТ СОУЧАСТИЯ
         </a>
-        <a class="btn btn-ghost btn-xs" href="https://www.interpol.iContacts/Contact-INTERPOL" target="_blank">
+        <a class="btn btn-ghost btn-xs" href="https://www.interpol.int/en/Who-we-are/Contact-INTERPOL" target="_blank">
           🔵 INTERPOL
         </a>
       </div>
@@ -1101,7 +1101,7 @@ body::after {
       Статус: OFFICIAL SUBMISSION TO UN OHCHR / INTERPOL.
     </div>
     <div class="btn-row">
-      <a class="btn btn-purple" href="https://www.interpol.iContacts/Contact-INTERPOL" target="_blank">
+      <a class="btn btn-purple" href="https://www.interpol.int/en/Who-we-are/Contact-INTERPOL" target="_blank">
         🔵 INTERPOL CONTACT
       </a>
       <a class="btn btn-red" href="https://arhiv1973b.github.io/apostille-legal-case/FORGERY_DECONSTRUCTION_ACT.html" target="_blank">
@@ -1122,7 +1122,7 @@ body::after {
   <div class="vector-head">📡 КАНАЛЫ ТРАНСМИССИИ — TRANSMISSION CHANNELS</div>
   <div class="vector-body">
     <div class="dock-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:8px;">
-      <a class="btn btn-yellow btn-block" href="https://www.ohchr.ocontact-us" target="_blank">
+      <a class="btn btn-yellow btn-block" href="https://https://www.ohchr.org/en/contact-us" target="_blank">
         🌍 UN OHCHR — ПОДАТЬ ЖАЛОБУ
       </a>
       <a class="btn btn-blue btn-block" href="https://www.icc-cpi.int/get-involved/Pages/communications-and-referrals.aspx" target="_blank">
