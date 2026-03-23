@@ -189,8 +189,8 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;back
       <a class="lang-item" href="FORGERY_DECONSTRUCTION_ACT.html" style="border-color:rgba(255,34,68,.3);color:var(--red);">🇷🇺 RUSSIAN (current)</a>
     </div>
     <div class="btn-row">
-      <a class="btn btn-red" href="https://www.interpol.int/en/Who-we-are/Contact-INTERPOL" target="_blank">🔵 SUBMIT TO INTERPOL</a>
-      <a class="btn btn-blue btn-sm" href="https://https://www.ohchr.org/en/contact-us" target="_blank">🌍 UN OHCHR</a>
+      <a class="btn btn-red" href="https://www.interpol.iContacts/Contact-INTERPOL" target="_blank">🔵 SUBMIT TO INTERPOL</a>
+      <a class="btn btn-blue btn-sm" href="https://www.ohchr.ocontact-us" target="_blank">🌍 UN OHCHR</a>
       <a class="btn btn-purple btn-sm" href="https://www.icc-cpi.int/get-involved/Pages/communications-and-referrals.aspx" target="_blank">⚖ МУС / ICC</a>
       <button class="btn btn-ghost btn-sm" onclick="window.print()">🖨 PRINT</button>
     </div>

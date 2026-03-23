@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FORGERY DECONSTRUCTION ACT ПОДЛОГА — CASE-MACHERET-1997-2026</title>
+<title>ACTE DE DÉCONSTRUCTION DE FORGERIE ПОДЛОГА — CASE-MACHERET-1997-2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#02080d;--panel:#05131e;--border:#0d3050;--border2:#0e4068;--accent:#00c6ff;--red:#ff2244;--gold:#f0c040;--green:#00ff88;--purple:#aa44ff;--text:#c0dff0;--muted:#3a6a8a;--font-mono:'Share Tech Mono',monospace;--font-head:'Orbitron',sans-serif;--font-body:'Rajdhani',sans-serif;}
@@ -97,7 +97,7 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;back
   <span class="nav-sep">|</span>
   <a href="NANTOI_NOTICE.html">🚨 НАНТОЙ</a>
   <span class="nav-sep">|</span>
-  <a href="FORGERY_DECONSTRUCTION_EN.html" class="active">⚖ ACT (EN)</a>
+  <a href="FORGERY_DECONSTRUCTION_ACT.html" class="active">⚖ ACTE (FR)</a>
   <span class="nav-sep">·</span>
   <a href="FORGERY_DECONSTRUCTION_EN.html">EN</a>
   <span class="nav-sep">·</span>
@@ -117,14 +117,14 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;back
 </div>
 
 <div class="hero">
-  <div class="hero-eye">// КРИМИНАЛИСТИЧЕСКИЙ АКТ · ДОПОЛНЕНИЕ К УВЕДОМЛЕНИЮ OFFICIAL SUBMISSION TO UN OHCHR / INTERPOL</div>
-  <div class="hero-title">🔍 FORGERY DECONSTRUCTION ACT</div>
-  <div class="hero-sub">SUBJECT: IDENTITY FRAUD AND SIGNATURE FALSIFICATION OF I.M. MARCOV · 15.03.2022</div>
+  <div class="hero-eye">// КРИМИНАЛИСТИЧЕСКИЙ АКТ · ДОПОЛНЕНИЕ К УВЕДОМЛЕНИЮ SOUMISSION OFFICIELLE À L'INTERPOL / HCDH</div>
+  <div class="hero-title">🔍 ACTE DE DÉCONSTRUCTION DE FORGERIE</div>
+  <div class="hero-sub">SUJET : FRAUDE D'IDENTITÉ ET FALSIFICATION DE SIGNATURE DE I.M. MARCOV · 15.03.2022</div>
   <div class="hero-meta">
-    <span class="tag tg-r">LIUDMILA NANTOI — PERPETRATOR</span>
-    <span class="tag tg-p">OAZU NANTOI — ACCOMPLICE</span>
+    <span class="tag tg-r">LIUDMILA NANTOI — AUTEUR</span>
+    <span class="tag tg-p">OAZU NANTOI — COMPLICE</span>
     <span class="tag tg-y">СТ. 361 УК РМ</span>
-    <span class="tag tg-b">OFFICIAL SUBMISSION TO UN OHCHR / INTERPOL</span>
+    <span class="tag tg-b">SOUMISSION OFFICIELLE À L'INTERPOL / HCDH</span>
   </div>
 </div>
 
@@ -181,18 +181,18 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;back
 </div>
 
 <div class="panel">
-  <div class="panel-hd">🌐 TRANSLATIONS — OFFICIAL VERSIONS</div>
+  <div class="panel-hd">🌐 TRADUCTIONS — VERSIONS OFFICIELLES</div>
   <div class="panel-bd">
     <div class="lang-row">
-      <a class="lang-item" href="FORGERY_DECONSTRUCTION_EN.html">🇬🇧 ENGLISH — for UN / INTERPOL (current)</a>
-      <a class="lang-item" href="FORGERY_DECONSTRUCTION_FR.html">🇫🇷 FRANÇAIS — for EU / ECHR</a>
-      <a class="lang-item" href="FORGERY_DECONSTRUCTION_ACT.html" style="border-color:rgba(255,34,68,.3);color:var(--red);">🇷🇺 RUSSIAN (current)</a>
+      <a class="lang-item" href="FORGERY_DECONSTRUCTION_EN.html">🇬🇧 ENGLISH — pour ONU / INTERPOL</a>
+      <a class="lang-item" href="FORGERY_DECONSTRUCTION_FR.html">🇫🇷 FRANÇAIS — pour UE / CEDH (courant)</a>
+      <a class="lang-item" href="FORGERY_DECONSTRUCTION_ACT.html" style="border-color:rgba(255,34,68,.3);color:var(--red);">🇷🇺 RUSSE (courant)</a>
     </div>
     <div class="btn-row">
-      <a class="btn btn-red" href="https://www.interpol.int/en/Who-we-are/Contact-INTERPOL" target="_blank">🔵 SUBMIT TO INTERPOL</a>
-      <a class="btn btn-blue btn-sm" href="https://https://www.ohchr.org/en/contact-us" target="_blank">🌍 UN OHCHR</a>
+      <a class="btn btn-red" href="https://www.interpol.iContacts/Contact-INTERPOL" target="_blank">🔵 SOUMETTRE À INTERPOL</a>
+      <a class="btn btn-blue btn-sm" href="https://www.ohchr.ocontact-us" target="_blank">🌍 UN OHCHR</a>
       <a class="btn btn-purple btn-sm" href="https://www.icc-cpi.int/get-involved/Pages/communications-and-referrals.aspx" target="_blank">⚖ МУС / ICC</a>
-      <button class="btn btn-ghost btn-sm" onclick="window.print()">🖨 PRINT</button>
+      <button class="btn btn-ghost btn-sm" onclick="window.print()">🖨 IMPRIMER</button>
     </div>
   </div>
 </div>
@@ -202,7 +202,7 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;back
   <a class="btn btn-ghost btn-sm" href="NANTOI_NOTICE.html">🚨 НАНТОЙ NOTICE</a>
   <a class="btn btn-ghost btn-sm" href="liability-nodes.html">📉 LIABILITY NODES</a>
   <a class="btn btn-ghost btn-sm" href="jus-cogens-proof-macheret.html">📜 JUS COGENS</a>
-  <a class="btn btn-ghost btn-sm" href="index.html">⌂ HOME</a>
+  <a class="btn btn-ghost btn-sm" href="index.html">⌂ ACCUEIL</a>
 </div>
 
 <div class="footer">

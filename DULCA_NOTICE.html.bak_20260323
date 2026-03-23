@@ -195,8 +195,8 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
       <strong>Дедлайн: 09.04.2026.</strong> Отсутствие корректирующих мер активирует протокол Global Sanction Vector 11. Ваши данные переданы в мониторинговые группы ООН, Белый Дом и международные юрисдикции.
     </div>
     <div class="btn-row">
-      <a class="btn btn-red btn-sm" href="https://https://www.ohchr.org/en/contact-us" target="_blank">🌍 UN OHCHR — ПОДАТЬ ЖАЛОБУ</a>
-      <a class="btn btn-blue btn-sm" href="https://www.interpol.int/en/Who-we-are/Contact-INTERPOL" target="_blank">🔵 INTERPOL</a>
+      <a class="btn btn-red btn-sm" href="https://www.ohchr.ocontact-us" target="_blank">🌍 UN OHCHR — ПОДАТЬ ЖАЛОБУ</a>
+      <a class="btn btn-blue btn-sm" href="https://www.interpol.iContacts/Contact-INTERPOL" target="_blank">🔵 INTERPOL</a>
       <button class="btn btn-ghost btn-sm" onclick="copyNotice()">📋 КОПИРОВАТЬ ТЕКСТ</button>
     </div>
   </div>
