@@ -1,0 +1,1039 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "title": "UN Jus Cogens Protocol",
+            "weight": 1.0,
+            "hash": "4269ccfde8144dfecbdb693eaa4e604fd550f4badcacea81ff763f9c0be6a8e8",
+            "content": "Fundamental International Law Integrity",
+            "id": "ROOT_JC"
+        },
+        {
+            "title": "Nantoi Liudmila",
+            "weight": 0.02,
+            "hash": "52ae87277412daf0de8eec791cbd3716ef4ee88fac38fe9c9fc502d337310c54",
+            "content": "Liability node: GNS Tax Authority violation",
+            "id": "NODE_NANTOI"
+        },
+        {
+            "title": "Dulca V.G.",
+            "weight": 0.02,
+            "hash": "59197f31e58c145d0793e3295dfdd7e89a3eaddd1a6a8bd411e19a7648c25cd6",
+            "content": "Liability node: MAI Ministry of Interior violation",
+            "id": "NODE_DULCA"
+        },
+        {
+            "title": "Murianu I.",
+            "weight": 0.02,
+            "hash": "8504af054687d968425a40eaecfbf5a87ae3b71c96bac5683fb091bad4ebfb9f",
+            "content": "Liability node: Court System violation",
+            "id": "NODE_MURIANU"
+        },
+        {
+            "title": "Apostille #1",
+            "weight": 0.5,
+            "hash": "a52a565aea464bd1fe21f4e87a6152364c3daa9b248117eaed0d56370d54c2b1",
+            "content": "Signatory: Official Signature",
+            "id": "APO_1"
+        },
+        {
+            "title": "Apostille #2",
+            "weight": 0.5,
+            "hash": "9af01ff14510885a01759aa1cb90ab90abadd95d786f09d35bab632c02d3531d",
+            "content": "Signatory: Official Signature",
+            "id": "APO_2"
+        },
+        {
+            "title": "Apostille #3",
+            "weight": 0.5,
+            "hash": "8c565ac052a489f7a2fc390a5392f0e730fbbc6ccc8e8b24d83091a310d4a3d9",
+            "content": "Signatory: Official Signature",
+            "id": "APO_3"
+        },
+        {
+            "title": "Apostille #4",
+            "weight": 0.5,
+            "hash": "eab709068c3022087c9c49c5f55ae122970d3eb18660785b2946f1e5936102a3",
+            "content": "Signatory: Official Signature",
+            "id": "APO_4"
+        },
+        {
+            "title": "Apostille #5",
+            "weight": 0.5,
+            "hash": "cb6276cf86a584915740462fb9cddb2ddc5e3b8b91f63f7b1d911068cfd973a2",
+            "content": "Signatory: Official Signature",
+            "id": "APO_5"
+        },
+        {
+            "title": "Apostille #6",
+            "weight": 0.5,
+            "hash": "c207516b5ad2486f7ae06537ba3e00e5e1130001cceb4f0a9fec6baafc30bd0c",
+            "content": "Signatory: Official Signature",
+            "id": "APO_6"
+        },
+        {
+            "title": "Apostille #7",
+            "weight": 0.5,
+            "hash": "77e2564888c6158b7e59d29298de3f2be3ce73f8b6203cc1ae5344e6c4f7edcb",
+            "content": "Signatory: Official Signature",
+            "id": "APO_7"
+        },
+        {
+            "title": "Apostille #8",
+            "weight": 0.5,
+            "hash": "eb00b2a338b273d87623623bafef1a4722334b227403d12d90cbff4956a6810c",
+            "content": "Signatory: Official Signature",
+            "id": "APO_8"
+        },
+        {
+            "title": "Apostille #9",
+            "weight": 0.5,
+            "hash": "0b532ec6b74ab1d5f3a4f7e0933fc95f365aeb1f0bda1f52992baf6f71f76534",
+            "content": "Signatory: Official Signature",
+            "id": "APO_9"
+        },
+        {
+            "title": "Apostille #10",
+            "weight": 0.05,
+            "hash": "dfb03f50cb836eefe4176e256f0571accb298e4979ebbda3b795a90b92539527",
+            "content": "Signatory: Indescifrabila",
+            "id": "APO_10"
+        },
+        {
+            "title": "Apostille #11",
+            "weight": 0.5,
+            "hash": "314f4f1c6d3fd41f7d3ff7e3e9f7c73bc6704ed734e24c5afd52d283c0c1bdc9",
+            "content": "Signatory: Official Signature",
+            "id": "APO_11"
+        },
+        {
+            "title": "Apostille #12",
+            "weight": 0.5,
+            "hash": "804926178724f09a155b10a05edb2cb781904cda70b880f2dbebdf3a1a77a071",
+            "content": "Signatory: Official Signature",
+            "id": "APO_12"
+        },
+        {
+            "title": "Apostille #13",
+            "weight": 0.5,
+            "hash": "65d06e7a986168173232070e09604ed4cea6aa978960b6cd454b90f30a67719e",
+            "content": "Signatory: Official Signature",
+            "id": "APO_13"
+        },
+        {
+            "title": "Apostille #14",
+            "weight": 0.5,
+            "hash": "6d26c611b11a1638dad8c8d5763030aa25f3792c34113c788953a3c22fd35e8a",
+            "content": "Signatory: Official Signature",
+            "id": "APO_14"
+        },
+        {
+            "title": "Apostille #15",
+            "weight": 0.5,
+            "hash": "21f9b9315deb05083ff825f414eab0ca7c86dcd0f8788a7205a00836571c939f",
+            "content": "Signatory: Official Signature",
+            "id": "APO_15"
+        },
+        {
+            "title": "Apostille #16",
+            "weight": 0.5,
+            "hash": "4e70536a35813b08d1e706085c81157a06a4f45b17957a111fa3a927d5ea3b47",
+            "content": "Signatory: Official Signature",
+            "id": "APO_16"
+        },
+        {
+            "title": "Apostille #17",
+            "weight": 0.5,
+            "hash": "863d8cba771de45c41c5d26b8567b2a17c6039cdcedcd566edfbfc8c30dea78e",
+            "content": "Signatory: Official Signature",
+            "id": "APO_17"
+        },
+        {
+            "title": "Apostille #18",
+            "weight": 0.5,
+            "hash": "e92afaf258c224e9b6c58e1ab00ee1bafc4704cb348598463320d98268bcade6",
+            "content": "Signatory: Official Signature",
+            "id": "APO_18"
+        },
+        {
+            "title": "Apostille #19",
+            "weight": 0.5,
+            "hash": "91dd5d7f9cc5447b1c9cb65c21724867a3c52f6732f2104a248070261dd3eb3d",
+            "content": "Signatory: Official Signature",
+            "id": "APO_19"
+        },
+        {
+            "title": "Apostille #20",
+            "weight": 0.05,
+            "hash": "46325d315a89de161e3bad36add1fa6ac7b205ca2b1d56dece84404ceb2546c2",
+            "content": "Signatory: Indescifrabila",
+            "id": "APO_20"
+        },
+        {
+            "title": "Apostille #21",
+            "weight": 0.5,
+            "hash": "78cfa1ba9ee8a84bd441e094fa33020760fdbd49aa0bbb4ce32ee5672c2edd3a",
+            "content": "Signatory: Official Signature",
+            "id": "APO_21"
+        },
+        {
+            "title": "Apostille #22",
+            "weight": 0.5,
+            "hash": "fc2db984c8be149d56869860d85b9210cfa9b004e4a20287214d450d2b89fe8f",
+            "content": "Signatory: Official Signature",
+            "id": "APO_22"
+        },
+        {
+            "title": "Apostille #23",
+            "weight": 0.5,
+            "hash": "847950be55528ff75c01b27e68501b2bea9535f6367607a6e83a2d1da0bf0069",
+            "content": "Signatory: Official Signature",
+            "id": "APO_23"
+        },
+        {
+            "title": "Apostille #24",
+            "weight": 0.5,
+            "hash": "7b6e302885cbbf5c1ab324e3b3d1259dfe22bcc5ce1cda5fb2d839a16562e4ed",
+            "content": "Signatory: Official Signature",
+            "id": "APO_24"
+        },
+        {
+            "title": "Apostille #25",
+            "weight": 0.5,
+            "hash": "679a34ee12ea736602f5d59f7aaca517fcff1103d20dfde6b18d4867d679c9db",
+            "content": "Signatory: Official Signature",
+            "id": "APO_25"
+        },
+        {
+            "title": "Apostille #26",
+            "weight": 0.5,
+            "hash": "eb0db5832a2c821219bef5111aa3a206e79fef1bdc1deff2a0731f62d099cf98",
+            "content": "Signatory: Official Signature",
+            "id": "APO_26"
+        },
+        {
+            "title": "Apostille #27",
+            "weight": 0.5,
+            "hash": "4a13c62908aba171e34ca74b5f2c63d97b3e7933b2e0bcc5ac6ff46af6457e97",
+            "content": "Signatory: Official Signature",
+            "id": "APO_27"
+        },
+        {
+            "title": "Apostille #28",
+            "weight": 0.5,
+            "hash": "535b5f8d2a809985a79b2e7354b57e74ef58549f059b38fade496bc0d4b09542",
+            "content": "Signatory: Official Signature",
+            "id": "APO_28"
+        },
+        {
+            "title": "Apostille #29",
+            "weight": 0.5,
+            "hash": "3d276ec517f95a5ea83ac06864b32e90b4125fb63ac27bd3462a10608cf3d240",
+            "content": "Signatory: Official Signature",
+            "id": "APO_29"
+        },
+        {
+            "title": "Apostille #30",
+            "weight": 0.05,
+            "hash": "e17382f1f3677a4ab78492cdb87ba19e3a7e03c83c3d1e4cbb5397da51219874",
+            "content": "Signatory: Indescifrabila",
+            "id": "APO_30"
+        },
+        {
+            "title": "Apostille #31",
+            "weight": 0.5,
+            "hash": "6272da7e4957cfa690ab56367c4bfb39b3066a971b3cd5fb07543b96b564f79f",
+            "content": "Signatory: Official Signature",
+            "id": "APO_31"
+        },
+        {
+            "title": "Apostille #32",
+            "weight": 0.5,
+            "hash": "12ce2c6dad5a497abed3c88e8125aa82d1f05ee764220a2798688bf0e355c1f8",
+            "content": "Signatory: Official Signature",
+            "id": "APO_32"
+        },
+        {
+            "title": "Apostille #33",
+            "weight": 0.5,
+            "hash": "63d607e0337e0d5b6981d980910f5580496809b2a95ceff18c6f576ce5bbf478",
+            "content": "Signatory: Official Signature",
+            "id": "APO_33"
+        },
+        {
+            "title": "Apostille #34",
+            "weight": 0.5,
+            "hash": "efa509896c9cc99834bd32ed98e02e17238b2b97b0c9f85ccbf32fcf238398e4",
+            "content": "Signatory: Official Signature",
+            "id": "APO_34"
+        },
+        {
+            "title": "Apostille #35",
+            "weight": 0.5,
+            "hash": "c245da87baefa000464b0def9d8a62c8d7bb3cf50b36d7abf9b7c610e4446e4b",
+            "content": "Signatory: Official Signature",
+            "id": "APO_35"
+        },
+        {
+            "title": "Apostille #36",
+            "weight": 0.5,
+            "hash": "814c4b8ff06856877c11b773ce888aca0be4fce595323564ed7a48d6039d3fc3",
+            "content": "Signatory: Official Signature",
+            "id": "APO_36"
+        },
+        {
+            "title": "Apostille #37",
+            "weight": 0.5,
+            "hash": "708cd8796bf6b9d839d56a146a3d85923cf57f2c6f116b95eb640dff767b9599",
+            "content": "Signatory: Official Signature",
+            "id": "APO_37"
+        },
+        {
+            "title": "Apostille #38",
+            "weight": 0.5,
+            "hash": "4cf95a7d68c0726be1d7aaf79a80a902e0da1d8cd34decdbe7bae1d3638f12be",
+            "content": "Signatory: Official Signature",
+            "id": "APO_38"
+        },
+        {
+            "title": "Apostille #39",
+            "weight": 0.5,
+            "hash": "da8d40c7a7508e1aa3e01ac939446e2940a7f4628f8d81e86b034d4a53a2c49f",
+            "content": "Signatory: Official Signature",
+            "id": "APO_39"
+        },
+        {
+            "title": "Apostille #40",
+            "weight": 0.05,
+            "hash": "22eb88bcb03e8acd8091630cd5a7e7b0611fe12f05c0ae7261a8fe521bf5f1d5",
+            "content": "Signatory: Indescifrabila",
+            "id": "APO_40"
+        },
+        {
+            "title": "Apostille #41",
+            "weight": 0.5,
+            "hash": "ec0900d984a8e3f244550b5dbcb4dbe0a947a67db30e1fa8d369d7cfb3fe9e0d",
+            "content": "Signatory: Official Signature",
+            "id": "APO_41"
+        },
+        {
+            "title": "Apostille #42",
+            "weight": 0.5,
+            "hash": "d4f75bb2eab11b780c766e2a71a2e224baac0304bbbf508c1424e87326743cc3",
+            "content": "Signatory: Official Signature",
+            "id": "APO_42"
+        },
+        {
+            "title": "Apostille #43",
+            "weight": 0.5,
+            "hash": "5774de97e5776934046a32bdc0a97e685cb653770982cd15c298019bf0642233",
+            "content": "Signatory: Official Signature",
+            "id": "APO_43"
+        },
+        {
+            "title": "Apostille #44",
+            "weight": 0.5,
+            "hash": "158ad82687ef592a799d4e3febd977fe0cdc74b0477d002eacd5e1fd8582854a",
+            "content": "Signatory: Official Signature",
+            "id": "APO_44"
+        },
+        {
+            "title": "Apostille #45",
+            "weight": 0.5,
+            "hash": "08a4f1bf52bdaeac968eb296cd046773b2e467016afa11a9b5f638801f520fc1",
+            "content": "Signatory: Official Signature",
+            "id": "APO_45"
+        },
+        {
+            "title": "Apostille #46",
+            "weight": 0.5,
+            "hash": "7d71a5824f4d227d6d23b6702244153556ed296ce1752e3054dff69941e9fe17",
+            "content": "Signatory: Official Signature",
+            "id": "APO_46"
+        },
+        {
+            "title": "Apostille #47",
+            "weight": 0.5,
+            "hash": "15d8860382616ff2cf0c1940afd2bf98c44701b500e23be6673a3e6ae1c8fd35",
+            "content": "Signatory: Official Signature",
+            "id": "APO_47"
+        },
+        {
+            "title": "Apostille #48",
+            "weight": 0.5,
+            "hash": "b06e42fe02c4feae2578efdddfa88af91bdacbc897388c79d31e272548b376d0",
+            "content": "Signatory: Official Signature",
+            "id": "APO_48"
+        },
+        {
+            "title": "Apostille #49",
+            "weight": 0.5,
+            "hash": "7e6d37df76027553380972bad4d023cf1ab5e2133474f9906416cacce8f25f57",
+            "content": "Signatory: Official Signature",
+            "id": "APO_49"
+        },
+        {
+            "title": "Apostille #50",
+            "weight": 0.05,
+            "hash": "1b4ff7c94bc62ea66e14ecdfbb31692135d138657e0ba7011b51078f3d516be5",
+            "content": "Signatory: Indescifrabila",
+            "id": "APO_50"
+        },
+        {
+            "title": "Apostille #51",
+            "weight": 0.5,
+            "hash": "468c3238fbeb8cee7269de12a33a8d041ac9b997ad7fffe7cb6db149ba509e95",
+            "content": "Signatory: Official Signature",
+            "id": "APO_51"
+        },
+        {
+            "title": "Apostille #52",
+            "weight": 0.5,
+            "hash": "5c8992528d3e0510155b27f164f33c8c2fb5f5f8743562656c9ef1b38b338850",
+            "content": "Signatory: Official Signature",
+            "id": "APO_52"
+        },
+        {
+            "title": "Apostille #53",
+            "weight": 0.5,
+            "hash": "046705a1fcaf181483029dce256570f8f979c3e3ee1472626d5f6a6244b3dde9",
+            "content": "Signatory: Official Signature",
+            "id": "APO_53"
+        },
+        {
+            "title": "Apostille #54",
+            "weight": 0.5,
+            "hash": "aa16243ae77f83e384363277aaeb8f5d4cfab2bbb038550c53cdef25acf1079a",
+            "content": "Signatory: Official Signature",
+            "id": "APO_54"
+        },
+        {
+            "title": "Apostille #55",
+            "weight": 0.5,
+            "hash": "6b2a97ca96113a2bbbb2c3d3d96cc864f6a26cc7bc2133e9351a85b45a9a3725",
+            "content": "Signatory: Official Signature",
+            "id": "APO_55"
+        },
+        {
+            "title": "Apostille #56",
+            "weight": 0.5,
+            "hash": "7211236e542176c8601374a38ab0a8bc72df2a25154c476a80047731d551d116",
+            "content": "Signatory: Official Signature",
+            "id": "APO_56"
+        },
+        {
+            "title": "Apostille #57",
+            "weight": 0.5,
+            "hash": "8c4b04bdd9c8630b49b998d522ebee8204baf9c2951a5684363762becc84a6c4",
+            "content": "Signatory: Official Signature",
+            "id": "APO_57"
+        },
+        {
+            "title": "Apostille #58",
+            "weight": 0.5,
+            "hash": "b83d7622c05029b308f3964fdb3d5a07500d24d1f43122317b6a94aa1d4efd3f",
+            "content": "Signatory: Official Signature",
+            "id": "APO_58"
+        },
+        {
+            "title": "Apostille #59",
+            "weight": 0.5,
+            "hash": "3be6dfd2c3d0b853ca799c2439d0b5ef6e716be1b929c21fddae0a87e45b3481",
+            "content": "Signatory: Official Signature",
+            "id": "APO_59"
+        },
+        {
+            "title": "Apostille #60",
+            "weight": 0.05,
+            "hash": "73ba469f82eeebda55a0a746c23b73036ca84e9ce6497b0f14ac9199e8f37adc",
+            "content": "Signatory: Indescifrabila",
+            "id": "APO_60"
+        },
+        {
+            "title": "Apostille #61",
+            "weight": 0.5,
+            "hash": "00e046d5f0d290844443b9ee0725eebe9589ac9575836b312e26f2c8fea1479f",
+            "content": "Signatory: Official Signature",
+            "id": "APO_61"
+        },
+        {
+            "title": "Apostille #62",
+            "weight": 0.5,
+            "hash": "7f983c2540325fc63edec2441f659fb16a0d245530b2d3a6024fe46440ab60d8",
+            "content": "Signatory: Official Signature",
+            "id": "APO_62"
+        },
+        {
+            "title": "Apostille #63",
+            "weight": 0.5,
+            "hash": "f80dcc4553994353b22065b831747f4cd16590bef2373a7940eccaa8bed83fe3",
+            "content": "Signatory: Official Signature",
+            "id": "APO_63"
+        },
+        {
+            "title": "Apostille #64",
+            "weight": 0.5,
+            "hash": "d2b08b457839490b96ec6c3a8d83e958728425b9a3a60e7bf8f81b0188571973",
+            "content": "Signatory: Official Signature",
+            "id": "APO_64"
+        },
+        {
+            "title": "Apostille #65",
+            "weight": 0.5,
+            "hash": "ac90fab035943ab388d9ce2c58ed85a15782c084077ee654ee4adae725c5027f",
+            "content": "Signatory: Official Signature",
+            "id": "APO_65"
+        },
+        {
+            "title": "Apostille #66",
+            "weight": 0.5,
+            "hash": "3f934e33e86b846901b3b26591078fd7e4ded2a7680bbdb52e6fa588dffcfba1",
+            "content": "Signatory: Official Signature",
+            "id": "APO_66"
+        },
+        {
+            "title": "Apostille #67",
+            "weight": 0.5,
+            "hash": "dff88c6b2080d5a53e3cff2a8d52ed045a184e8fb0ed6abcceee9dfb1937f2ee",
+            "content": "Signatory: Official Signature",
+            "id": "APO_67"
+        },
+        {
+            "title": "Apostille #68",
+            "weight": 0.5,
+            "hash": "83335b8b34dbc3479df1662bb0638b8274618d129c4027120f07cb07675b5f58",
+            "content": "Signatory: Official Signature",
+            "id": "APO_68"
+        },
+        {
+            "title": "Apostille #69",
+            "weight": 0.5,
+            "hash": "f6e9391ee41ad5674a5d5b4c9342cff93a867e3cc48e446bceb826250121aa70",
+            "content": "Signatory: Official Signature",
+            "id": "APO_69"
+        },
+        {
+            "title": "Apostille #70",
+            "weight": 0.05,
+            "hash": "e2f2761d8133f0b711de758436c21943b1aa406072debb28d2b52ee4992477d6",
+            "content": "Signatory: Indescifrabila",
+            "id": "APO_70"
+        },
+        {
+            "title": "Apostille #71",
+            "weight": 0.5,
+            "hash": "e2a61e98ca64a79d9d0187d1b2918f48bd13a3ff2a83f0ef7418c6344005ee32",
+            "content": "Signatory: Official Signature",
+            "id": "APO_71"
+        },
+        {
+            "title": "Apostille #72",
+            "weight": 0.5,
+            "hash": "90ce46159fe1296f8db6344124118cdaad72bf681888a6687bd1c7484073d1e4",
+            "content": "Signatory: Official Signature",
+            "id": "APO_72"
+        },
+        {
+            "title": "Apostille #73",
+            "weight": 0.5,
+            "hash": "7273ffda338240a53ebf1e8984a056627da304271e426bae644ebcbf998a3a15",
+            "content": "Signatory: Official Signature",
+            "id": "APO_73"
+        },
+        {
+            "title": "Apostille #74",
+            "weight": 0.5,
+            "hash": "da35ae65f1751861076d353e6dfa94983975c27bdf0a1e806bdc79f6639f79a2",
+            "content": "Signatory: Official Signature",
+            "id": "APO_74"
+        },
+        {
+            "title": "Apostille #75",
+            "weight": 0.5,
+            "hash": "1d9d6ed617028312af028acec31395dde7777b1c37fec68cd622bdebca63aa5e",
+            "content": "Signatory: Official Signature",
+            "id": "APO_75"
+        },
+        {
+            "title": "Apostille #76",
+            "weight": 0.5,
+            "hash": "dc7faf419d7b89db7c1f2c6bfb638c83a6c4d2517deeba573068bd76d7bcb798",
+            "content": "Signatory: Official Signature",
+            "id": "APO_76"
+        },
+        {
+            "title": "Apostille #77",
+            "weight": 0.5,
+            "hash": "77c78a57c0cff827bf8574c16dccd942c08b35f37cef2e1bbd9aeda34a518a3f",
+            "content": "Signatory: Official Signature",
+            "id": "APO_77"
+        },
+        {
+            "title": "Apostille #78",
+            "weight": 0.5,
+            "hash": "ebc5844ad23653f0e1309a34c5d0243338cd434009ee3f5ffcba6f76b806612c",
+            "content": "Signatory: Official Signature",
+            "id": "APO_78"
+        },
+        {
+            "title": "Apostille #79",
+            "weight": 0.5,
+            "hash": "6c5c805394784eb49eaf15068472ac7e49174f2a9f4164efc1ccf8a6ea27f932",
+            "content": "Signatory: Official Signature",
+            "id": "APO_79"
+        },
+        {
+            "title": "Apostille #80",
+            "weight": 0.05,
+            "hash": "f554a46a5ddb02ca3a8d05d505d0f52ad9c2a3dd3402df6246d3dbc6fbea1b11",
+            "content": "Signatory: Indescifrabila",
+            "id": "APO_80"
+        },
+        {
+            "title": "Apostille #81",
+            "weight": 0.5,
+            "hash": "d74c654463fb85f7037564f5bde724f4c967f5085dcc3348a609ac13ce7a3d26",
+            "content": "Signatory: Official Signature",
+            "id": "APO_81"
+        },
+        {
+            "title": "Apostille #82",
+            "weight": 0.5,
+            "hash": "ff2337c7641bf27b78e869dca4356c96d2b2a0be5dfbe1f8c641a532ad309dde",
+            "content": "Signatory: Official Signature",
+            "id": "APO_82"
+        },
+        {
+            "title": "Apostille #83",
+            "weight": 0.5,
+            "hash": "d4c5d03ddce25d8c2b7bc7ed8c14c70093eb02cf0d1c67e4364eb9a0b80c2854",
+            "content": "Signatory: Official Signature",
+            "id": "APO_83"
+        },
+        {
+            "title": "Apostille #84",
+            "weight": 0.5,
+            "hash": "b8e0ff3c271f503bfe37f457472d822788c88a6d54ee1bb7b003cd99245ae06d",
+            "content": "Signatory: Official Signature",
+            "id": "APO_84"
+        },
+        {
+            "title": "Apostille #85",
+            "weight": 0.5,
+            "hash": "fb48b096a4b69a3d0ac44e0add9074ecb7d3b229c9f622650e3a5778103c54b5",
+            "content": "Signatory: Official Signature",
+            "id": "APO_85"
+        },
+        {
+            "title": "Apostille #86",
+            "weight": 0.5,
+            "hash": "709b0f503c835a57a534ec57eec456b860e7702603d5a13dc676029d6072bb2c",
+            "content": "Signatory: Official Signature",
+            "id": "APO_86"
+        },
+        {
+            "title": "Apostille #87",
+            "weight": 0.5,
+            "hash": "38301c56544e0120b2b9a31674d97d8ede6d92bda03435a11f7fc70df129d443",
+            "content": "Signatory: Official Signature",
+            "id": "APO_87"
+        },
+        {
+            "title": "Apostille #88",
+            "weight": 0.5,
+            "hash": "8e6772a41fe102ba4b1eea5604c3139035bfa6ba91e33db2279c07028b4f1d70",
+            "content": "Signatory: Official Signature",
+            "id": "APO_88"
+        },
+        {
+            "title": "Apostille #89",
+            "weight": 0.5,
+            "hash": "4449741d8989a014390423701876d1a7b7e8af4134771ff648081f8e59c063ba",
+            "content": "Signatory: Official Signature",
+            "id": "APO_89"
+        },
+        {
+            "title": "Apostille #90",
+            "weight": 0.05,
+            "hash": "cedbf8306a400adf4257bf8fb5e324a40f6151a830ca66ab14203f493565bd38",
+            "content": "Signatory: Indescifrabila",
+            "id": "APO_90"
+        }
+    ],
+    "edges": [
+        {
+            "source": "ROOT_JC",
+            "target": "NODE_NANTOI"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "NODE_DULCA"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "NODE_MURIANU"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_1"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_2"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_3"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_4"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_5"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_6"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_7"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_8"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_9"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_10"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_11"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_12"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_13"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_14"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_15"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_16"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_17"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_18"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_19"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_20"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_21"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_22"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_23"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_24"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_25"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_26"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_27"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_28"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_29"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_30"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_31"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_32"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_33"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_34"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_35"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_36"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_37"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_38"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_39"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_40"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_41"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_42"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_43"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_44"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_45"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_46"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_47"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_48"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_49"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_50"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_51"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_52"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_53"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_54"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_55"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_56"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_57"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_58"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_59"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_60"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_61"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_62"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_63"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_64"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_65"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_66"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_67"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_68"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_69"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_70"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_71"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_72"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_73"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_74"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_75"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_76"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_77"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_78"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_79"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_80"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_81"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_82"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_83"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_84"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_85"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_86"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_87"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_88"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_89"
+        },
+        {
+            "source": "ROOT_JC",
+            "target": "APO_90"
+        }
+    ]
+}
