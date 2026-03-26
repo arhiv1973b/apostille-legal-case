@@ -1,0 +1,4 @@
+--- LEGAL INTEGRITY REPORT: 2026-03-26 ---
+🛡️ ID: NODE_1997 | Title: Base Evidence | Weight: 1.0
+⚠️ ID: NODE_2009 | Title: Toxic Event | Weight: 0.05
+🛡️ ID: NODE_2026 | Title: Final Victory | Weight: 1.0
