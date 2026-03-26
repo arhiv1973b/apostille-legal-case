@@ -1,8 +1,8 @@
 --- A©TŌR COURT REPORT (LUPAŞCU SESSION) | 2026-03-26 ---
-⚠️ TOXIC | ROOT | Delay: 0 days | Weight: 0.5
-⚠️ TOXIC | IMWM44AZGX6N6 | Delay: 14 days | Weight: 0.5
-⚠️ TOXIC | DR4Y1584JW9F4 | Delay: 6354 days | Weight: 0.25
-⚠️ TOXIC | DLTP7B8ZHWGQ7 | Delay: 0 days | Weight: 0.05
-⚠️ TOXIC | 4J20E98WFY7J2 | Delay: 0 days | Weight: 0.05
+⚠️ TOXIC/ANOMALY | ROOT_JC | Delay: 0 days | Weight: 0.5
+⚠️ TOXIC/ANOMALY | IMWM44AZGX6N6 | Delay: 14 days | Weight: 0.5
+⚠️ TOXIC/ANOMALY | DR4Y1584JW9F4 | Delay: 6354 days | Weight: 0.25
+⚠️ TOXIC/ANOMALY | DLTP7B8ZHWGQ7 | Delay: 0 days | Weight: 0.05
+⚠️ TOXIC/ANOMALY | 4J20E98WFY7J2 | Delay: 0 days | Weight: 0.05
 
---- GLOBAL INTEGRITY INDEX: 27.0% ---
+--- GLOBAL INTEGRITY INDEX: 27.00% ---

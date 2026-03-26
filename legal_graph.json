@@ -4,166 +4,39 @@
     "graph": {},
     "nodes": [
         {
-            "title": "UN Jus Cogens Protocol",
-            "weight": 1.0,
-            "hash": "4269ccfde8144dfecbdb693eaa4e604fd550f4badcacea81ff763f9c0be6a8e8",
-            "content": "Fundamental International Law Integrity",
-            "metadata": {},
+            "title": "UN Jus Cogens",
+            "weight": 0.5,
+            "delay": 0,
+            "hash": "c67ba102b998778bc72c051da57d93de339285dbe3b0fd910e6be6c554245206",
             "id": "ROOT_JC"
         },
         {
             "title": "Apostille #1",
             "weight": 0.5,
-            "hash": "b0136cb35b2dd1b23fdf71560350016977ba5df6bd4c7819de2d3be8f5ee2f42",
-            "content": "Signatory: Топорец Ирина",
-            "metadata": {
-                "id": "IMWM44AZGX6N6",
-                "title": "Apostille #1",
-                "sign": "Топорец Ирина",
-                "date": "04.01.2021"
-            },
+            "delay": 14,
+            "hash": "066c983fe91040a198789ffa37d374789e01817269630e78a54e2e4ea4e69a1f",
             "id": "IMWM44AZGX6N6"
         },
         {
-            "title": "Apostille #3",
-            "weight": 0.5,
-            "hash": "c96f1a49daada3238e23f35e5600b0b2f15fb38ecf4de15633871a97aa05e67d",
-            "content": "Signatory: Гонза Наталья",
-            "metadata": {
-                "id": "CQ0VC27VGTCK6",
-                "title": "Apostille #3",
-                "sign": "Гонза Наталья",
-                "date": "24.03.2021"
-            },
-            "id": "CQ0VC27VGTCK6"
-        },
-        {
-            "title": "Apostille #6",
-            "weight": 0.5,
-            "hash": "80743c6579bb713f0f232ab3c90509ec8ec8b1dcc1840aa82b8c15bc8a9dcc2f",
-            "content": "Signatory: Гузун Корнелиу",
-            "metadata": {
-                "id": "5GTUD58SJQ5N6",
-                "title": "Apostille #6",
-                "sign": "Гузун Корнелиу",
-                "date": "21.07.2009"
-            },
-            "id": "5GTUD58SJQ5N6"
+            "title": "Apostille #4",
+            "weight": 0.25,
+            "delay": 6354,
+            "hash": "50ea820a67eca19be0536af48418b948e8a01dc0f02fddf91abdaa0164a482a0",
+            "id": "DR4Y1584JW9F4"
         },
         {
             "title": "Apostille #36",
             "weight": 0.05,
-            "hash": "ecfde8ce7dcd897af58316f4968c9fa5b72a280c842966cef5beb3a994a17ee3",
-            "content": "Signatory: semnatura indescifrabila",
-            "metadata": {
-                "id": "DLTP7B8ZHWGQ7",
-                "title": "Apostille #36",
-                "sign": "semnatura indescifrabila",
-                "date": "08.07.2022"
-            },
+            "delay": 0,
+            "hash": "a517a6ffb7719f9a7bac160eaf40daec19793c49b4dc295db656e49f66d87361",
             "id": "DLTP7B8ZHWGQ7"
-        },
-        {
-            "title": "Apostille #41",
-            "weight": 0.05,
-            "hash": "19621173802b5b0690743c108c4a1e3e289e44aaf8bbd8e0bacc5df32b7b5e26",
-            "content": "Signatory: semnatura indescifrabila",
-            "metadata": {
-                "id": "CG0T6Y1TBUEL7",
-                "title": "Apostille #41",
-                "sign": "semnatura indescifrabila",
-                "date": "12.07.2022"
-            },
-            "id": "CG0T6Y1TBUEL7"
-        },
-        {
-            "title": "Apostille #68",
-            "weight": 0.05,
-            "hash": "9c2a869367efad65348ab39b8b6dea344013e51bfec6d4f263982b979f4ce00f",
-            "content": "Signatory: semnatura indescifrabila",
-            "metadata": {
-                "id": "DFVMD2FQLW5N3",
-                "title": "Apostille #68",
-                "sign": "semnatura indescifrabila",
-                "date": "14.12.2022"
-            },
-            "id": "DFVMD2FQLW5N3"
-        },
-        {
-            "title": "Apostille #69",
-            "weight": 0.05,
-            "hash": "00884adf18ea4dfc7fc96090aedc5088aa11478169607ba85e1a2d85004db15b",
-            "content": "Signatory: semnatura indescifrabila",
-            "metadata": {
-                "id": "IMTQ930Z8U4N7",
-                "title": "Apostille #69",
-                "sign": "semnatura indescifrabila",
-                "date": "05.10.2022"
-            },
-            "id": "IMTQ930Z8U4N7"
         },
         {
             "title": "Apostille #90",
             "weight": 0.05,
-            "hash": "fe5ddc10e345a1cbc736c542c120a248a85675103a6a6a1cc94629dfa5b74287",
-            "content": "Signatory: semnatura indescifrabila",
-            "metadata": {
-                "id": "4J20E98WFY7J2",
-                "title": "Apostille #90",
-                "sign": "semnatura indescifrabila",
-                "date": "03.10.2022"
-            },
+            "delay": 0,
+            "hash": "bbf461b4ff604ed8a9f5cc9a351b741f1a6084873da7ecdc36ebba584fcfac67",
             "id": "4J20E98WFY7J2"
-        },
-        {
-            "title": "Apostille #93",
-            "weight": 0.05,
-            "hash": "9bc70898eab90e6bfe89fffa258bc62dcce2023887e1068563a0afb1657f5af2",
-            "content": "Signatory: semnatura indescifrabila",
-            "metadata": {
-                "id": "6OZUD89VBUEJ3",
-                "title": "Apostille #93",
-                "sign": "semnatura indescifrabila",
-                "date": "01.11.2022"
-            },
-            "id": "6OZUD89VBUEJ3"
-        },
-        {
-            "title": "Apostille #96",
-            "weight": 0.05,
-            "hash": "3307d5f04a782d49478e10514623b4fbecad21a8fa2d5081653a45eaacd842a3",
-            "content": "Signatory: semnatura indescifrabila",
-            "metadata": {
-                "id": "IHW093CZ8U8R7",
-                "title": "Apostille #96",
-                "sign": "semnatura indescifrabila",
-                "date": "03.08.2022"
-            },
-            "id": "IHW093CZ8U8R7"
-        },
-        {
-            "title": "Nantoi Liudmila",
-            "weight": 0.02,
-            "hash": "1fc3880beccbeb8edb8a0a979e8384e61b555885e0e7ff1de3948134f7e8bcdc",
-            "content": "Liability: Nantoi Liudmila systematic violation",
-            "metadata": {},
-            "id": "NODE_NANTOI"
-        },
-        {
-            "title": "Dulca V.G.",
-            "weight": 0.02,
-            "hash": "e5a8178420f5870f98dddc53f41c12bdd63811a4cf19a2ae179a4f2e7bcc875c",
-            "content": "Liability: Dulca V.G. systematic violation",
-            "metadata": {},
-            "id": "NODE_DULCA"
-        },
-        {
-            "title": "Murianu I.",
-            "weight": 0.02,
-            "hash": "9a893cf8037d55d8d5f30da5cfd3a8d684aee04524b992c462bb2140ef379747",
-            "content": "Liability: Murianu I. systematic violation",
-            "metadata": {},
-            "id": "NODE_MURIANU"
         }
     ],
     "edges": [
@@ -173,11 +46,7 @@
         },
         {
             "source": "ROOT_JC",
-            "target": "CQ0VC27VGTCK6"
-        },
-        {
-            "source": "ROOT_JC",
-            "target": "5GTUD58SJQ5N6"
+            "target": "DR4Y1584JW9F4"
         },
         {
             "source": "ROOT_JC",
@@ -185,39 +54,7 @@
         },
         {
             "source": "ROOT_JC",
-            "target": "CG0T6Y1TBUEL7"
-        },
-        {
-            "source": "ROOT_JC",
-            "target": "DFVMD2FQLW5N3"
-        },
-        {
-            "source": "ROOT_JC",
-            "target": "IMTQ930Z8U4N7"
-        },
-        {
-            "source": "ROOT_JC",
             "target": "4J20E98WFY7J2"
-        },
-        {
-            "source": "ROOT_JC",
-            "target": "6OZUD89VBUEJ3"
-        },
-        {
-            "source": "ROOT_JC",
-            "target": "IHW093CZ8U8R7"
-        },
-        {
-            "source": "ROOT_JC",
-            "target": "NODE_NANTOI"
-        },
-        {
-            "source": "ROOT_JC",
-            "target": "NODE_DULCA"
-        },
-        {
-            "source": "ROOT_JC",
-            "target": "NODE_MURIANU"
         }
     ]
 }
