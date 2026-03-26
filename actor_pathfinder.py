@@ -4,84 +4,72 @@ import json
 import datetime
 
 class JusCogensNode:
-    def __init__(self, id, title, content, weight=0.5, metadata=None):
+    def __init__(self, id, title, doc_date, apo_date, content, metadata=None):
         self.id = id
         self.title = title
+        self.doc_date = self.parse_date(doc_date)
+        self.apo_date = self.parse_date(apo_date)
         self.content = content
         self.metadata = metadata or {}
-        self.weight = self.evaluate_semantics(content, weight)
-        self.hash = hashlib.sha256(f"{id}{content}".encode()).hexdigest()
+        
+        # Вычисление временной аномалии (разрыв в днях)
+        self.delay_days = (self.apo_date - self.doc_date).days if self.doc_date and self.apo_date else 0
+        self.weight = self.evaluate_integrity(content)
+        self.hash = hashlib.sha256(f"{id}{content}{self.delay_days}".encode()).hexdigest()
 
-    def evaluate_semantics(self, content, base):
-        # ЮРИДИЧЕСКИЙ ВЕС (v.11.5): Прямая корреляция с легитимностью подписи
+    def parse_date(self, date_str):
+        for fmt in ('%d.%m.%Y', '%Y-%m-%d', '%d-%m-%Y'):
+            try: return datetime.datetime.strptime(date_str.strip(), fmt)
+            except: continue
+        return None
+
+    def evaluate_integrity(self, content):
         rules = {
-            "Jus Cogens": 1.0, "ECHR": 0.9, "Torture": 1.0,
-            "Rehabilitation": 0.95, "Macheret": 0.8,
-            "Illegal": 0.1, "Forced": 0.05, "Forgery": 0.01,
-            "Nantoi": 0.02, "Dulca": 0.02, "Murianu": 0.02,
-            "semnatura indescifrabila": 0.05  # Флаг фальсификации
+            "Jus Cogens": 1.0, "semnatura indescifrabila": 0.05,
+            "Nantoi": 0.02, "Dulca": 0.02, "Murianu": 0.02
         }
-        weight = base
-        content_lower = content.lower()
-        title_lower = self.title.lower()
+        weight = 0.5
         for key, val in rules.items():
-            if key.lower() in content_lower or key.lower() in title_lower:
-                weight = max(weight, val) if val > 0.5 else min(weight, val)
-        return weight
+            if key.lower() in content.lower(): weight = min(weight, val) if val < 0.5 else max(weight, val)
+        
+        # ШТРАФ ЗА ВРЕМЕННУЮ АНОМАЛИЮ (v.11.6)
+        if self.delay_days < 0: weight = 0.01  # Невозможно: апостиль раньше документа
+        elif self.delay_days > 365 * 5: weight *= 0.5  # Задержка более 5 лет — признак симуляции
+        
+        return round(weight, 3)
 
 class LegalAuditor:
     def __init__(self):
         self.G = nx.DiGraph()
 
     def add_evidence(self, node, parents=[]):
-        self.G.add_node(node.id, 
-                        title=node.title, 
-                        weight=node.weight, 
-                        hash=node.hash,
-                        content=node.content,
-                        metadata=node.metadata)
-        for p in parents:
-            self.G.add_edge(p, node.id)
+        self.G.add_node(node.id, title=node.title, weight=node.weight, delay=node.delay_days)
+        for p in parents: self.G.add_edge(p, node.id)
 
     def generate_report(self):
-        report = [f"--- A©TŌR LEGAL INTEGRITY REPORT | {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')} ---"]
-        total_weight = 0
         nodes = self.G.nodes(data=True)
+        report = [f"--- A©TŌR COURT REPORT (LUPAŞCU SESSION) | {datetime.date.today()} ---"]
+        total_w = 0
         for n_id, data in nodes:
-            status = "🛡️ VALID" if data['weight'] > 0.7 else "⚠️ TOXIC/FRAUD"
-            report.append(f"{status} | ID: {n_id} | Title: {data['title']} | Weight: {data['weight']}")
-            total_weight += data['weight']
-        
-        avg_integrity = (total_weight / len(nodes)) * 100
-        report.append(f"\n--- SYSTEM INTEGRITY INDEX: {avg_integrity:.2f}% ---")
+            status = "🛡️ VALID" if data['weight'] > 0.7 else "⚠️ TOXIC"
+            report.append(f"{status} | {n_id} | Delay: {data['delay']} days | Weight: {data['weight']}")
+            total_w += data['weight']
+        report.append(f"\n--- GLOBAL INTEGRITY INDEX: {round((total_w/len(nodes))*100, 2)}% ---")
         return "\n".join(report)
 
 auditor = LegalAuditor()
-auditor.add_evidence(JusCogensNode("ROOT_JC", "UN Jus Cogens Protocol", "Fundamental International Law Integrity", 1.0))
+auditor.add_evidence(JusCogensNode("ROOT", "Jus Cogens", "01.01.1997", "01.01.1997", "Core principle"), [])
 
-# РЕАЛЬНЫЕ ДАННЫЕ РЕЕСТРА (Выборка 97 записей)
-real_records = [
-    {"id": "IMWM44AZGX6N6", "title": "Apostille #1", "sign": "Топорец Ирина", "date": "04.01.2021"},
-    {"id": "CQ0VC27VGTCK6", "title": "Apostille #3", "sign": "Гонза Наталья", "date": "24.03.2021"},
-    {"id": "5GTUD58SJQ5N6", "title": "Apostille #6", "sign": "Гузун Корнелиу", "date": "21.07.2009"},
-    {"id": "DLTP7B8ZHWGQ7", "title": "Apostille #36", "sign": "semnatura indescifrabila", "date": "08.07.2022"},
-    {"id": "CG0T6Y1TBUEL7", "title": "Apostille #41", "sign": "semnatura indescifrabila", "date": "12.07.2022"},
-    {"id": "DFVMD2FQLW5N3", "title": "Apostille #68", "sign": "semnatura indescifrabila", "date": "14.12.2022"},
-    {"id": "IMTQ930Z8U4N7", "title": "Apostille #69", "sign": "semnatura indescifrabila", "date": "05.10.2022"},
-    {"id": "4J20E98WFY7J2", "title": "Apostille #90", "sign": "semnatura indescifrabila", "date": "03.10.2022"},
-    {"id": "6OZUD89VBUEJ3", "title": "Apostille #93", "sign": "semnatura indescifrabila", "date": "01.11.2022"},
-    {"id": "IHW093CZ8U8R7", "title": "Apostille #96", "sign": "semnatura indescifrabila", "date": "03.08.2022"}
+# РЕАЛЬНЫЕ ДАННЫЕ С АНОМАЛИЯМИ ИЗ РЕЕСТРА
+records = [
+    ("IMWM44AZGX6N6", "Apostille #1", "04.01.2021", "18.01.2021", "Toporet I."),
+    ("DR4Y1584JW9F4", "Apostille #4", "12.11.2003", "05.04.2021", "Aliona Miron (17 YEAR DELAY)"),
+    ("DLTP7B8ZHWGQ7", "Apostille #36", "08.07.2022", "08.07.2022", "semnatura indescifrabila"),
+    ("4J20E98WFY7J2", "Apostille #90", "03.10.2022", "03.10.2022", "semnatura indescifrabila")
 ]
 
-for rec in real_records:
-    auditor.add_evidence(JusCogensNode(rec['id'], rec['title'], f"Signatory: {rec['sign']}", metadata=rec), ["ROOT_JC"])
-
-# Добавление Узлов Ответственности (Liability Nodes)
-for target in [("NODE_NANTOI", "Nantoi Liudmila"), ("NODE_DULCA", "Dulca V.G."), ("NODE_MURIANU", "Murianu I.")]:
-    auditor.add_evidence(JusCogensNode(target[0], target[1], f"Liability: {target[1]} systematic violation"), ["ROOT_JC"])
+for rid, tit, d1, d2, cont in records:
+    auditor.add_evidence(JusCogensNode(rid, tit, d1, d2, cont), ["ROOT"])
 
 with open("audit_report.txt", "w", encoding="utf-8") as f:
     f.write(auditor.generate_report())
-
-with open("legal_graph.json", "w", encoding="utf-8") as f:
-    json.dump(nx.node_link_data(auditor.G), f, indent=4, ensure_ascii=False)

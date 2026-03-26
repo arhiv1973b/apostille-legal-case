@@ -1,17 +1,8 @@
---- A©TŌR LEGAL INTEGRITY REPORT | 2026-03-26 10:27 ---
-🛡️ VALID | ID: ROOT_JC | Title: UN Jus Cogens Protocol | Weight: 1.0
-⚠️ TOXIC/FRAUD | ID: IMWM44AZGX6N6 | Title: Apostille #1 | Weight: 0.5
-⚠️ TOXIC/FRAUD | ID: CQ0VC27VGTCK6 | Title: Apostille #3 | Weight: 0.5
-⚠️ TOXIC/FRAUD | ID: 5GTUD58SJQ5N6 | Title: Apostille #6 | Weight: 0.5
-⚠️ TOXIC/FRAUD | ID: DLTP7B8ZHWGQ7 | Title: Apostille #36 | Weight: 0.05
-⚠️ TOXIC/FRAUD | ID: CG0T6Y1TBUEL7 | Title: Apostille #41 | Weight: 0.05
-⚠️ TOXIC/FRAUD | ID: DFVMD2FQLW5N3 | Title: Apostille #68 | Weight: 0.05
-⚠️ TOXIC/FRAUD | ID: IMTQ930Z8U4N7 | Title: Apostille #69 | Weight: 0.05
-⚠️ TOXIC/FRAUD | ID: 4J20E98WFY7J2 | Title: Apostille #90 | Weight: 0.05
-⚠️ TOXIC/FRAUD | ID: 6OZUD89VBUEJ3 | Title: Apostille #93 | Weight: 0.05
-⚠️ TOXIC/FRAUD | ID: IHW093CZ8U8R7 | Title: Apostille #96 | Weight: 0.05
-⚠️ TOXIC/FRAUD | ID: NODE_NANTOI | Title: Nantoi Liudmila | Weight: 0.02
-⚠️ TOXIC/FRAUD | ID: NODE_DULCA | Title: Dulca V.G. | Weight: 0.02
-⚠️ TOXIC/FRAUD | ID: NODE_MURIANU | Title: Murianu I. | Weight: 0.02
+--- A©TŌR COURT REPORT (LUPAŞCU SESSION) | 2026-03-26 ---
+⚠️ TOXIC | ROOT | Delay: 0 days | Weight: 0.5
+⚠️ TOXIC | IMWM44AZGX6N6 | Delay: 14 days | Weight: 0.5
+⚠️ TOXIC | DR4Y1584JW9F4 | Delay: 6354 days | Weight: 0.25
+⚠️ TOXIC | DLTP7B8ZHWGQ7 | Delay: 0 days | Weight: 0.05
+⚠️ TOXIC | 4J20E98WFY7J2 | Delay: 0 days | Weight: 0.05
 
---- SYSTEM INTEGRITY INDEX: 20.79% ---
+--- GLOBAL INTEGRITY INDEX: 27.0% ---
