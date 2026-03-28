@@ -1,18 +1,8 @@
 {
   "event_id": "JUDICIAL-CASCADE-2025",
-  "status": "COORDINATED_REHABILITATION_BLOCKADE",
-  "actors": [
-    {
-      "name": "Vladislav Holban",
-      "action": "Rejection of property confiscation fact",
-      "date": "2025-12-22"
-    },
-    {
-      "name": "Tudor Stambol",
-      "action": "Rejection of criminal rehabilitation",
-      "date": "2025-12-23"
-    }
-  ],
-  "analysis": "Symmetrical sabotage: 24-hour interval between decisions after years of delay proves orchestrated intent to maintain consequences of 1998-2009 torture acts.",
-  "jus_cogens_impact": "Direct violation of Right to Remedy (Art. 13 ECHR). Acts are void under Jus Cogens as they protect the results of torture."
+  "date_start": "2025-12-22 (Holban)",
+  "date_end": "2025-12-23 (Stambol)",
+  "actors": ["Vladislav Holban", "Tudor Stambol"],
+  "violation": "Coordinated procedural rejection with 24-hour interval to block property and criminal rehabilitation.",
+  "jus_cogens_impact": "Violation of Art. 13 ECHR. The cascade is a tool to protect the results of 1998-2009 torture."
 }
