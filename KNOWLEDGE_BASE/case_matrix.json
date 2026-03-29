@@ -1,0 +1,21 @@
+{
+  "system_identity": "ACTOR_LEGAL_INTELLIGENCE_V2",
+  "core_protocol": "JUS_COGENS_IMPERATIVE",
+  "base_context": {
+    "case_id": "CASE-MACHERET-1997-2026",
+    "subject": "Alexei Maceret (A©tor)",
+    "status": "Victim of Torture / Art. 3 ECHR",
+    "idnp": "2000001159655"
+  },
+  "financial_logic": {
+    "debit_state_eur": 500960,
+    "credit_actor_mdl": 200,
+    "legal_basis": "Art. 967 Civil Code of the Republic of Moldova",
+    "status": "COMPENSATED / OFFSET"
+  },
+  "technical_integrity": {
+    "verification_method": "SHA-256",
+    "report_file": "FINAL_INTEGRITY_REPORT.md",
+    "auth_gate": "16-digit-app-secure-code"
+  }
+}
