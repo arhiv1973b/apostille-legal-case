@@ -1,4 +1,45 @@
 # GitHub Pages configuration
-title: 'Apostille Legal Case'
+title: 'Apostille Legal Case - Evidence Vault'
 description: 'Legal case against Republic of Moldova for illegal apostille processing'
 show_downloads: true
+
+# Security headers for GitHub Pages
+plugins:
+  - jekyll-seo-tag
+
+# Content Security Policy
+csp_policy: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';"
+
+# Additional security
+markdown: kramdown
+kramdown:
+  html_to_native: true
+
+# Build settings
+exclude:
+  - logs/
+  - '*.log'
+  - '*.bak*'
+  - '.git/'
+  - 'node_modules/'
+
+# Enforced HTTPS
+url: "https://arhiv1973b.github.io/apostille-legal-case"
+enforce_ssl: true
+
+# 404 Error Handling
+error_404:
+  template: 404.html
+  
+# Static file serving
+static_files:
+  - layout/
+  - docs/
+  - evidence/
+  - bot_audit/
+
+# Disable Jekyll processing for HTML files
+include:
+  - 404.html
+  - sitemap.html
+  - layout/wrapper.html

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Archive Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-dark: #050508;
+            --bg-panel: #0a0a12;
+            --border: #1a1a2e;
+            --primary: #00ff88;
+            --fraud: #ff3366;
+            --text: #e0e0e0;
+            --text-dim: #666;
+        }
+        
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .error-box {
+            background: linear-gradient(135deg, #1a0a2e 0%, #0a1628 100%);
+            border: 2px solid var(--fraud);
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .error-code {
+            font-size: 72px;
+            font-weight: bold;
+            color: var(--fraud);
+            margin-bottom: 10px;
+        }
+        
+        .error-message {
+            font-size: 24px;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+        
+        .error-description {
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+        
+        .recovery-box {
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .recovery-box h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .nav-button {
+            display: block;
+            padding: 15px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .nav-button:hover {
+            border-color: var(--primary);
+            background: var(--primary-dim);
+            transform: translateY(-2px);
+        }
+        
+        .nav-button .icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .nav-button .label {
+            font-size: 12px;
+            display: block;
+        }
+        
+        .info-box {
+            background: rgba(0, 255, 136, 0.1);
+            border-left: 3px solid var(--primary);
+            padding: 15px;
+            text-align: left;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .info-box h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .breadcrumb-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        
+        .breadcrumb-list li {
+            padding: 5px 0;
+            color: var(--text-dim);
+            font-size: 12px;
+        }
+        
+        .breadcrumb-list li code {
+            color: var(--primary);
+            background: var(--bg-dark);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        
+        .tip-box {
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            padding: 15px;
+            text-align: left;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .tip-box strong {
+            color: var(--primary);
+        }
+        
+        footer {
+            color: var(--text-dim);
+            font-size: 12px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-box">
+            <div class="error-code">404</div>
+            <div class="error-message">Page Not Found</div>
+            <div class="error-description">
+                The requested page could not be located in the archive.
+            </div>
+        </div>
+        
+        <div class="recovery-box">
+            <h2>🔍 Navigation Options</h2>
+            
+            <div class="nav-grid">
+                <a href="/" class="nav-button">
+                    <div class="icon">🏠</div>
+                    <div class="label">Root Index</div>
+                </a>
+                <a href="/sitemap.html" class="nav-button">
+                    <div class="icon">📍</div>
+                    <div class="label">Sitemap</div>
+                </a>
+                <a href="/docs/" class="nav-button">
+                    <div class="icon">📁</div>
+                    <div class="label">Documentation</div>
+                </a>
+                <a href="/evidence/" class="nav-button">
+                    <div class="icon">📑</div>
+                    <div class="label">Evidence</div>
+                </a>
+                <a href="/bot_audit/" class="nav-button">
+                    <div class="icon">🔍</div>
+                    <div class="label">Audit</div>
+                </a>
+                <a href="/instant_access_texts/" class="nav-button">
+                    <div class="icon">⚡</div>
+                    <div class="label">Quick Access</div>
+                </a>
+            </div>
+            
+            <div class="info-box">
+                <h3>📝 Current Location</h3>
+                <code id="current-path"></code>
+                <p style="margin-top: 10px; font-size: 12px;">
+                    This path may be temporarily unavailable or archived. 
+                    Use the navigation above to find your content.
+                </p>
+            </div>
+        </div>
+        
+        <div class="recovery-box">
+            <h2>💡 Tips</h2>
+            
+            <div class="tip-box">
+                <strong>📌 Sitemap:</strong> 
+                The complete archive structure is available at <code>/sitemap.html</code>
+            </div>
+            
+            <div class="tip-box" style="margin-top: 10px;">
+                <strong>🔗 Archive Structure:</strong>
+                <ul class="breadcrumb-list">
+                    <li><code>/docs/</code> - Documentation files</li>
+                    <li><code>/evidence/</code> - Evidence vault (85+ PDFs)</li>
+                    <li><code>/bot_audit/</code> - Audit reports</li>
+                    <li><code>/apostille_project/</code> - Project files</li>
+                    <li><code>/instant_access_texts/</code> - Quick reference</li>
+                </ul>
+            </div>
+            
+            <div class="tip-box" style="margin-top: 10px;">
+                <strong>🔄 Archive Synchronization:</strong>
+                All directories are automatically indexed. 
+                If you can't find something, try the main index or sitemap.
+            </div>
+        </div>
+        
+        <footer>
+            <p>Apostille Legal Case - Evidence Archive</p>
+            <p style="margin-top: 10px;">
+                <a href="/" style="color: var(--primary);">Return to root</a> | 
+                <a href="/sitemap.html" style="color: var(--primary);">View sitemap</a>
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        // Display current path
+        document.getElementById('current-path').textContent = window.location.pathname;
+        
+        // Optional: Redirect after 10 seconds if desired
+        // setTimeout(() => { window.location.href = '/sitemap.html'; }, 10000);
+    </script>
+</body>
+</html>
