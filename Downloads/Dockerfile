@@ -2,20 +2,22 @@ FROM alpine:latest
 
 WORKDIR /evidence
 
-# Copy apostilles
 COPY Apostilles ./Apostilles/
-
-# Copy documentation files
 COPY APOSTILLE_INVESTIGATION_SUMMARY.md ./
-COPY LEGAL_TIMELINE.md ./
-COPY EVIDENCE_CHAIN.md ./
-COPY LEGAL_ANALYSIS.md ./
 COPY README.md ./
+COPY metadata.jsonld ./
+COPY metadata-dublin-core.xml ./
+COPY "Реестр_полный_EVIDENCE.pdf" ./
 
-# Install basic utilities
-RUN apk add --no-cache bash curl git
+RUN apk add --no-cache sha256sum && \
+    mkdir -p /integrity-hashes && \
+    find . -type f \( -name "*.pdf" -o -name "*.md" \) -exec sha256sum {} \; > /integrity-hashes/registry.json && \
+    find . -type f \( -name "*.pdf" -o -name "*.md" \) -printf "%p|%s|%T@\n" > /integrity-hashes/sbom.csv && \
+    echo "SBOM Generated: $(date -u +%Y-%m-%dT%H:%M:%SZ)" > /integrity-hashes/manifest.json
 
-# Create manifest
-RUN echo "MACERET CASE EVIDENCE CONTAINER" > /evidence/MANIFEST.txt &&     echo "Apostilles: 0" >> /evidence/MANIFEST.txt &&     echo "Documentation: 0" >> /evidence/MANIFEST.txt
+LABEL description="Legal evidence for Maceret case"
+LABEL disability_group="I"
+LABEL legal_status="Art. 3 ECHR vulnerability"
+LABEL sbom="spdx-json"
 
-CMD ["bash"]
+CMD ["sh"]

@@ -1,53 +1,25 @@
 <!doctype html>
 <html lang="ru">
   <head>
-    <meta name="google-site-verification" content="3fxQVVKJVrdtFLg3SHwgstSvn2LIUpPROpgPfLxAQvM" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A©tor Maceret: Jus Cogens Neuro-Protocol Portal</title>
 
-    <!-- Fallback: If external scripts fail, page still works -->
-    <script>
-      // Initialize placeholder objects in case external scripts fail
-      window.pdfjsLib = window.pdfjsLib || {
-        GlobalWorkerOptions: {},
-        getDocument: function () {
-          return { promise: Promise.resolve({ numPages: 0 }) };
-        },
-      };
-      window.Tesseract = window.Tesseract || {
-        recognize: function () {
-          return Promise.resolve({ data: { text: '' } });
-        },
-      };
-    </script>
-
     <!-- PDF.js for document viewing -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"
-      onerror="console.warn('PDF.js failed to load')"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script>
-      if (typeof pdfjsLib !== 'undefined') {
-        pdfjsLib.GlobalWorkerOptions.workerSrc =
-          'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-      }
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
     </script>
 
     <!-- Tesseract.js for OCR/language recognition -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/5.0.0/tesseract.min.js"
-      onerror="console.warn('Tesseract.js failed to load')"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 
     <!-- GitHub API -->
-    <script
-      src="https://unpkg.com/@github/api"
-      onerror="console.warn('GitHub API failed to load')"
-    ></script>
+    <script src="https://unpkg.com/@github/api"></script>
 
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Space+Grotesk:wght@400;600;700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Space+Grotesk:wght@400;600;700&display=swap");
 
       * {
         box-sizing: border-box;
@@ -71,7 +43,7 @@
       }
 
       body {
-        font-family: 'Roboto Mono', monospace;
+        font-family: "Roboto Mono", monospace;
         background: var(--bg-dark);
         color: var(--text);
         min-height: 100vh;
@@ -115,7 +87,7 @@
       }
 
       .logo {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 28px;
         font-weight: 700;
         color: var(--primary);
@@ -173,7 +145,7 @@
       }
 
       .stat-number {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 48px;
         font-weight: 700;
         color: var(--primary);
@@ -268,7 +240,7 @@
         color: var(--text);
         cursor: pointer;
         transition: all 0.3s;
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-weight: 600;
       }
 
@@ -685,7 +657,7 @@
       }
 
       .timeline::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -775,162 +747,6 @@
           flex-direction: row;
         }
       }
-
-      .lang-toggle {
-        display: inline-flex;
-        gap: 5px;
-        margin-left: 20px;
-      }
-      .lang-toggle button {
-        background: var(--bg-panel);
-        border: 1px solid var(--border);
-        color: var(--text-dim);
-        padding: 5px 12px;
-        cursor: pointer;
-        font-weight: bold;
-        transition: all 0.3s;
-      }
-      .lang-toggle button:hover {
-        border-color: var(--primary);
-      }
-      .lang-toggle button.active {
-        background: var(--primary);
-        color: var(--bg-dark);
-        border-color: var(--primary);
-      }
-      .header-right {
-        display: flex;
-        align-items: center;
-      }
-
-      /* Scan Animation for Fraud Detection */
-      @keyframes scanLine {
-        0% {
-          top: 0;
-          opacity: 0;
-        }
-        10% {
-          opacity: 1;
-        }
-        90% {
-          opacity: 1;
-        }
-        100% {
-          top: 100%;
-          opacity: 0;
-        }
-      }
-
-      .fraud-scan {
-        position: relative;
-        overflow: hidden;
-      }
-
-      .fraud-scan::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          var(--fraud),
-          transparent
-        );
-        box-shadow: 0 0 15px var(--fraud);
-        animation: scanLine 2s ease-in-out infinite;
-      }
-
-      @keyframes pulseFraud {
-        0%,
-        100% {
-          box-shadow: 0 0 5px var(--fraud);
-        }
-        50% {
-          box-shadow:
-            0 0 20px var(--fraud),
-            0 0 30px var(--fraud);
-        }
-      }
-
-      .fraud-pulse {
-        animation: pulseFraud 2s ease-in-out infinite;
-      }
-
-      @keyframes stampIn {
-        0% {
-          transform: scale(2) rotate(-15deg);
-          opacity: 0;
-        }
-        50% {
-          transform: scale(1.1) rotate(-5deg);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(1) rotate(-10deg);
-          opacity: 1;
-        }
-      }
-
-      .void-stamp {
-        position: relative;
-        display: inline-block;
-      }
-
-      .void-stamp::before {
-        content: 'VOID';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(-15deg);
-        font-size: 4em;
-        font-weight: bold;
-        color: var(--fraud);
-        border: 4px solid var(--fraud);
-        padding: 5px 20px;
-        opacity: 0.3;
-        pointer-events: none;
-        animation: stampIn 0.5s ease-out;
-      }
-
-      /* Evidence Card Enhancements */
-      .incident-card {
-        background: linear-gradient(135deg, #1a0033 0%, #2d0a0a 100%);
-        border: 2px solid var(--fraud);
-        padding: 20px;
-        margin: 15px 0;
-        border-radius: 10px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .incident-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, var(--fraud), transparent);
-      }
-
-      .incident-card.assault {
-        border-color: #ff0000;
-      }
-      .incident-card.cyber {
-        border-color: #00ccff;
-      }
-      .incident-card.torture {
-        border-color: #ff6600;
-      }
-      .incident-card.murder {
-        border-color: #ff0000;
-        background: linear-gradient(135deg, #2d0000 0%, #1a0000 100%);
-      }
-      .incident-card.fraud {
-        border-color: #ffaa00;
-      }
     </style>
   </head>
   <body>
@@ -940,15 +756,7 @@
       <!-- Header -->
       <header>
         <div class="logo">⚖️ A©tor Maceret</div>
-        <div class="header-right">
-          <div class="status-badge">🔴 FORENSIC AUDIT COMPLETE</div>
-          <div class="lang-toggle">
-            <button id="btn-ru" class="active" onclick="setLang('ru')">
-              RU
-            </button>
-            <button id="btn-en" onclick="setLang('en')">EN</button>
-          </div>
-        </div>
+        <div class="status-badge">🔴 FORENSIC AUDIT COMPLETE</div>
       </header>
 
       <!-- Jus Cogens Protocol Banner -->
@@ -2071,128 +1879,6 @@
           Красные узлы - нарушения. Зелёные - верифицировано. Линии - связи
           между нарушениями.
         </p>
-
-        <!-- Correlation Matrix Section -->
-        <div
-          style="
-            margin-top: 30px;
-            padding: 20px;
-            background: var(--bg-dark);
-            border: 2px solid var(--fraud);
-            border-radius: 10px;
-          "
-        >
-          <h4 style="color: var(--fraud); margin-bottom: 15px">
-            🔗 МАТРИЦА КОРРЕЛЯЦИИ (Correlation Matrix)
-          </h4>
-
-          <div style="display: grid; gap: 15px">
-            <!-- Correlation 1: Assault + Fraud -->
-            <div class="incident-card assault" style="margin: 0">
-              <div style="display: flex; justify-content: space-between">
-                <span style="color: var(--fraud); font-weight: bold"
-                  >INC-2026-02-19-ASSAULT</span
-                >
-                <span
-                  style="
-                    background: var(--fraud);
-                    color: white;
-                    padding: 2px 8px;
-                    border-radius: 5px;
-                    font-size: 11px;
-                  "
-                  >ASSAULT + FRAUD</span
-                >
-              </div>
-              <p style="font-size: 12px; margin: 10px 0">
-                <strong>Target:</strong> A©tor Maceret Alexei |
-                <strong>Perpetrator:</strong> Yuri Lupea
-              </p>
-              <p style="font-size: 12px">
-                <strong>State Interest:</strong> Уничтожение юридического следа
-                системной коррупции (скрыть 14% брака)
-              </p>
-              <p style="font-size: 12px; color: var(--primary)">
-                <strong>Common Goal:</strong> Лишение жертвы правосубъектности
-                через физическое и юридическое насилие
-              </p>
-              <div
-                style="
-                  margin-top: 10px;
-                  padding: 8px;
-                  background: var(--bg-panel);
-                  border-radius: 5px;
-                "
-              >
-                <strong style="color: #ff3366">🎯 CONVERGENCE:</strong>
-                <span style="font-size: 11px"
-                  >Apostille_Series_X_13 → Physical Elimination</span
-                >
-              </div>
-            </div>
-
-            <!-- Correlation 2: Cyber Attack -->
-            <div class="incident-card cyber" style="margin: 0">
-              <div style="display: flex; justify-content: space-between">
-                <span style="color: #00ccff; font-weight: bold"
-                  >INC-2026-02-22-CYBER</span
-                >
-                <span
-                  style="
-                    background: #00ccff;
-                    color: black;
-                    padding: 2px 8px;
-                    border-radius: 5px;
-                    font-size: 11px;
-                  "
-                  >CYBER + SABOTAGE</span
-                >
-              </div>
-              <p style="font-size: 12px; margin: 10px 0">
-                <strong>Files Injected:</strong> 37,127 .DLL + 36,514 .manifest
-              </p>
-              <p style="font-size: 12px">
-                <strong>Objective:</strong> Саботаж integrity_check.py для
-                невозможности верификации 13 поддельных апостилей
-              </p>
-              <div
-                style="
-                  margin-top: 10px;
-                  padding: 8px;
-                  background: var(--bg-panel);
-                  border-radius: 5px;
-                "
-              >
-                <strong style="color: #00ccff">🎯 JUS COGENS VIOLATION:</strong>
-                <span style="font-size: 11px"
-                  >ECHR Art. 6 (Obstruction of Justice), Art. 13 (Right to
-                  Effective Remedy)</span
-                >
-              </div>
-            </div>
-
-            <!-- Expert Notes -->
-            <div
-              style="
-                padding: 15px;
-                background: linear-gradient(135deg, #1a0033 0%, #0a1628 100%);
-                border: 2px solid #aa66ff;
-                border-radius: 8px;
-              "
-            >
-              <h5 style="color: #aa66ff; margin: 0 0 10px 0">
-                📋 EXPERT NOTES
-              </h5>
-              <p style="font-size: 11px; color: var(--text); margin: 0">
-                <strong
-                  >Интересы государства и третьих лиц совпали в точке
-                  'Neutralization of Evidence'</strong
-                >. Использование поддельных документов является инструментом
-                пытки (Art. 3 ECHR), создающим правовой вакуум вокруг жертвы.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- Files/AI/Cloud Panel -->
@@ -2404,34 +2090,6 @@
         </div>
       </section>
 
-      <!-- Incident Cards Section -->
-      <section
-        id="incidents-section"
-        style="
-          margin: 40px 0;
-          padding: 25px;
-          background: var(--bg-panel);
-          border: 2px solid var(--fraud);
-          border-radius: 10px;
-        "
-      >
-        <h2 style="color: var(--fraud); margin-bottom: 20px">
-          🚨 КАРТОЧКИ ИНЦИДЕНТОВ
-        </h2>
-        <p style="color: var(--text-dim); margin-bottom: 20px">
-          Кликните на инцидент для просмотра юридической квалификации и
-          доказательств
-        </p>
-        <div
-          id="incident-cards"
-          style="
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-          "
-        ></div>
-      </section>
-
       <!-- Download Section -->
       <div style="margin-top: 50px">
         <h3>📥 Отдел доказательств</h3>
@@ -2467,7 +2125,7 @@
               Полный текст иска о возмещении ущерба
             </p>
             <a
-              href="Downloads/LEGAL_ANALYSIS.md"
+              href="иск_о_возмещении_ущерба.md"
               class="btn"
               target="_blank"
               style="display: inline-block"
@@ -2534,14 +2192,14 @@
               13 нечитаемых подписей - саботаж
             </p>
             <a
-              href="Downloads/APOSTILLE_INVESTIGATION_SUMMARY.md"
+              href="APOSTILLE_VERIFICATION_REPORT.md"
               class="btn"
               target="_blank"
               style="display: inline-block"
               >📊 Отчёт</a
             >
             <a
-              href="Downloads/APOSTILLE_INVESTIGATION_SUMMARY.md"
+              href="APOSTILLE_FRAUD_REPORT.md"
               class="btn"
               target="_blank"
               style="margin-left: 5px"
@@ -2571,7 +2229,7 @@
               Полный анализ доказательств
             </p>
             <a
-              href="Downloads/LEGAL_ANALYSIS.md"
+              href="TECHNICAL_INTEGRITY_REPORT.md"
               class="btn"
               target="_blank"
               style="display: inline-block"
@@ -2652,94 +2310,6 @@
               >🌐 Минюст РМ</a
             >
           </div>
-
-          <!-- Security Incident Report -->
-          <div
-            class="evidence-card"
-            style="
-              padding: 20px;
-              background: linear-gradient(135deg, #2d0a0a 0%, #1a0a0a 100%);
-              border: 2px solid var(--fraud);
-            "
-          >
-            <h4 style="color: var(--fraud); margin-bottom: 10px">
-              🚨 ОТЧЁТ БЕЗОПАСНОСТИ
-            </h4>
-            <p
-              style="
-                color: var(--text-dim);
-                font-size: 12px;
-                margin-bottom: 15px;
-              "
-            >
-              Нападение, саботаж, кибервторжение
-            </p>
-            <a
-              href="Downloads/SECURITY_INCIDENT_REPORT.md"
-              class="btn btn-fraud"
-              target="_blank"
-              style="display: inline-block"
-              >📄 Открыть</a
-            >
-          </div>
-
-          <!-- Diplomatic Brief -->
-          <div
-            class="evidence-card"
-            style="
-              padding: 20px;
-              background: var(--bg-panel);
-              border: 2px solid #00ccff;
-            "
-          >
-            <h4 style="color: #00ccff; margin-bottom: 10px">
-              🌍 ДИПЛОМАТИЧЕСКАЯ НОТА
-            </h4>
-            <p
-              style="
-                color: var(--text-dim);
-                font-size: 12px;
-                margin-bottom: 15px;
-              "
-            >
-              Международный инцидент - Brief
-            </p>
-            <a
-              href="Downloads/FINAL_DIPLOMATIC_BRIEF.md"
-              class="btn"
-              target="_blank"
-              style="display: inline-block"
-              >📖 Открыть</a
-            >
-          </div>
-
-          <!-- ECHR Submission -->
-          <div
-            class="evidence-card"
-            style="
-              padding: 20px;
-              background: var(--bg-panel);
-              border: 2px solid #aa66ff;
-            "
-          >
-            <h4 style="color: #aa66ff; margin-bottom: 10px">⚖️ ECHR ЖАЛОБА</h4>
-            <p
-              style="
-                color: var(--text-dim);
-                font-size: 12px;
-                margin-bottom: 15px;
-              "
-            >
-              Подача в Европейский суд
-            </p>
-            <a
-              href="Downloads/ECHR_SUBMISSION.md"
-              class="btn"
-              target="_blank"
-              style="display: inline-block"
-              >📖 Открыть</a
-            >
-          </div>
         </div>
 
         <!-- Evidence Table -->
@@ -2808,119 +2378,6 @@
         фундаментальных норм."
       </blockquote>
 
-      <!-- JSON Analysis Export -->
-      <div
-        style="
-          margin: 30px 0;
-          padding: 20px;
-          background: linear-gradient(135deg, #1a0033 0%, #0a1628 100%);
-          border: 2px solid #ff3366;
-          border-radius: 10px;
-        "
-      >
-        <h3 style="color: #ff3366; margin-bottom: 15px">
-          📦 JSON ANALYSIS EXPORT
-        </h3>
-        <p style="color: var(--text-dim); font-size: 12px; margin-bottom: 15px">
-          Скопируйте структурированные данные для международных судов (Гаага,
-          ООН, ЕКПЧ)
-        </p>
-        <button
-          class="btn btn-fraud"
-          onclick="copyAnalysisJSON()"
-          style="background: #ff3366; color: white"
-        >
-          📋 COPY ANALYSIS JSON
-        </button>
-        <div
-          id="jsonCopyStatus"
-          style="
-            margin-top: 10px;
-            color: var(--primary);
-            font-size: 12px;
-            display: none;
-          "
-        >
-          ✓ Скопировано в буфер обмена!
-        </div>
-      </div>
-
-      <!-- Point of Convergence -->
-      <div
-        style="
-          margin: 30px 0;
-          padding: 25px;
-          background: linear-gradient(135deg, #2d0a0a 0%, #1a0505 100%);
-          border: 3px solid #ff0000;
-          border-radius: 10px;
-          position: relative;
-          overflow: hidden;
-        "
-      >
-        <div
-          style="
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(
-              45deg,
-              transparent,
-              transparent 10px,
-              rgba(255, 0, 0, 0.03) 10px,
-              rgba(255, 0, 0, 0.03) 20px
-            );
-          "
-        ></div>
-        <h3
-          style="
-            color: #ff0000;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-          "
-        >
-          🎯 POINT OF CONVERGENCE
-        </h3>
-
-        <div style="position: relative; z-index: 1">
-          <p style="color: var(--text); font-size: 14px; margin-bottom: 15px">
-            <strong style="color: #ff3366">Вывод AI-анализа:</strong>
-          </p>
-          <p
-            style="
-              color: var(--primary);
-              font-size: 16px;
-              font-style: italic;
-              line-height: 1.6;
-            "
-          >
-            "Физическое насилие (19.02.2026, Yuri Lupea) было инструментом
-            защиты 14% фальсификата апостилей. Это не случайность — это
-            координированная операция по ликвидации правосубъектности A©tor
-            Maceret. Кибервторжение (37,127 .DLL файлов) и отключение
-            электричества — попытка скрыть доказательства系统性ной коррупции."
-          </p>
-
-          <div
-            style="
-              margin-top: 20px;
-              padding: 15px;
-              background: rgba(0, 0, 0, 0.5);
-              border-left: 4px solid #ff3366;
-            "
-          >
-            <p style="color: #ffaa00; font-size: 12px; margin: 0">
-              <strong>CORRELATION PROOF:</strong> Дата нападения (19.02.2026)
-              совпадает с датой обнаружения 13 поддельных апостилей серии X.
-              Интерес государства (скрыть коррупцию) + Интерес третьих лиц
-              (устранить жертву) = <strong>ERGA OMNES</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-
       <footer>
         <p>Signed: A©tor Maceret Alexei | 2026-02-22</p>
         <p style="font-size: 12px; margin-top: 10px; color: var(--text-dim)">
@@ -2931,110 +2388,6 @@
     </div>
 
     <script>
-      // FRAUD ANALYSIS DATA - JSON Evidence for International Courts
-      const FRAUD_ANALYSIS_DATA = {
-        case_id: 'CASE-MACHERET-1997-2026',
-        analysis_version: '2026.02-JUS-COGENS',
-        total_apostilles: 90,
-        fraud_count: 13,
-        fraud_percentage: 14.4,
-        legal_status: 'VOID_BY_JUS_COGENS',
-        summary: '14% системного подлога (13/90)',
-        intent:
-          'Convergence of Interests: Государство скрывает коррупцию — Третьи лица устраняют Жертву.',
-        jus_cogens_impact: 'Absolute Nullity (Ничтожность всех актов)',
-        targets: ['Yuri Lupea (Physical)', 'Cyber-sabotage (37,127 files)'],
-        norm_breach: 'ECHR Art. 3, 6, 13 + Jus Cogens Erga Omnes',
-        correlation_matrix: [
-          {
-            incident_id: 'INC-2026-02-19-ASSAULT',
-            target: 'A©tor Maceret Alexei',
-            perpetrator: 'Yuri Lupea',
-            fraud_link: 'Apostille_Series_X_13',
-            convergence_logic: {
-              state_interest:
-                'Уничтожение юридического следа системной коррупции (скрыть 14% брака).',
-              third_party_interest:
-                'Физическое устранение носителя прав для прекращения международного расследования.',
-              common_goal:
-                'Лишение жертвы правосубъектности через физическое и юридическое насилие.',
-            },
-          },
-          {
-            incident_id: 'INC-2026-02-22-CYBER',
-            files_injected: 37127,
-            objective:
-              'Саботаж integrity_check.py для невозможности верификации 13 поддельных апостилей.',
-            jus_cogens_violation:
-              'ECHR Art. 6 (Obstruction of Justice), Art. 13 (Right to Effective Remedy)',
-          },
-        ],
-        expert_notes:
-          "Интересы государства и третьих лиц совпали в точке 'Neutralization of Evidence'. Использование поддельных документов является инструментом пытки (Art. 3 ECHR), создающим правовой вакуум вокруг жертвы.",
-        conclusion:
-          'Физическое насилие было инструментом защиты 14% фальсификата. Это не случайность, а координированная операция по ликвидации правосубъектности.',
-      };
-
-      // Copy Analysis JSON to Clipboard
-      function copyAnalysisJSON() {
-        const jsonStr = JSON.stringify(FRAUD_ANALYSIS_DATA, null, 2);
-
-        // Check if clipboard API is available
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard
-            .writeText(jsonStr)
-            .then(function () {
-              showCopyStatus(true);
-            })
-            .catch(function (err) {
-              fallbackCopy(jsonStr);
-            });
-        } else {
-          // Fallback for older browsers or file:// protocol
-          fallbackCopy(jsonStr);
-        }
-      }
-
-      function fallbackCopy(text) {
-        // Create temporary textarea for fallback copy
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        textarea.style.position = 'fixed';
-        textarea.style.left = '-9999px';
-        document.body.appendChild(textarea);
-        textarea.select();
-        try {
-          document.execCommand('copy');
-          showCopyStatus(true);
-        } catch (err) {
-          showCopyStatus(false);
-          // Show JSON in alert as last resort
-          alert(
-            'Clipboard not available. JSON:\n\n' +
-              text.substring(0, 500) +
-              '...',
-          );
-        }
-        document.body.removeChild(textarea);
-      }
-
-      function showCopyStatus(success) {
-        const statusEl = document.getElementById('jsonCopyStatus');
-        if (statusEl) {
-          statusEl.style.display = 'block';
-          statusEl.textContent = success
-            ? currentLang === 'en'
-              ? '✓ Copied to clipboard!'
-              : '✓ Скопировано в буфер обмена!'
-            : currentLang === 'en'
-              ? '✗ Copy failed'
-              : '✗ Ошибка копирования';
-          setTimeout(function () {
-            statusEl.style.display = 'none';
-          }, 3000);
-        }
-      }
-
       // Global variables
       var jcActive = false;
       var jcRunning = false;
@@ -3044,775 +2397,738 @@
       var pdfDoc = null;
       var pageNum = 1;
       var pdfScale = 1.5;
-      var currentPdfUrl = '';
+      var currentPdfUrl = "";
       var githubFiles = [];
-      var currentLang = 'ru';
 
       // Data - Full database
       const fraudData = [
         {
-          code: 'IT1PD8E29S5F5',
-          date: '30.01.2023',
-          authority: 'Directia de Arhiva',
-          digital: 'Grimailo Ana',
-          real: 'Maia Flnchea',
-          status: 'VOID',
+          code: "IT1PD8E29S5F5",
+          date: "30.01.2023",
+          authority: "Directia de Arhiva",
+          digital: "Grimailo Ana",
+          real: "Maia Flnchea",
+          status: "VOID",
         },
         {
-          code: '4O3WF02QGRCI1',
-          date: '30.01.2023',
-          authority: 'Directia de Arhiva',
-          digital: 'Cristina Deleanu',
-          status: 'VOID',
+          code: "4O3WF02QGRCI1",
+          date: "30.01.2023",
+          authority: "Directia de Arhiva",
+          digital: "Cristina Deleanu",
+          status: "VOID",
         },
         {
-          code: 'DLTP7B8ZHWGQ7',
-          date: '08.07.2022',
-          authority: 'Directia de Arhiva',
-          digital: 'Mirzac Iuliana',
-          status: 'VOID',
+          code: "DLTP7B8ZHWGQ7",
+          date: "08.07.2022",
+          authority: "Directia de Arhiva",
+          digital: "Mirzac Iuliana",
+          status: "VOID",
         },
         {
-          code: 'CG0T6Y1TBUEL7',
-          date: '12.07.2022',
-          authority: 'Curtea Suprema',
-          digital: 'Mirzac Iuliana',
-          status: 'VOID',
+          code: "CG0T6Y1TBUEL7",
+          date: "12.07.2022",
+          authority: "Curtea Suprema",
+          digital: "Mirzac Iuliana",
+          status: "VOID",
         },
         {
-          code: 'DFVMD2FQLW5N3',
-          date: '14.12.2022',
-          authority: 'Directia de Arhiva',
-          digital: 'Cristina Deleanu',
-          status: 'VOID',
+          code: "DFVMD2FQLW5N3",
+          date: "14.12.2022",
+          authority: "Directia de Arhiva",
+          digital: "Cristina Deleanu",
+          status: "VOID",
         },
         {
-          code: 'HQ7X9W62GUJL9',
-          date: '20.04.2022',
-          authority: 'Penitenciarul Nr.15',
-          digital: 'Valeriu Frimu',
-          status: 'VOID',
+          code: "HQ7X9W62GUJL9",
+          date: "20.04.2022",
+          authority: "Penitenciarul Nr.15",
+          digital: "Valeriu Frimu",
+          status: "VOID",
         },
         {
-          code: 'BS7XCZF1EUJG3',
-          date: '15.07.2022',
-          authority: 'Directia de Arhiva',
-          digital: 'Mirzac Iuliana',
-          status: 'VOID',
+          code: "BS7XCZF1EUJG3",
+          date: "15.07.2022",
+          authority: "Directia de Arhiva",
+          digital: "Mirzac Iuliana",
+          status: "VOID",
         },
         {
-          code: 'DQ1N892ZFXDI3',
-          date: '13.03.2023',
-          authority: 'Directia de Arhiva',
-          digital: 'Mirzac Iuliana',
-          status: 'VOID',
+          code: "DQ1N892ZFXDI3",
+          date: "13.03.2023",
+          authority: "Directia de Arhiva",
+          digital: "Mirzac Iuliana",
+          status: "VOID",
         },
         {
-          code: '6R2V5Z4XBZBH8',
-          date: '20.07.2022',
-          authority: 'Directia de Politie',
-          digital: 'Mihaela Goleac',
-          status: 'VOID',
+          code: "6R2V5Z4XBZBH8",
+          date: "20.07.2022",
+          authority: "Directia de Politie",
+          digital: "Mihaela Goleac",
+          status: "VOID",
         },
         {
-          code: '4J20E98WFY7J2',
-          date: '03.10.2022',
-          authority: 'Directia de Arhiva',
-          digital: 'Valeriu Frimu',
-          status: 'VOID',
+          code: "4J20E98WFY7J2",
+          date: "03.10.2022",
+          authority: "Directia de Arhiva",
+          digital: "Valeriu Frimu",
+          status: "VOID",
         },
         {
-          code: 'IHW093CZ8U8R7',
-          date: '03.08.2022',
-          authority: 'Directia de Arhiva',
-          digital: 'Mirzac Iuliana',
-          status: 'VOID',
+          code: "IHW093CZ8U8R7",
+          date: "03.08.2022",
+          authority: "Directia de Arhiva",
+          digital: "Mirzac Iuliana",
+          status: "VOID",
         },
         {
-          code: '6OZUD89VBUEJ3',
-          date: '01.11.2022',
-          authority: 'Directia Generala Locativ',
-          digital: 'Grimailo Ana',
-          status: 'VOID',
+          code: "6OZUD89VBUEJ3",
+          date: "01.11.2022",
+          authority: "Directia Generala Locativ",
+          digital: "Grimailo Ana",
+          status: "VOID",
         },
       ];
 
       // Verified data
       const verifiedData = [
         {
-          code: 'IMWM44AZGX6N6',
-          date: '18.01.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "IMWM44AZGX6N6",
+          date: "18.01.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'BOUS9XAQDTFH2',
-          date: '24.02.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "BOUS9XAQDTFH2",
+          date: "24.02.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'CQ0VC27VGTCK6',
-          date: '29.03.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "CQ0VC27VGTCK6",
+          date: "29.03.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
       ];
 
       // Complete Registry - All 90 Apostilles
       const allApostilles = [
         {
-          code: 'IT1PD8E29S5F5',
-          date: '30.01.2023',
-          authority: 'Directia de Arhiva',
-          status: 'VOID',
+          code: "IT1PD8E29S5F5",
+          date: "30.01.2023",
+          authority: "Directia de Arhiva",
+          status: "VOID",
         },
         {
-          code: '4O3WF02QGRCI1',
-          date: '30.01.2023',
-          authority: 'Directia de Arhiva',
-          status: 'VOID',
+          code: "4O3WF02QGRCI1",
+          date: "30.01.2023",
+          authority: "Directia de Arhiva",
+          status: "VOID",
         },
         {
-          code: 'DLTP7B8ZHWGQ7',
-          date: '08.07.2022',
-          authority: 'Directia de Arhiva',
-          status: 'VOID',
+          code: "DLTP7B8ZHWGQ7",
+          date: "08.07.2022",
+          authority: "Directia de Arhiva",
+          status: "VOID",
         },
         {
-          code: 'CG0T6Y1TBUEL7',
-          date: '12.07.2022',
-          authority: 'Curtea Suprema',
-          status: 'VOID',
+          code: "CG0T6Y1TBUEL7",
+          date: "12.07.2022",
+          authority: "Curtea Suprema",
+          status: "VOID",
         },
         {
-          code: 'DFVMD2FQLW5N3',
-          date: '14.12.2022',
-          authority: 'Directia de Arhiva',
-          status: 'VOID',
+          code: "DFVMD2FQLW5N3",
+          date: "14.12.2022",
+          authority: "Directia de Arhiva",
+          status: "VOID",
         },
         {
-          code: 'HQ7X9W62GUJL9',
-          date: '20.04.2022',
-          authority: 'Penitenciarul Nr.15',
-          status: 'VOID',
+          code: "HQ7X9W62GUJL9",
+          date: "20.04.2022",
+          authority: "Penitenciarul Nr.15",
+          status: "VOID",
         },
         {
-          code: 'BS7XCZF1EUJG3',
-          date: '15.07.2022',
-          authority: 'Directia de Arhiva',
-          status: 'VOID',
+          code: "BS7XCZF1EUJG3",
+          date: "15.07.2022",
+          authority: "Directia de Arhiva",
+          status: "VOID",
         },
         {
-          code: 'DQ1N892ZFXDI3',
-          date: '13.03.2023',
-          authority: 'Directia de Arhiva',
-          status: 'VOID',
+          code: "DQ1N892ZFXDI3",
+          date: "13.03.2023",
+          authority: "Directia de Arhiva",
+          status: "VOID",
         },
         {
-          code: '6R2V5Z4XBZBH8',
-          date: '20.07.2022',
-          authority: 'Directia de Politie',
-          status: 'VOID',
+          code: "6R2V5Z4XBZBH8",
+          date: "20.07.2022",
+          authority: "Directia de Politie",
+          status: "VOID",
         },
         {
-          code: '4J20E98WFY7J2',
-          date: '03.10.2022',
-          authority: 'Directia de Arhiva',
-          status: 'VOID',
+          code: "4J20E98WFY7J2",
+          date: "03.10.2022",
+          authority: "Directia de Arhiva",
+          status: "VOID",
         },
         {
-          code: 'IHW093CZ8U8R7',
-          date: '03.08.2022',
-          authority: 'Directia de Arhiva',
-          status: 'VOID',
+          code: "IHW093CZ8U8R7",
+          date: "03.08.2022",
+          authority: "Directia de Arhiva",
+          status: "VOID",
         },
         {
-          code: '6OZUD89VBUEJ3',
-          date: '01.11.2022',
-          authority: 'Directia Generala Locativ',
-          status: 'VOID',
+          code: "6OZUD89VBUEJ3",
+          date: "01.11.2022",
+          authority: "Directia Generala Locativ",
+          status: "VOID",
         },
         {
-          code: 'IMWM44AZGX6N6',
-          date: '18.01.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "IMWM44AZGX6N6",
+          date: "18.01.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'BOUS9XAQDTFH2',
-          date: '24.02.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "BOUS9XAQDTFH2",
+          date: "24.02.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'CQ0VC27VGTCK6',
-          date: '29.03.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "CQ0VC27VGTCK6",
+          date: "29.03.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'IQVY40CXISHM2',
-          date: '15.06.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "IQVY40CXISHM2",
+          date: "15.06.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'IPTZ514SCO6R9',
-          date: '22.06.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "IPTZ514SCO6R9",
+          date: "22.06.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'IMTQ930Z8U4N7',
-          date: '01.07.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "IMTQ930Z8U4N7",
+          date: "01.07.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'IJ1S0403JYEH8',
-          date: '08.07.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "IJ1S0403JYEH8",
+          date: "08.07.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'IG4Q770QDXGH7',
-          date: '14.07.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "IG4Q770QDXGH7",
+          date: "14.07.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'HS0W3X5SGO6O3',
-          date: '20.07.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "HS0W3X5SGO6O3",
+          date: "20.07.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'HS5N558YBNEK3',
-          date: '25.07.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "HS5N558YBNEK3",
+          date: "25.07.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'HI4O379ZEPGN2',
-          date: '01.08.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "HI4O379ZEPGN2",
+          date: "01.08.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'GS5T609ZFL4E3',
-          date: '05.08.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "GS5T609ZFL4E3",
+          date: "05.08.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'GO5V1W1R7XCF7',
-          date: '10.08.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "GO5V1W1R7XCF7",
+          date: "10.08.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'HFUO1X3XGUDF7',
-          date: '15.08.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "HFUO1X3XGUDF7",
+          date: "15.08.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'FRWX11FTJU5F9',
-          date: '20.08.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "FRWX11FTJU5F9",
+          date: "20.08.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'GGTUEBEZGYGH7',
-          date: '25.08.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "GGTUEBEZGYGH7",
+          date: "25.08.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'FN5P1X6ZIP6R3',
-          date: '01.09.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "FN5P1X6ZIP6R3",
+          date: "01.09.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'FPWSB4ARCR9L3',
-          date: '05.09.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "FPWSB4ARCR9L3",
+          date: "05.09.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'FJXU588SHPDP2',
-          date: '10.09.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "FJXU588SHPDP2",
+          date: "10.09.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'FL2VB340JYEG5',
-          date: '15.09.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "FL2VB340JYEG5",
+          date: "15.09.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'EQ6RD50ZGP8M0',
-          date: '20.09.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "EQ6RD50ZGP8M0",
+          date: "20.09.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'EOYXD0FZ7Y8P2',
-          date: '25.09.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "EOYXD0FZ7Y8P2",
+          date: "25.09.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'EL3X827SBY4J0',
-          date: '01.10.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "EL3X827SBY4J0",
+          date: "01.10.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'EJ3U9703FPFS4',
-          date: '05.10.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "EJ3U9703FPFS4",
+          date: "05.10.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'EJ2077249VEH8',
-          date: '10.10.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "EJ2077249VEH8",
+          date: "10.10.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'DR4Y1584JW9F4',
-          date: '15.10.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "DR4Y1584JW9F4",
+          date: "15.10.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'DQWVCZCRGYBP4',
-          date: '20.10.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "DQWVCZCRGYBP4",
+          date: "20.10.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'DQWV',
-          date: '20.10.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "DQWV",
+          date: "20.10.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'DOYO489SCL5K2',
-          date: '25.10.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "DOYO489SCL5K2",
+          date: "25.10.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'DOUM4B2ZHL7J7',
-          date: '01.11.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "DOUM4B2ZHL7J7",
+          date: "01.11.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'DLUX84ASKYII6',
-          date: '05.11.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "DLUX84ASKYII6",
+          date: "05.11.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'DLTP7B8ZHWGQ7',
-          date: '08.07.2022',
-          authority: 'Directia de Arhiva',
-          status: 'VOID',
+          code: "DLTP7B8ZHWGQ7",
+          date: "08.07.2022",
+          authority: "Directia de Arhiva",
+          status: "VOID",
         },
         {
-          code: 'DJ6Z0130LM7H2',
-          date: '15.11.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "DJ6Z0130LM7H2",
+          date: "15.11.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'DIV07B9RCV8P4',
-          date: '20.11.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "DIV07B9RCV8P4",
+          date: "20.11.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'DI6RDB72JYDL1',
-          date: '25.11.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "DI6RDB72JYDL1",
+          date: "25.11.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'CT5X1Y51KUDM1',
-          date: '01.12.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "CT5X1Y51KUDM1",
+          date: "01.12.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'CTTO324Z8MDO7',
-          date: '05.12.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "CTTO324Z8MDO7",
+          date: "05.12.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'CQ5PF42YCMDO5',
-          date: '10.12.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "CQ5PF42YCMDO5",
+          date: "10.12.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'COUQ976XEZCH7',
-          date: '15.12.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "COUQ976XEZCH7",
+          date: "15.12.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'CO2S9BA3JX6H1',
-          date: '20.12.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "CO2S9BA3JX6H1",
+          date: "20.12.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'CI6P9821GWFR5',
-          date: '25.12.2021',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "CI6P9821GWFR5",
+          date: "25.12.2021",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'CK5O133ZKLJE8',
-          date: '01.01.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "CK5O133ZKLJE8",
+          date: "01.01.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'CH3OF03S9Q7F9',
-          date: '05.01.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "CH3OF03S9Q7F9",
+          date: "05.01.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'CG0T6Y1TBUEL7',
-          date: '12.07.2022',
-          authority: 'Curtea Suprema',
-          status: 'VOID',
+          code: "CG0T6Y1TBUEL7",
+          date: "12.07.2022",
+          authority: "Curtea Suprema",
+          status: "VOID",
         },
         {
-          code: 'CFYN438ZLLFN2',
-          date: '15.01.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "CFYN438ZLLFN2",
+          date: "15.01.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'BO2TCZ6WHSFG4',
-          date: '20.01.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "BO2TCZ6WHSFG4",
+          date: "20.01.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: 'BO1SF0EV8U6P7',
-          date: '25.01.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "BO1SF0EV8U6P7",
+          date: "25.01.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '9T3M953ZBUHO4',
-          date: '01.02.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "9T3M953ZBUHO4",
+          date: "01.02.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '9L5ZBB6SHU9K5',
-          date: '05.02.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "9L5ZBB6SHU9K5",
+          date: "05.02.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '9J3V97AV8T4M8',
-          date: '10.02.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "9J3V97AV8T4M8",
+          date: "10.02.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '9OVS71FRKM4S3',
-          date: '15.02.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "9OVS71FRKM4S3",
+          date: "15.02.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '8OUW0ZDQJZGQ2',
-          date: '20.02.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "8OUW0ZDQJZGQ2",
+          date: "20.02.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '8Q0V733ZLQFO7',
-          date: '25.02.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "8Q0V733ZLQFO7",
+          date: "25.02.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '8I6O30ASHY6M6',
-          date: '01.03.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "8I6O30ASHY6M6",
+          date: "01.03.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '8OUQ636YBZGI7',
-          date: '05.03.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "8OUQ636YBZGI7",
+          date: "05.03.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '8I2N14CVELIQ5',
-          date: '10.03.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "8I2N14CVELIQ5",
+          date: "10.03.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '7R0W7XAY9OFH2',
-          date: '15.03.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "7R0W7XAY9OFH2",
+          date: "15.03.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '7G6YCW5R9NCP4',
-          date: '20.03.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "7G6YCW5R9NCP4",
+          date: "20.03.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '7H2Q3790FZEI5',
-          date: '25.03.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "7H2Q3790FZEI5",
+          date: "25.03.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '7G6OCX9YIR8K7',
-          date: '01.04.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "7G6OCX9YIR8K7",
+          date: "01.04.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '7FYS428VLM4F4',
-          date: '05.04.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "7FYS428VLM4F4",
+          date: "05.04.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '6S1Q564XIRJJ8',
-          date: '10.04.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "6S1Q564XIRJJ8",
+          date: "10.04.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '6R3U2Y63JZ6M3',
-          date: '15.04.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "6R3U2Y63JZ6M3",
+          date: "15.04.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '6QTV0Z4VIS7I1',
-          date: '20.04.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "6QTV0Z4VIS7I1",
+          date: "20.04.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '6LTO0B9ZBV7N3',
-          date: '25.04.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "6LTO0B9ZBV7N3",
+          date: "25.04.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '6J4V25F3DNGJ8',
-          date: '01.05.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "6J4V25F3DNGJ8",
+          date: "01.05.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '6H0S225X9UFN2',
-          date: '05.05.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "6H0S225X9UFN2",
+          date: "05.05.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '5S2WF92X7X4R8',
-          date: '10.05.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "5S2WF92X7X4R8",
+          date: "10.05.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '5OTZ38FVFN8R2',
-          date: '15.05.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "5OTZ38FVFN8R2",
+          date: "15.05.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '5L7N238Z7QHH5',
-          date: '20.05.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "5L7N238Z7QHH5",
+          date: "20.05.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '5PWVD5A28PBS8',
-          date: '25.05.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "5PWVD5A28PBS8",
+          date: "25.05.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '5J1O95ARLQJN5',
-          date: '01.06.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "5J1O95ARLQJN5",
+          date: "01.06.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '5GTUD58SJQ5N6',
-          date: '05.06.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "5GTUD58SJQ5N6",
+          date: "05.06.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '5G2T615VCPFG1',
-          date: '10.06.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "5G2T615VCPFG1",
+          date: "10.06.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '4O2V205Z9TCG2',
-          date: '15.06.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "4O2V205Z9TCG2",
+          date: "15.06.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '3SUU150WIRBO8',
-          date: '20.06.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "3SUU150WIRBO8",
+          date: "20.06.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '3S6V078ZELJK9',
-          date: '25.06.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "3S6V078ZELJK9",
+          date: "25.06.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '3RX0DXD1DOFL2',
-          date: '01.07.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "3RX0DXD1DOFL2",
+          date: "01.07.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '3R3T11BQ6TJI1',
-          date: '05.07.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "3R3T11BQ6TJI1",
+          date: "05.07.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '3QWY79726SDN4',
-          date: '10.07.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "3QWY79726SDN4",
+          date: "10.07.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
         {
-          code: '3HWVD912FN7H4',
-          date: '15.07.2022',
-          authority: 'Various',
-          status: 'VERIFIED',
+          code: "3HWVD912FN7H4",
+          date: "15.07.2022",
+          authority: "Various",
+          status: "VERIFIED",
         },
       ];
 
       // Sabotage Events - Obstruction of Justice
       const sabotageEvents = [
         {
-          code: 'SABOTAGE-001',
-          date: '19.02.2026',
-          authority: 'Yuri Lupea (Lupiy Yuri)',
-          status: 'ASSAULT',
+          code: "SABOTAGE-001",
+          date: "15.02.2024",
+          authority: "Юрий Лупэа",
+          status: "SABOTAGE",
           description:
-            'Физическое нападение на A©tor Maceret во время аудита апостилей. Удар в область головы/лица.',
-          legalQualification:
-            'Obstruction of Justice with Violence - Статья 3 ЕКПЧ (пытки/бесчеловечное обращение)',
-          evidence: 'SECURITY_INCIDENT_REPORT.md',
+            "Физическое нападение на A©tor Maceret во время аудита апостилей",
         },
         {
-          code: 'SABOTAGE-002',
-          date: '19.02.2026',
-          authority: 'Moldova Government',
-          status: 'SABOTAGE',
+          code: "SABOTAGE-002",
+          date: "20.02.2024",
+          authority: "Moldova Government",
+          status: "SABOTAGE",
           description:
-            'Отключение электричества (Blackout) точно во время верификации данных реестра апостилей',
-          legalQualification:
-            'Psychological Torture - Препятствование правосудию',
-          evidence: 'SECURITY_INCIDENT_REPORT.md',
+            "Отключение электричества во время официального аудита апостилей",
         },
         {
-          code: 'SABOTAGE-003',
-          date: '22.02.2026',
-          authority: 'Unknown (Google Drive)',
-          status: 'CYBER',
+          code: "SABOTAGE-003",
+          date: "25.02.2024",
+          authority: "Unknown",
+          status: "CYBER",
           description:
-            'Кибервторжение - обнаружено 37,127 .DLL и 36,514 .manifest файлов несанкционированного зеркалирования',
-          legalQualification: 'Cyber Intrusion - Computer Fraud',
-          evidence: 'LUPEA_FileType_Stats.csv',
-        },
-        {
-          code: 'CASE-1997',
-          date: '17.07.1997',
-          authority: 'Police Riscany',
-          status: 'TORTURE',
-          description: 'Первая сессия пыток - Полицейский участок Riscany',
-          legalQualification: 'Art. 3 ECHR - Torture',
-          evidence: '7H2Q3790FZEI5',
-        },
-        {
-          code: 'CASE-2002',
-          date: '19.09.2002',
-          authority: 'Moldova Police',
-          status: 'FRAUD',
-          description:
-            'Незаконный обыск квартиры - сфабрикованное дело о наркотиках',
-          legalQualification: 'Art. 6 ECHR - Unfair trial',
-          evidence: '5S2WF92X7X4R8',
-        },
-        {
-          code: 'MURDER-2022',
-          date: '16.03.2022',
-          authority: 'Moldova Authorities',
-          status: 'MURDER',
-          description: 'Убийство Марковой Галины - свидетеля по делу',
-          legalQualification: 'Rome Statute Art. 7 - Crimes against humanity',
-          evidence: 'CO2S9BA3JX6H1',
+            "Кибервторжение в систему - попытка удаления доказательств",
         },
       ];
 
       // Populate evidence table
       function populateEvidenceTable() {
-        var tbody = document.getElementById('evidenceTableBody');
+        var tbody = document.getElementById("evidenceTableBody");
         if (!tbody) return;
 
-        var html = '';
+        var html = "";
         allApostilles.forEach(function (a, i) {
-          var rowClass = a.status === 'VOID' ? 'fraud' : 'verified';
-          var statusIcon = a.status === 'VOID' ? '🚨' : '✅';
-          var pdfName = a.code + '_EVIDENCE';
+          var rowClass = a.status === "VOID" ? "fraud" : "verified";
+          var statusIcon = a.status === "VOID" ? "🚨" : "✅";
+          var pdfName = a.code + "_EVIDENCE";
 
           html += '<tr class="' + rowClass + '">';
-          html += '<td>' + (i + 1) + '</td>';
-          html += '<td><strong>' + a.code + '</strong></td>';
-          html += '<td>' + a.date + '</td>';
-          html += '<td>' + a.authority + '</td>';
-          html += '<td>' + statusIcon + ' ' + a.status + '</td>';
-          html += '<td>';
+          html += "<td>" + (i + 1) + "</td>";
+          html += "<td><strong>" + a.code + "</strong></td>";
+          html += "<td>" + a.date + "</td>";
+          html += "<td>" + a.authority + "</td>";
+          html += "<td>" + statusIcon + " " + a.status + "</td>";
+          html += "<td>";
           html +=
             '<button class="btn btn-small" onclick="loadPdfByCodeDirect(\'' +
             pdfName +
-            '\')">📖</button>';
+            "')\">📖</button>";
           html +=
             '<a href="Downloads/Apostilles/' +
             pdfName +
             '.pdf" class="btn btn-small" download>📥</a>';
-          html += '</td>';
-          html += '</tr>';
+          html += "</td>";
+          html += "</tr>";
         });
 
         tbody.innerHTML = html;
@@ -3820,54 +3136,54 @@
 
       // Timeline functions
       function renderTimeline() {
-        const container = document.getElementById('timeline-events');
-        if (!container || typeof allApostilles === 'undefined') return;
+        const container = document.getElementById("timeline-events");
+        if (!container || typeof allApostilles === "undefined") return;
 
-        container.innerHTML = '';
+        container.innerHTML = "";
         timelineDots = [];
 
         // Sort by date
         const sorted = [...allApostilles].sort((a, b) => {
-          const da = a.date.split('.').reverse().join('-');
-          const db = b.date.split('.').reverse().join('-');
+          const da = a.date.split(".").reverse().join("-");
+          const db = b.date.split(".").reverse().join("-");
           return new Date(da) - new Date(db);
         });
 
-        const startDate = new Date('2021-01-01');
-        const endDate = new Date('2026-12-31');
+        const startDate = new Date("2021-01-01");
+        const endDate = new Date("2026-12-31");
         const totalDays = (endDate - startDate) / (1000 * 60 * 60 * 24);
         const containerWidth = Math.max(800, sorted.length * 30);
 
-        document.getElementById('timeline-line').style.width =
-          containerWidth + 'px';
-        container.style.width = containerWidth + 'px';
+        document.getElementById("timeline-line").style.width =
+          containerWidth + "px";
+        container.style.width = containerWidth + "px";
 
         // Add year markers
         for (let year = 2021; year <= 2026; year++) {
-          const yearDate = new Date(year + '-01-01');
+          const yearDate = new Date(year + "-01-01");
           const days = (yearDate - startDate) / (1000 * 60 * 60 * 24);
           const leftPos = 30 + (days / totalDays) * containerWidth;
 
-          const yearLabel = document.createElement('div');
-          yearLabel.className = 'timeline-year';
-          yearLabel.style.left = leftPos + 'px';
+          const yearLabel = document.createElement("div");
+          yearLabel.className = "timeline-year";
+          yearLabel.style.left = leftPos + "px";
           yearLabel.textContent = year;
           container.appendChild(yearLabel);
         }
 
         // Add event dots
         sorted.forEach((doc, i) => {
-          const parts = doc.date.split('.');
-          const docDate = new Date(parts[2] + '-' + parts[1] + '-' + parts[0]);
+          const parts = doc.date.split(".");
+          const docDate = new Date(parts[2] + "-" + parts[1] + "-" + parts[0]);
           const days = (docDate - startDate) / (1000 * 60 * 60 * 24);
           const leftPos = 30 + (days / totalDays) * containerWidth;
 
-          const isFraud = doc.status === 'VOID';
+          const isFraud = doc.status === "VOID";
 
-          const dot = document.createElement('div');
-          dot.className = 'timeline-dot' + (isFraud ? ' fraud' : '');
-          dot.style.left = leftPos + 'px';
-          dot.title = doc.code + ' - ' + doc.date;
+          const dot = document.createElement("div");
+          dot.className = "timeline-dot" + (isFraud ? " fraud" : "");
+          dot.style.left = leftPos + "px";
+          dot.title = doc.code + " - " + doc.date;
 
           dot.onclick = () => showEventDetails(doc);
 
@@ -3876,35 +3192,35 @@
 
           // Add label every few events
           if (i % 10 === 0) {
-            const label = document.createElement('div');
-            label.className = 'timeline-label';
-            label.style.left = leftPos + 'px';
-            label.textContent = doc.date + ' ' + doc.code.substring(0, 6);
+            const label = document.createElement("div");
+            label.className = "timeline-label";
+            label.style.left = leftPos + "px";
+            label.textContent = doc.date + " " + doc.code.substring(0, 6);
             container.appendChild(label);
           }
         });
 
         // Add sabotage events to timeline
-        if (typeof sabotageEvents !== 'undefined') {
+        if (typeof sabotageEvents !== "undefined") {
           sabotageEvents.forEach(function (event) {
-            const parts = event.date.split('.');
+            const parts = event.date.split(".");
             const docDate = new Date(
-              parts[2] + '-' + parts[1] + '-' + parts[0],
+              parts[2] + "-" + parts[1] + "-" + parts[0],
             );
             const days = (docDate - startDate) / (1000 * 60 * 60 * 24);
             const leftPos = 30 + (days / totalDays) * containerWidth;
 
             const isSabotage =
-              event.status === 'SABOTAGE' || event.status === 'CYBER';
+              event.status === "SABOTAGE" || event.status === "CYBER";
 
-            const dot = document.createElement('div');
-            dot.className = 'timeline-dot' + (isSabotage ? ' fraud' : '');
-            dot.style.left = leftPos + 'px';
-            dot.style.backgroundColor = isSabotage ? '#ff0000' : '#ff6600';
-            dot.style.zIndex = '100';
-            dot.style.width = '16px';
-            dot.style.height = '16px';
-            dot.title = event.code + ' - ' + event.description;
+            const dot = document.createElement("div");
+            dot.className = "timeline-dot" + (isSabotage ? " fraud" : "");
+            dot.style.left = leftPos + "px";
+            dot.style.backgroundColor = isSabotage ? "#ff0000" : "#ff6600";
+            dot.style.zIndex = "100";
+            dot.style.width = "16px";
+            dot.style.height = "16px";
+            dot.title = event.code + " - " + event.description;
 
             dot.onclick = function () {
               showSabotageDetails(event);
@@ -3916,117 +3232,56 @@
       }
 
       function showEventDetails(doc) {
-        const details = document.getElementById('event-details');
-        const isFraud = doc.status === 'VOID';
+        const details = document.getElementById("event-details");
+        const isFraud = doc.status === "VOID";
 
-        details.className = 'event-card' + (isFraud ? ' fraud' : '');
+        details.className = "event-card" + (isFraud ? " fraud" : "");
         details.innerHTML = isFraud
           ? "<h3 style='color: var(--fraud);'>🚨 НАРУШЕНИЕ</h3>"
           : "<h3 style='color: var(--primary);'>✅ Верифицировано</h3>";
 
         details.innerHTML +=
-          '<p><strong>Код:</strong> ' +
+          "<p><strong>Код:</strong> " +
           doc.code +
-          '</p>' +
-          '<p><strong>Дата:</strong> ' +
+          "</p>" +
+          "<p><strong>Дата:</strong> " +
           doc.date +
-          '</p>' +
-          '<p><strong>Ведомство:</strong> ' +
+          "</p>" +
+          "<p><strong>Ведомство:</strong> " +
           doc.authority +
-          '</p>' +
-          '<p><strong>Статус:</strong> ' +
+          "</p>" +
+          "<p><strong>Статус:</strong> " +
           doc.status +
-          '</p>' +
+          "</p>" +
           "<button class='btn' onclick=\"loadPdfByCodeDirect('" +
           doc.code +
-          '_EVIDENCE\')">📖 Открыть</button>';
+          "_EVIDENCE')\">📖 Открыть</button>";
       }
 
       function showSabotageDetails(event) {
-        const details = document.getElementById('event-details');
-        const isCyber = event.status === 'CYBER';
-        const isAssault = event.status === 'ASSAULT';
-        const isTorture = event.status === 'TORTURE';
-        const isMurder = event.status === 'MURDER';
-        const isFraud = event.status === 'FRAUD';
+        const details = document.getElementById("event-details");
+        const isCyber = event.status === "CYBER";
 
-        let statusIcon = '⚠️';
-        let statusLabel = 'САБОТАЖ / ПРЕПЯТСТВОВАНИЕ';
-
-        if (isCyber) {
-          statusIcon = '🌐';
-          statusLabel = 'КИБЕРАТАКА';
-        } else if (isAssault) {
-          statusIcon = '💥';
-          statusLabel = 'ФИЗИЧЕСКОЕ НАПАДЕНИЕ';
-        } else if (isTorture) {
-          statusIcon = '🔥';
-          statusLabel = 'ПЫТКИ';
-        } else if (isMurder) {
-          statusIcon = '💀';
-          statusLabel = 'УБИЙСТВО';
-        } else if (isFraud) {
-          statusIcon = '🎭';
-          statusLabel = 'ФАЛЬСИФИКАЦИЯ';
-        }
-
-        const isEn = currentLang === 'en';
-
-        details.className = 'event-card fraud';
+        details.className = "event-card fraud";
         details.innerHTML =
-          '<h3 style="color: #ff0000;">' +
-          statusIcon +
-          ' ' +
-          statusLabel +
-          '</h3>' +
-          '<p><strong>' +
-          (isEn ? 'Code:' : 'Код:') +
-          '</strong> ' +
+          "<h3 style='color: #ff0000;'>⚠️ САБОТАЖ / ПРЕПЯТСТВОВАНИЕ</h3>" +
+          "<p><strong>Код:</strong> " +
           event.code +
-          '</p>' +
-          '<p><strong>' +
-          (isEn ? 'Date:' : 'Дата:') +
-          '</strong> ' +
+          "</p>" +
+          "<p><strong>Дата:</strong> " +
           event.date +
-          '</p>' +
-          '<p><strong>' +
-          (isEn ? 'Perpetrator:' : 'Виновник:') +
-          '</strong> ' +
+          "</p>" +
+          "<p><strong>Виновник:</strong> " +
           event.authority +
-          '</p>' +
-          '<p><strong>' +
-          (isEn ? 'Description:' : 'Описание:') +
-          '</strong> ' +
+          "</p>" +
+          "<p><strong>Тип:</strong> " +
+          (isCyber ? "🌐 Кибератака" : "🔴 Физическое/Энергетическое") +
+          "</p>" +
+          "<p><strong>Описание:</strong> " +
           event.description +
-          '</p>' +
-          '<p><strong>' +
-          (isEn ? 'Legal Qualification:' : 'Правовая квалификация:') +
-          '</strong></p>' +
-          '<p style="color: #ff3366; font-style: italic;">' +
-          (event.legalQualification ||
-            (isEn ? 'Obstruction of Justice' : 'Препятствование правосудию')) +
-          '</p>' +
-          (event.evidence
-            ? '<p><strong>' +
-              (isEn ? 'Evidence:' : 'Доказательство:') +
-              '</strong> <a href="Downloads/' +
-              event.evidence +
-              '" target="_blank" class="btn" style="margin-left: 10px;">📄 ' +
-              event.evidence +
-              '</a></p>'
-            : '') +
-          '<div style="margin-top: 15px; padding: 15px; background: linear-gradient(135deg, #1a0033 0%, #0a1628 100%); border: 2px solid #ff3366; border-radius: 8px;">' +
-          '<h4 style="color: #ff3366; margin: 0 0 10px 0;">' +
-          (isEn
-            ? '⚖️ INTERNATIONAL LAW STATUS'
-            : '⚖️ СТАТУС МЕЖДУНАРОДНОГО ПРАВА') +
-          '</h4>' +
-          '<p style="font-size: 12px;">' +
-          (isEn
-            ? 'This constitutes obstruction of justice, crimes against humanity (Rome Statute Art. 7), and violation of ECHR Art. 3 (torture/inhuman treatment).'
-            : 'Это препятствование правосудию, преступления против человечности (Римский статут, ст. 7), и нарушение ст. 3 ЕКПЧ (пытки/бесчеловечное обращение).') +
-          '</p>' +
-          '</div>';
+          "</p>" +
+          "<p style='margin-top: 10px; padding: 10px; background: #ffebee; border-left: 4px solid #ff0000;'>" +
+          "Это препятствование правосудию согласно ст. 7 Римского статута (преступления против человечности) и ст. 3 ЕКПЧ (пытки/бесчеловечное обращение).</p>";
       }
 
       function playTimeline() {
@@ -4039,10 +3294,10 @@
           if (index < timelineDots.length) {
             timelineDots[index].click();
             // Scroll into view
-            const container = document.getElementById('timeline-container');
+            const container = document.getElementById("timeline-container");
             timelineDots[index].scrollIntoView({
-              behavior: 'smooth',
-              inline: 'center',
+              behavior: "smooth",
+              inline: "center",
             });
             index++;
           } else {
@@ -4060,9 +3315,9 @@
 
       // Direct PDF load for registry
       function loadPdfByCodeDirect(pdfName) {
-        document.getElementById('pdfCode').value = pdfName;
+        document.getElementById("pdfCode").value = pdfName;
         loadPdfByCode();
-        showRole('files');
+        showRole("files");
       }
 
       // Jus Cogens Protocol Functions
@@ -4070,25 +3325,25 @@
         if (jcRunning) return;
 
         jcRunning = true;
-        document.getElementById('protocolStatus').innerHTML = '⏳ АНАЛИЗ...';
-        document.getElementById('protocolStatus').style.color =
-          'var(--warning)';
+        document.getElementById("protocolStatus").innerHTML = "⏳ АНАЛИЗ...";
+        document.getElementById("protocolStatus").style.color =
+          "var(--warning)";
 
         var violations = 0;
         var valid = 0;
 
-        if (typeof fraudData !== 'undefined') {
+        if (typeof fraudData !== "undefined") {
           violations = fraudData.length;
         }
 
-        if (typeof allApostilles !== 'undefined') {
+        if (typeof allApostilles !== "undefined") {
           valid = allApostilles.length - violations;
         }
 
         var progress = 0;
         var interval = setInterval(function () {
           progress += 5;
-          document.getElementById('jcProgressBar').style.width = progress + '%';
+          document.getElementById("jcProgressBar").style.width = progress + "%";
 
           if (progress >= 100) {
             clearInterval(interval);
@@ -4098,278 +3353,244 @@
       }
 
       function completeJusCogens(violations, valid) {
-        document.getElementById('jcStatus').innerHTML = 'АКТИВЕН';
-        document.getElementById('jcViolations').innerHTML = violations;
-        document.getElementById('jcValid').innerHTML = valid;
-        document.getElementById('protocolStatus').innerHTML =
-          '🛡️ JUS COGENS ACTIVE';
-        document.getElementById('protocolStatus').style.color =
-          'var(--primary)';
+        document.getElementById("jcStatus").innerHTML = "АКТИВЕН";
+        document.getElementById("jcViolations").innerHTML = violations;
+        document.getElementById("jcValid").innerHTML = valid;
+        document.getElementById("protocolStatus").innerHTML =
+          "🛡️ JUS COGENS ACTIVE";
+        document.getElementById("protocolStatus").style.color =
+          "var(--primary)";
 
         jcActive = true;
         jcRunning = false;
 
         alert(
-          '🛡️ JUS COGENS NEURO-PROTOCOL ACTIVATED\n\nОбнаружено нарушений: ' +
+          "🛡️ JUS COGENS NEURO-PROTOCOL ACTIVATED\n\nОбнаружено нарушений: " +
             violations +
-            '\nДействительных: ' +
+            "\nДействительных: " +
             valid +
-            '\n\nВсе документы с пустым полем 3 признаются НЕДЕЙСТВИТЕЛЬНЫМИ.',
+            "\n\nВсе документы с пустым полем 3 признаются НЕДЕЙСТВИТЕЛЬНЫМИ.",
         );
       }
 
       function verifyJusCogens(code) {
-        var result = { valid: true, reason: '', article: '' };
-        var found = null;
+        var result = { valid: true, reason: "", article: "" };
 
-        if (typeof fraudData !== 'undefined') {
-          found = fraudData.find(function (d) {
+        if (typeof fraudData !== "undefined") {
+          var found = fraudData.find(function (d) {
             return d.code === code;
           });
           if (found) {
             result.valid = false;
-            result.reason = 'Пустое поле 3 (фамилия/должность отсутствует)';
-            result.article = 'Статья 5 Гаагской конвенции 1961 года';
+            result.reason = "Пустое поле 3 (фамилия/должность отсутствует)";
+            result.article = "Статья 5 Гаагской конвенции 1961 года";
             return result;
           }
         }
 
-        result.reason = 'Соответствует Статье 5';
+        result.reason = "Соответствует Статье 5";
         return result;
       }
 
       // ECHR Functions
       function showECHRViolations() {
-        document.getElementById('art3Count').innerHTML = echrViolations.art3;
-        document.getElementById('art6Count').innerHTML = echrViolations.art6;
-        document.getElementById('art8Count').innerHTML = echrViolations.art8;
+        document.getElementById("art3Count").innerHTML = echrViolations.art3;
+        document.getElementById("art6Count").innerHTML = echrViolations.art6;
+        document.getElementById("art8Count").innerHTML = echrViolations.art8;
 
         alert(
-          '⚖️ ECHR НАРУШЕНИЯ\n\n' +
-            'Статья 3 (Запрет пыток): ' +
+          "⚖️ ECHR НАРУШЕНИЯ\n\n" +
+            "Статья 3 (Запрет пыток): " +
             echrViolations.art3 +
-            ' фактов\n' +
-            '  - Незаконное лишение свободы\n' +
-            '  - Бесчеловечное обращение\n\n' +
-            'Статья 6 (Справедливый суд): ' +
+            " фактов\n" +
+            "  - Незаконное лишение свободы\n" +
+            "  - Бесчеловечное обращение\n\n" +
+            "Статья 6 (Справедливый суд): " +
             echrViolations.art6 +
-            ' фактов\n' +
-            '  - Фальсификация апостилей\n' +
-            '  - Нарушение права на защиту\n\n' +
-            'Статья 8 (Частная жизнь): ' +
+            " фактов\n" +
+            "  - Фальсификация апостилей\n" +
+            "  - Нарушение права на защиту\n\n" +
+            "Статья 8 (Частная жизнь): " +
             echrViolations.art8 +
-            ' фактов\n' +
-            '  - Манипуляция персональными данными',
+            " фактов\n" +
+            "  - Манипуляция персональными данными",
         );
       }
 
       // UDHR Functions
       function showUDHR() {
         alert(
-          '🌍 ВСЕОБЩАЯ ДЕКЛАРАЦИЯ ПРАВ ЧЕЛОВЕКА (ВДПЧ)\n' +
-            'Принята ГА ООН 10 декабря 1948 года\n\n' +
-            '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n' +
-            'Статья 1:\n' +
-            'Все люди рождаются свободными и равными в достоинстве и правах\n\n' +
-            'Статья 3:\n' +
-            'Каждый имеет право на жизнь, свободу и личную неприкосновенность\n\n' +
-            'Статья 5:\n' +
-            'Никто не должен подвергаться пыткам или бесчеловечному обращению\n\n' +
-            'Статья 10:\n' +
-            'Каждый имеет право на справедливое публичное разбирательство\n\n' +
-            '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
-            'ВДПЧ является фундаментом международного права\n' +
-            'и имеет статус Jus Cogens',
+          "🌍 ВСЕОБЩАЯ ДЕКЛАРАЦИЯ ПРАВ ЧЕЛОВЕКА (ВДПЧ)\n" +
+            "Принята ГА ООН 10 декабря 1948 года\n\n" +
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n" +
+            "Статья 1:\n" +
+            "Все люди рождаются свободными и равными в достоинстве и правах\n\n" +
+            "Статья 3:\n" +
+            "Каждый имеет право на жизнь, свободу и личную неприкосновенность\n\n" +
+            "Статья 5:\n" +
+            "Никто не должен подвергаться пыткам или бесчеловечному обращению\n\n" +
+            "Статья 10:\n" +
+            "Каждый имеет право на справедливое публичное разбирательство\n\n" +
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
+            "ВДПЧ является фундаментом международного права\n" +
+            "и имеет статус Jus Cogens",
         );
       }
 
       // Rome Statute Functions
       function showRomeStatute() {
         var violations = 0;
-        if (typeof fraudData !== 'undefined') {
+        if (typeof fraudData !== "undefined") {
           violations = fraudData.length;
         }
 
-        document.getElementById('art7Status').innerHTML =
-          '⚠ ' + violations + ' ФАКТОВ';
+        document.getElementById("art7Status").innerHTML =
+          "⚠ " + violations + " ФАКТОВ";
 
         alert(
-          '⚖️ РИМСКИЙ СТАТУТ МЕЖДУНАРОДНОГО УГОЛОВНОГО СУДА\n' +
-            'Принят 17 июля 1998 года, вступил в силу 1 июля 2002\n\n' +
-            '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n' +
-            'Статья 5 - Юрисдикция суда:\n' +
-            '✓ Геноцид, преступления против человечности,\n' +
-            '  военные преступления, агрессия\n\n' +
-            'Статья 7 - Преступления против человечности:\n' +
-            '⚠ Обнаружено ' +
+          "⚖️ РИМСКИЙ СТАТУТ МЕЖДУНАРОДНОГО УГОЛОВНОГО СУДА\n" +
+            "Принят 17 июля 1998 года, вступил в силу 1 июля 2002\n\n" +
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n" +
+            "Статья 5 - Юрисдикция суда:\n" +
+            "✓ Геноцид, преступления против человечности,\n" +
+            "  военные преступления, агрессия\n\n" +
+            "Статья 7 - Преступления против человечности:\n" +
+            "⚠ Обнаружено " +
             violations +
-            ' фактов:\n' +
-            '  - Умышленное лишение свободы\n' +
-            '  - Бесчеловечное обращение\n' +
-            '  - Преследование\n\n' +
-            'Статья 17 - Приемлемость:\n' +
-            '⚠ Дела не должны рассматриваться национальными судами\n' +
-            '  при отсутствии намерения или возможности судить\n\n' +
-            'Статья 29 - Сроки давности:\n' +
-            '✓ Неприменимы к преступлениям под юрисдикцией суда\n\n' +
-            'Статья 32 - Ошибка факта/права:\n' +
-            '○ Не является основанием для освобождения от ответственности\n' +
-            '  при наличии умысла\n\n' +
-            '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
-            'МУС может рассматривать дела, когда национальные суды\n' +
-            'не желают или не способны осуществлять правосудие\n\n' +
-            '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n' +
-            'Статья 50 - Аутентичность:\n' +
-            '✓ Тексты Римского Статута аутентичны\n' +
-            '  на английском и французском языках\n\n' +
-            'Официальный перевод на русский язык является\n' +
-            'аутентичным в соответствии с резолюцией установления',
+            " фактов:\n" +
+            "  - Умышленное лишение свободы\n" +
+            "  - Бесчеловечное обращение\n" +
+            "  - Преследование\n\n" +
+            "Статья 17 - Приемлемость:\n" +
+            "⚠ Дела не должны рассматриваться национальными судами\n" +
+            "  при отсутствии намерения или возможности судить\n\n" +
+            "Статья 29 - Сроки давности:\n" +
+            "✓ Неприменимы к преступлениям под юрисдикцией суда\n\n" +
+            "Статья 32 - Ошибка факта/права:\n" +
+            "○ Не является основанием для освобождения от ответственности\n" +
+            "  при наличии умысла\n\n" +
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
+            "МУС может рассматривать дела, когда национальные суды\n" +
+            "не желают или не способны осуществлять правосудие\n\n" +
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n" +
+            "Статья 50 - Аутентичность:\n" +
+            "✓ Тексты Римского Статута аутентичны\n" +
+            "  на английском и французском языках\n\n" +
+            "Официальный перевод на русский язык является\n" +
+            "аутентичным в соответствии с резолюцией установления",
         );
       }
 
       // Vienna Convention 1969 Functions
       function applyViennaConvention() {
         var violations = 0;
-        if (typeof fraudData !== 'undefined') {
+        if (typeof fraudData !== "undefined") {
           violations = fraudData.length;
         }
 
-        document.getElementById('art53Status').innerHTML =
-          '⚠ ' + violations + ' НАРУШЕНИЙ';
-        document.getElementById('art60Status').innerHTML =
-          '⚠ ' + violations + ' НАРУШЕНИЙ';
+        document.getElementById("art53Status").innerHTML =
+          "⚠ " + violations + " НАРУШЕНИЙ";
+        document.getElementById("art60Status").innerHTML =
+          "⚠ " + violations + " НАРУШЕНИЙ";
 
         alert(
-          '🏛️ ВЕНСКАЯ КОНВЕНЦИЯ 1969 - ПРИМЕНЕНА\n\n' +
-            'Статья 31 - Добросовестное толкование:\n' +
-            '✓ Активна\n\n' +
-            'Статья 53 - Jus Cogens:\n' +
-            '⚠ Обнаружено ' +
+          "🏛️ ВЕНСКАЯ КОНВЕНЦИЯ 1969 - ПРИМЕНЕНА\n\n" +
+            "Статья 31 - Добросовестное толкование:\n" +
+            "✓ Активна\n\n" +
+            "Статья 53 - Jus Cogens:\n" +
+            "⚠ Обнаружено " +
             violations +
-            ' нарушений императивных норм\n\n' +
-            'Статья 60 - Существенное нарушение:\n' +
-            '⚠ ' +
+            " нарушений императивных норм\n\n" +
+            "Статья 60 - Существенное нарушение:\n" +
+            "⚠ " +
             violations +
-            ' случаев - право на приостановление\n\n' +
-            'Статья 64 - Imperium contra jus:\n' +
-            '○ Применяется при обнаружении коллизий\n\n' +
-            'Статья 85 - Аутентичность:\n' +
-            '✓ Тексты договоров аутентичны на всех языках\n\n' +
-            '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
-            'ПРАВОВАЯ ИЕРАРХИЯ:\n' +
-            'ВДПЧ → Венская конв.1969 → ЕКПЧ → Нац.право\n\n' +
-            'Любой акт, нарушающий Jus Cogens,\n' +
-            'НЕДЕЙСТВИТЕЛЕН (ex tunc) - с момента создания',
+            " случаев - право на приостановление\n\n" +
+            "Статья 64 - Imperium contra jus:\n" +
+            "○ Применяется при обнаружении коллизий\n\n" +
+            "Статья 85 - Аутентичность:\n" +
+            "✓ Тексты договоров аутентичны на всех языках\n\n" +
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
+            "ПРАВОВАЯ ИЕРАРХИЯ:\n" +
+            "ВДПЧ → Венская конв.1969 → ЕКПЧ → Нац.право\n\n" +
+            "Любой акт, нарушающий Jus Cogens,\n" +
+            "НЕДЕЙСТВИТЕЛЕН (ex tunc) - с момента создания",
         );
       }
 
       // Vienna Filter - VOID BY JUS COGENS
       function applyViennaFilter() {
         var violations = 0;
-        if (typeof fraudData !== 'undefined') {
+        if (typeof fraudData !== "undefined") {
           violations = fraudData.length;
         }
 
-        var result = '';
-        var isEn = currentLang === 'en';
-
-        if (typeof fraudData !== 'undefined') {
+        var result = "";
+        if (typeof fraudData !== "undefined") {
           fraudData.forEach(function (d) {
-            result += '\n🚨 ' + d.code + ' - ' + d.date + '\n';
-            result +=
-              (isEn ? '   Authority: ' : '   Орган: ') + d.authority + '\n';
-            result +=
-              (isEn
-                ? '   Status: ❌ VOID BY JUS COGENS'
-                : '   Статус: ❌ VOID BY JUS COGENS') + '\n';
-            result +=
-              (isEn
-                ? '   Basis: Art. 53 VC 1969'
-                : '   Основание: Статья 53 ВК 1969') + '\n';
-            result += '   --------------------------------\n';
+            result += "\n🚨 " + d.code + " - " + d.date + "\n";
+            result += "   Орган: " + d.authority + "\n";
+            result += "   Статус: ❌ VOID BY JUS COGENS\n";
+            result += "   Основание: Статья 53 ВК 1969\n";
+            result += "   --------------------------------\n";
           });
         }
 
-        var title = isEn
-          ? '⚠️ VIENNA FILTER - JUS COGENS ACTIVATED'
-          : '⚠️ ВЕНСКИЙ ФИЛЬТР - JUS COGENS ACTIVATED';
-        var separator = '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━';
-        var violationsFound = isEn
-          ? 'VIOLATIONS DETECTED: '
-          : 'ОБНАРУЖЕНО НАРУШЕНИЙ: ';
-        var appliedNorms = isEn ? 'Applied norms:\n' : 'Применены нормы:\n';
-        var norm1 = isEn
-          ? '- Art. 53 VC 1969 (Jus Cogens)\n'
-          : '- Статья 53 ВК 1969 (Jus Cogens)\n';
-        var norm2 = isEn
-          ? '- Art. 5 Hague Convention 1961\n'
-          : '- Статья 5 Гаагской конвенции 1961\n';
-        var norm3 = isEn ? '- Art. 3, 6, 8 ECHR\n' : '- Статья 3, 6, 8 ЕКПЧ\n';
-        var voidDocs = isEn
-          ? 'DOCUMENTS WITH VOID STATUS:\n'
-          : 'ДОКУМЕНТЫ СО СТАТУСОМ VOID:\n';
-        var conclusion = isEn
-          ? 'All these apostilles are declared INVALID\nfrom the moment of creation (ex tunc) according to\ninternational law norms'
-          : 'Все эти апостили признаются НЕДЕЙСТВИТЕЛЬНЫМИ\nс момента создания (ex tunc) согласно нормам\nмеждународного права';
-
         alert(
-          title +
-            '\n\n' +
-            separator +
-            '\n\n' +
-            violationsFound +
+          "⚠️ ВЕНСКИЙ ФИЛЬТР - JUS COGENS ACTIVATED\n\n" +
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n" +
+            "ОБНАРУЖЕНО НАРУШЕНИЙ: " +
             violations +
-            '\n\n' +
-            appliedNorms +
-            norm1 +
-            norm2 +
-            norm3 +
-            separator +
-            '\n\n' +
-            voidDocs +
+            "\n\n" +
+            "Применены нормы:\n" +
+            "- Статья 53 ВК 1969 (Jus Cogens)\n" +
+            "- Статья 5 Гаагской конвенции 1961\n" +
+            "- Статья 3, 6, 8 ЕКПЧ\n\n" +
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n" +
+            "ДОКУМЕНТЫ СО СТАТУСОМ VOID:\n" +
             result +
-            separator +
-            '\n\n' +
-            conclusion,
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n" +
+            "Все эти апостили признаются НЕДЕЙСТВИТЕЛЬНЫМИ\n" +
+            "с момента создания (ex tunc) согласно нормам\n" +
+            "международного права",
         );
 
         // Visual feedback - highlight fraud entries
-        if (typeof populateEvidenceTable === 'function') {
-          document.querySelectorAll('.fraud').forEach(function (el) {
-            el.style.background = 'var(--fraud-dim)';
-            el.style.borderLeft = '4px solid #ff3366';
+        if (typeof populateEvidenceTable === "function") {
+          document.querySelectorAll(".fraud").forEach(function (el) {
+            el.style.background = "var(--fraud-dim)";
+            el.style.borderLeft = "4px solid #ff3366";
           });
         }
       }
 
       // Role switching
-      function showRole(role, evt) {
-        document.querySelectorAll('.role-tab').forEach(function (t) {
-          t.classList.remove('active');
+      function showRole(role) {
+        document.querySelectorAll(".role-tab").forEach(function (t) {
+          t.classList.remove("active");
         });
-        document.querySelectorAll('.role-panel').forEach(function (p) {
-          p.classList.remove('active');
+        document.querySelectorAll(".role-panel").forEach(function (p) {
+          p.classList.remove("active");
         });
-        var tab = evt ? evt.target : document.querySelector('.role-tab');
-        tab.classList.add('active');
+        var tab = event.target;
+        tab.classList.add("active");
         var panel = document.getElementById(role);
-        panel.classList.add('active');
+        panel.classList.add("active");
 
-        if (role === 'network') {
+        if (role === "network") {
           setTimeout(initNetwork, 100);
         }
       }
 
       // Accordion
       function toggleAccordion(header) {
-        header.nextElementSibling.classList.toggle('show');
+        header.nextElementSibling.classList.toggle("show");
       }
 
       // Search for citizen
       function searchApostille(query) {
-        const result = document.getElementById('citizenResult');
+        const result = document.getElementById("citizenResult");
         if (query.length < 3) {
-          result.classList.remove('show');
+          result.classList.remove("show");
           return;
         }
 
@@ -4378,7 +3599,7 @@
         );
 
         if (found.length > 0) {
-          result.className = 'search-results show fraud';
+          result.className = "search-results show fraud";
           result.innerHTML = `
                   <div style="background: var(--fraud-dim); border: 1px solid var(--fraud); padding: 20px;">
                     <h4 style="color: var(--fraud);">🚨 НАРУШЕНИЕ!</h4>
@@ -4390,7 +3611,7 @@
                   </div>
                 `;
         } else {
-          result.className = 'search-results show';
+          result.className = "search-results show";
           result.innerHTML = `
                   <div style="background: var(--primary-dim); border: 1px solid var(--primary); padding: 20px;">
                     <h4 style="color: var(--primary);">✅ ВЕРИФИЦИРОВАН</h4>
@@ -4403,9 +3624,9 @@
 
       // Judge verification
       function judgeVerify(query) {
-        const result = document.getElementById('judgeResult');
+        const result = document.getElementById("judgeResult");
         if (query.length < 3) {
-          result.innerHTML = '';
+          result.innerHTML = "";
           return;
         }
 
@@ -4428,18 +3649,10 @@
 
       // Network visualization
       function initNetwork() {
-        const canvas = document.getElementById('networkCanvas');
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        if (!ctx) return;
-
-        if (typeof fraudData === 'undefined') {
-          console.log('fraudData not loaded');
-          return;
-        }
-
-        canvas.width = canvas.offsetWidth || 600;
-        canvas.height = canvas.offsetWidth || 600;
+        const canvas = document.getElementById("networkCanvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetWidth;
 
         const nodes = [];
         const centerX = canvas.width / 2;
@@ -4453,7 +3666,7 @@
             x: centerX + Math.cos(angle) * radius,
             y: centerY + Math.sin(angle) * radius,
             code: d.code,
-            type: 'fraud',
+            type: "fraud",
           });
         });
 
@@ -4464,8 +3677,8 @@
           nodes.push({
             x: centerX + Math.cos(angle) * radius,
             y: centerY + Math.sin(angle) * radius,
-            code: 'VERIFIED',
-            type: 'verified',
+            code: "VERIFIED",
+            type: "verified",
           });
         }
 
@@ -4475,13 +3688,13 @@
         // Draw center
         ctx.beginPath();
         ctx.arc(centerX, centerY, 30, 0, Math.PI * 2);
-        ctx.fillStyle = '#00ff88';
+        ctx.fillStyle = "#00ff88";
         ctx.fill();
-        ctx.fillStyle = '#000';
-        ctx.font = '12px Roboto Mono';
-        ctx.textAlign = 'center';
-        ctx.fillText('JUS', centerX, centerY - 5);
-        ctx.fillText('COGENS', centerX, centerY + 10);
+        ctx.fillStyle = "#000";
+        ctx.font = "12px Roboto Mono";
+        ctx.textAlign = "center";
+        ctx.fillText("JUS", centerX, centerY - 5);
+        ctx.fillText("COGENS", centerX, centerY + 10);
 
         // Draw nodes
         nodes.forEach((node) => {
@@ -4489,7 +3702,7 @@
           ctx.beginPath();
           ctx.moveTo(centerX, centerY);
           ctx.lineTo(node.x, node.y);
-          ctx.strokeStyle = node.type === 'fraud' ? '#ff3366' : '#00ff88';
+          ctx.strokeStyle = node.type === "fraud" ? "#ff3366" : "#00ff88";
           ctx.globalAlpha = 0.3;
           ctx.stroke();
           ctx.globalAlpha = 1;
@@ -4497,13 +3710,13 @@
           // Node
           ctx.beginPath();
           ctx.arc(node.x, node.y, 15, 0, Math.PI * 2);
-          ctx.fillStyle = node.type === 'fraud' ? '#ff3366' : '#00ff88';
+          ctx.fillStyle = node.type === "fraud" ? "#ff3366" : "#00ff88";
           ctx.fill();
 
           // Code
-          if (node.type === 'fraud') {
-            ctx.fillStyle = '#fff';
-            ctx.font = '8px Roboto Mono';
+          if (node.type === "fraud") {
+            ctx.fillStyle = "#fff";
+            ctx.font = "8px Roboto Mono";
             ctx.fillText(node.code.substring(0, 4), node.x, node.y + 25);
           }
         });
@@ -4515,18 +3728,18 @@
           // Draw center
           ctx.beginPath();
           ctx.arc(centerX, centerY, 30, 0, Math.PI * 2);
-          ctx.fillStyle = '#00ff88';
+          ctx.fillStyle = "#00ff88";
           ctx.fill();
-          ctx.fillStyle = '#000';
-          ctx.font = 'bold 12px Roboto Mono';
-          ctx.textAlign = 'center';
-          ctx.fillText('JUS', centerX, centerY - 5);
-          ctx.fillText('COGENS', centerX, centerY + 10);
+          ctx.fillStyle = "#000";
+          ctx.font = "bold 12px Roboto Mono";
+          ctx.textAlign = "center";
+          ctx.fillText("JUS", centerX, centerY - 5);
+          ctx.fillText("COGENS", centerX, centerY + 10);
 
           // Draw with rotation
           nodes.forEach((node, i) => {
             const angle = Date.now() / 5000 + (i / nodes.length) * Math.PI * 2;
-            const radius = node.type === 'fraud' ? 150 : 100;
+            const radius = node.type === "fraud" ? 150 : 100;
             node.x = centerX + Math.cos(angle) * radius;
             node.y = centerY + Math.sin(angle) * radius;
 
@@ -4534,7 +3747,7 @@
             ctx.beginPath();
             ctx.moveTo(centerX, centerY);
             ctx.lineTo(node.x, node.y);
-            ctx.strokeStyle = node.type === 'fraud' ? '#ff3366' : '#00ff88';
+            ctx.strokeStyle = node.type === "fraud" ? "#ff3366" : "#00ff88";
             ctx.globalAlpha = 0.3;
             ctx.stroke();
             ctx.globalAlpha = 1;
@@ -4542,7 +3755,7 @@
             // Node
             ctx.beginPath();
             ctx.arc(node.x, node.y, 12, 0, Math.PI * 2);
-            ctx.fillStyle = node.type === 'fraud' ? '#ff3366' : '#00ff88';
+            ctx.fillStyle = node.type === "fraud" ? "#ff3366" : "#00ff88";
             ctx.fill();
           });
 
@@ -4560,125 +3773,35 @@
         populateEvidenceTable();
         loadGithubFiles();
         renderTimeline();
-        renderIncidentCards();
       };
-
-      // Render Incident Cards
-      function renderIncidentCards() {
-        var container = document.getElementById('incident-cards');
-        if (!container || typeof sabotageEvents === 'undefined') return;
-
-        var isEn = currentLang === 'en';
-        var html = '';
-
-        sabotageEvents.forEach(function (event) {
-          var cardClass = 'incident-card';
-          var icon = '⚠️';
-
-          if (event.status === 'ASSAULT') {
-            cardClass += ' assault';
-            icon = '💥';
-          } else if (event.status === 'CYBER') {
-            cardClass += ' cyber';
-            icon = '🌐';
-          } else if (event.status === 'TORTURE') {
-            cardClass += ' torture';
-            icon = '🔥';
-          } else if (event.status === 'MURDER') {
-            cardClass += ' murder';
-            icon = '💀';
-          } else if (event.status === 'FRAUD') {
-            cardClass += ' fraud';
-            icon = '🎭';
-          }
-
-          var statusLabel = event.status;
-          if (isEn) {
-            if (event.status === 'ASSAULT') statusLabel = 'ASSAULT';
-            else if (event.status === 'CYBER') statusLabel = 'CYBER ATTACK';
-            else if (event.status === 'TORTURE') statusLabel = 'TORTURE';
-            else if (event.status === 'MURDER') statusLabel = 'MURDER';
-            else if (event.status === 'FRAUD') statusLabel = 'FORGERY';
-          }
-
-          html +=
-            '<div class="' +
-            cardClass +
-            ' fraud-pulse" onclick="showIncidentCard(\'' +
-            event.code +
-            '\')" style="cursor: pointer;">';
-          html +=
-            '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">';
-          html += '<span style="font-size: 24px;">' + icon + '</span>';
-          html +=
-            '<span style="background: var(--fraud); color: white; padding: 3px 10px; border-radius: 10px; font-size: 11px;">' +
-            statusLabel +
-            '</span>';
-          html += '</div>';
-          html +=
-            '<h4 style="color: var(--text); margin: 0 0 10px 0;">' +
-            event.code +
-            '</h4>';
-          html +=
-            '<p style="color: var(--text-dim); font-size: 12px; margin: 0 0 10px 0;">' +
-            event.date +
-            '</p>';
-          html +=
-            '<p style="color: var(--text); font-size: 13px;">' +
-            event.description.substring(0, 80) +
-            '...</p>';
-          html +=
-            '<div style="margin-top: 15px; padding-top: 10px; border-top: 1px solid var(--border);">';
-          html +=
-            '<span style="color: var(--fraud); font-size: 12px;">' +
-            (isEn ? 'Click for details →' : 'Кликните для деталей →') +
-            '</span>';
-          html += '</div>';
-          html += '</div>';
-        });
-
-        container.innerHTML = html;
-      }
-
-      function showIncidentCard(code) {
-        var event = sabotageEvents.find(function (e) {
-          return e.code === code;
-        });
-        if (event) {
-          showSabotageDetails(event);
-          document
-            .getElementById('event-details')
-            .scrollIntoView({ behavior: 'smooth' });
-        }
-      }
 
       function updateTime() {
         var now = new Date();
-        var timeEl = document.getElementById('currentTime');
+        var timeEl = document.getElementById("currentTime");
         if (timeEl) {
-          timeEl.textContent = now.toLocaleString('ru-RU');
+          timeEl.textContent = now.toLocaleString("ru-RU");
         }
       }
 
       // Cloud connection handler
       function connectCloud(service) {
-        var msg = '';
+        var msg = "";
         switch (service) {
-          case 'github':
-            msg = '✅ GitHub уже подключён! Файлы загружаются из репозитория.';
+          case "github":
+            msg = "✅ GitHub уже подключён! Файлы загружаются из репозитория.";
             loadGithubFiles();
             break;
-          case 'drive':
+          case "drive":
             msg =
-              '📁 Google Drive: Требуется авторизация. Используйте: https://drive.google.com';
+              "📁 Google Drive: Требуется авторизация. Используйте: https://drive.google.com";
             break;
-          case 'dropbox':
+          case "dropbox":
             msg =
-              '📦 Dropbox: Требуется авторизация. Используйте: https://dropbox.com';
+              "📦 Dropbox: Требуется авторизация. Используйте: https://dropbox.com";
             break;
-          case 'icloud':
+          case "icloud":
             msg =
-              '☁️ iCloud: Требуется авторизация. Используйте: https://icloud.com';
+              "☁️ iCloud: Требуется авторизация. Используйте: https://icloud.com";
             break;
         }
         alert(msg);
@@ -4686,7 +3809,7 @@
 
       // GitHub file listing (using raw GitHub API)
       function loadGithubFiles() {
-        var container = document.getElementById('githubFiles');
+        var container = document.getElementById("githubFiles");
         container.innerHTML =
           '<p style="color: var(--text-dim); text-align: center;">Загрузка...</p>';
 
@@ -4697,21 +3820,21 @@
             code: d.code,
             date: d.date,
             status: d.status,
-            url: 'Downloads/Apostilles/' + d.code + '_EVIDENCE.pdf',
+            url: "Downloads/Apostilles/" + d.code + "_EVIDENCE.pdf",
           };
         });
 
         // Add verified files (non-fraud)
         var verifiedCodes = [
-          'IQVY40CXISHM2',
-          'IPTZ514SCO6R9',
-          'IMTQ930Z8U4N7',
-          'IMWM44AZGX6N6',
-          'IHW093CZ8U8R7',
-          'IJ1S0403JYEH8',
-          'IG4Q770QDXGH7',
-          'HS0W3X5SGO6O3',
-          'HS5N558YBNEK3',
+          "IQVY40CXISHM2",
+          "IPTZ514SCO6R9",
+          "IMTQ930Z8U4N7",
+          "IMWM44AZGX6N6",
+          "IHW093CZ8U8R7",
+          "IJ1S0403JYEH8",
+          "IG4Q770QDXGH7",
+          "HS0W3X5SGO6O3",
+          "HS5N558YBNEK3",
         ];
         verifiedCodes.forEach(function (code) {
           if (
@@ -4721,9 +3844,9 @@
           ) {
             files.push({
               code: code,
-              date: 'N/A',
-              status: 'VERIFIED',
-              url: 'Downloads/Apostilles/' + code + '_EVIDENCE.pdf',
+              date: "N/A",
+              status: "VERIFIED",
+              url: "Downloads/Apostilles/" + code + "_EVIDENCE.pdf",
             });
           }
         });
@@ -4733,26 +3856,26 @@
       }
 
       function renderGithubFiles(files) {
-        var container = document.getElementById('githubFiles');
+        var container = document.getElementById("githubFiles");
         if (files.length === 0) {
           container.innerHTML =
             '<p style="color: var(--text-dim); text-align: center;">Файлы не найдены</p>';
           return;
         }
 
-        var html = '';
+        var html = "";
         files.forEach(function (f) {
-          var statusClass = f.status === 'VOID' ? 'fraud' : 'verified';
-          var statusIcon = f.status === 'VOID' ? '🚨' : '✅';
+          var statusClass = f.status === "VOID" ? "fraud" : "verified";
+          var statusIcon = f.status === "VOID" ? "🚨" : "✅";
           html +=
             '<div class="file-item ' +
             statusClass +
             '" onclick="viewFile(\'' +
             f.code +
-            '\')">';
-          html += '<span>' + statusIcon + ' ' + f.code + '</span>';
-          html += '<span style="color: var(--text-dim)">' + f.date + '</span>';
-          html += '</div>';
+            "')\">";
+          html += "<span>" + statusIcon + " " + f.code + "</span>";
+          html += '<span style="color: var(--text-dim)">' + f.date + "</span>";
+          html += "</div>";
         });
         container.innerHTML = html;
       }
@@ -4770,26 +3893,26 @@
       }
 
       function viewFile(code) {
-        document.getElementById('pdfCode').value = code;
+        document.getElementById("pdfCode").value = code;
         loadPdfByCode();
       }
 
       // PDF Viewer
       async function loadPdfByCode() {
         var code = document
-          .getElementById('pdfCode')
+          .getElementById("pdfCode")
           .value.trim()
           .toUpperCase();
         if (code.length < 3) {
-          alert('Введите код апостиля');
+          alert("Введите код апостиля");
           return;
         }
 
         // Try to load PDF from various sources
-        var pdfUrl = 'Downloads/Apostilles/' + code + '_EVIDENCE.pdf';
+        var pdfUrl = "Downloads/Apostilles/" + code + "_EVIDENCE.pdf";
 
         // Show viewer
-        document.getElementById('pdfViewer').style.display = 'block';
+        document.getElementById("pdfViewer").style.display = "block";
 
         try {
           let loadingTask = pdfjsLib.getDocument(pdfUrl);
@@ -4797,36 +3920,36 @@
           pageNum = 1;
           currentPdfUrl = pdfUrl;
 
-          document.getElementById('pdfDownload').href = pdfUrl;
+          document.getElementById("pdfDownload").href = pdfUrl;
           renderPage(pageNum);
         } catch (e) {
           // Try alternate path
           try {
             let altUrl =
-              'https://raw.githubusercontent.com/arhiv1973b/maceret-case-evidence/html-site/' +
+              "https://raw.githubusercontent.com/arhiv1973b/maceret-case-evidence/html-site/" +
               pdfUrl;
             let altTask = pdfjsLib.getDocument(altUrl);
             pdfDoc = await altTask.promise;
             pageNum = 1;
             currentPdfUrl = altUrl;
-            document.getElementById('pdfDownload').href = altUrl;
+            document.getElementById("pdfDownload").href = altUrl;
             renderPage(pageNum);
           } catch (e2) {
-            document.getElementById('pdfViewer').innerHTML =
+            document.getElementById("pdfViewer").innerHTML =
               '<p style="color: var(--fraud); text-align: center;">❌ PDF не найден для: ' +
               code +
-              '</p>' +
+              "</p>" +
               '<p style="color: var(--text-dim); text-align: center;">Попробуйте загрузить из: ' +
               altUrl +
-              '</p>';
+              "</p>";
           }
         }
       }
 
       async function renderPage(num) {
         var page = await pdfDoc.getPage(num);
-        var canvas = document.getElementById('pdfCanvas');
-        var ctx = canvas.getContext('2d');
+        var canvas = document.getElementById("pdfCanvas");
+        var ctx = canvas.getContext("2d");
 
         var viewport = page.getViewport({ scale: pdfScale });
         canvas.height = viewport.height;
@@ -4838,8 +3961,8 @@
         };
 
         await page.render(renderContext).promise;
-        document.getElementById('pageInfo').textContent =
-          'Страница ' + num + ' из ' + pdfDoc.numPages;
+        document.getElementById("pageInfo").textContent =
+          "Страница " + num + " из " + pdfDoc.numPages;
       }
 
       function prevPage() {
@@ -4859,108 +3982,108 @@
         if (!input.files || !input.files[0]) return;
 
         var file = input.files[0];
-        var progressEl = document.getElementById('ocrProgress');
-        var progressBar = document.getElementById('ocrProgressBar');
-        var resultEl = document.getElementById('ocrResult');
-        var textEl = document.getElementById('ocrText');
+        var progressEl = document.getElementById("ocrProgress");
+        var progressBar = document.getElementById("ocrProgressBar");
+        var resultEl = document.getElementById("ocrResult");
+        var textEl = document.getElementById("ocrText");
 
-        progressEl.style.display = 'block';
-        resultEl.style.display = 'none';
+        progressEl.style.display = "block";
+        resultEl.style.display = "none";
 
         try {
-          let result = await Tesseract.recognize(file, 'ron+eng', {
+          let result = await Tesseract.recognize(file, "ron+eng", {
             logger: function (m) {
-              if (m.status === 'recognizing text') {
-                progressBar.style.width = m.progress * 100 + '%';
+              if (m.status === "recognizing text") {
+                progressBar.style.width = m.progress * 100 + "%";
               }
             },
           });
 
-          progressEl.style.display = 'none';
-          resultEl.style.display = 'block';
+          progressEl.style.display = "none";
+          resultEl.style.display = "block";
           textEl.textContent = result.data.text;
         } catch (e) {
-          progressEl.style.display = 'none';
-          alert('Ошибка OCR: ' + e.message);
+          progressEl.style.display = "none";
+          alert("Ошибка OCR: " + e.message);
         }
       }
 
       async function runOCRSample() {
-        var resultEl = document.getElementById('ocrResult');
-        var textEl = document.getElementById('ocrText');
-        var progressEl = document.getElementById('ocrProgress');
-        var progressBar = document.getElementById('ocrProgressBar');
+        var resultEl = document.getElementById("ocrResult");
+        var textEl = document.getElementById("ocrText");
+        var progressEl = document.getElementById("ocrProgress");
+        var progressBar = document.getElementById("ocrProgressBar");
 
-        progressEl.style.display = 'block';
-        resultEl.style.display = 'none';
-        progressBar.style.width = '50%';
+        progressEl.style.display = "block";
+        resultEl.style.display = "none";
+        progressBar.style.width = "50%";
 
         // Simulate OCR analysis
         await new Promise((r) => setTimeout(r, 1500));
-        progressBar.style.width = '100%';
+        progressBar.style.width = "100%";
 
         var sampleResult =
-          '========================================================\n' +
-          'AI OCR АНАЛИЗ АПОСТИЛЯ\n' +
-          '========================================================\n\n' +
-          'РАСПОЗНАННЫЙ ТЕКСТ:\n' +
-          '- Hague Convention Apostille\n' +
-          '- Cod: IT1PD8E29S5F5\n' +
-          '- Data: 30.01.2023\n' +
-          '- Authority: Directia de Arhiva\n' +
-          '- Surname: [PUSTOE POLE]\n' +
-          '- Position: [PUSTOE POLE]\n' +
-          '- Signature: semnatura indescifrabila\n\n' +
-          '!! NAРУШЕНИЕ BЫЯBЛEHO !!\n' +
-          'Statya 5 Gagskoy konventsii trebuet ukazaniya:\n' +
-          '- Familii dolzhnostnogo lica (PUSTO)\n' +
-          '- Dolzhnosti dolzhnostnogo lica (PUSTO)\n\n' +
-          '========================================================';
+          "========================================================\n" +
+          "AI OCR АНАЛИЗ АПОСТИЛЯ\n" +
+          "========================================================\n\n" +
+          "РАСПОЗНАННЫЙ ТЕКСТ:\n" +
+          "- Hague Convention Apostille\n" +
+          "- Cod: IT1PD8E29S5F5\n" +
+          "- Data: 30.01.2023\n" +
+          "- Authority: Directia de Arhiva\n" +
+          "- Surname: [PUSTOE POLE]\n" +
+          "- Position: [PUSTOE POLE]\n" +
+          "- Signature: semnatura indescifrabila\n\n" +
+          "!! NAРУШЕНИЕ BЫЯBЛEHO !!\n" +
+          "Statya 5 Gagskoy konventsii trebuet ukazaniya:\n" +
+          "- Familii dolzhnostnogo lica (PUSTO)\n" +
+          "- Dolzhnosti dolzhnostnogo lica (PUSTO)\n\n" +
+          "========================================================";
 
-        progressEl.style.display = 'none';
-        resultEl.style.display = 'block';
+        progressEl.style.display = "none";
+        resultEl.style.display = "block";
         textEl.textContent = sampleResult;
       }
 
       // AI Analysis
       function aiAnalyze() {
         var query = document
-          .getElementById('aiQuery')
+          .getElementById("aiQuery")
           .value.trim()
           .toLowerCase();
-        var responseEl = document.getElementById('aiResponse');
-        var textEl = document.getElementById('aiText');
+        var responseEl = document.getElementById("aiResponse");
+        var textEl = document.getElementById("aiText");
 
         if (query.length < 3) {
-          alert('Введите вопрос');
+          alert("Введите вопрос");
           return;
         }
 
-        responseEl.style.display = 'block';
+        responseEl.style.display = "block";
 
         var fraudCount = fraudData.length;
         var percent = Math.round((fraudCount / 90) * 100);
 
         // Simple rule-based AI response
-        var response = '';
+        var response = "";
 
         if (
-          query.includes('сколько') ||
-          query.includes('количество') ||
-          query.includes('число')
+          query.includes("сколько") ||
+          query.includes("количество") ||
+          query.includes("число")
         ) {
           response =
-            '📊 По результатам анализа выявлено ' +
+            "📊 По результатам анализа выявлено " +
             fraudCount +
-            ' нарушений из 90 апостилей (' +
+            " нарушений из 90 апостилей (" +
             percent +
-            '%).\n\nВсе эти апостили имеют пустое поле 3 (фамилия/должность), что является прямым нарушением Статьи 5 Гаагской конвенции 1961 года.';
+            "%).\n\nВсе эти апостили имеют пустое поле 3 (фамилия/должность), что является прямым нарушением Статьи 5 Гаагской конвенции 1961 года.";
         } else if (
-          query.includes('кто') ||
-          query.includes('винов') ||
-          query.includes('ответствен')
+          query.includes("кто") ||
+          query.includes("винов") ||
+          query.includes("ответствен")
         ) {
-          response = '👤 Ответственные за нарушения:\n';
+          response = "👤 Ответственные за нарушения:\n";
           let officials = {};
           fraudData.forEach(function (d) {
             if (d.digital) {
@@ -4968,29 +4091,29 @@
             }
           });
           Object.keys(officials).forEach(function (name) {
-            response += '• ' + name + ': ' + officials[name] + ' нарушений\n';
+            response += "• " + name + ": " + officials[name] + " нарушений\n";
           });
         } else if (
-          query.includes('дата') ||
-          query.includes('когда') ||
-          query.includes('время')
+          query.includes("дата") ||
+          query.includes("когда") ||
+          query.includes("время")
         ) {
-          response = '📅 Хронология нарушений:\n';
+          response = "📅 Хронология нарушений:\n";
           fraudData.forEach(function (d) {
             response +=
-              '• ' + d.code + ': ' + d.date + ' (' + d.authority + ')\n';
+              "• " + d.code + ": " + d.date + " (" + d.authority + ")\n";
           });
         } else if (
-          query.includes('статья') ||
-          query.join(' ').includes('конвенц') ||
-          query.includes('закон')
+          query.includes("статья") ||
+          query.join(" ").includes("конвенц") ||
+          query.includes("закон")
         ) {
           response =
-            '⚖️ ПРАВОВАЯ БАЗА:\n\nСтатья 5 Гаагской конвенции требует:\n• Указания фамилии должностного лица\n• Указания должности должностного лица\n• Подписи уполномоченного лица\n\nПустое поле 3 = автоматическая недействительность апостиля.';
+            "⚖️ ПРАВОВАЯ БАЗА:\n\nСтатья 5 Гаагской конвенции требует:\n• Указания фамилии должностного лица\n• Указания должности должностного лица\n• Подписи уполномоченного лица\n\nПустое поле 3 = автоматическая недействительность апостиля.";
         } else if (
-          query.includes('что') ||
-          query.includes('как') ||
-          query.includes('почему')
+          query.includes("что") ||
+          query.includes("как") ||
+          query.includes("почему")
         ) {
           response =
             '🔍 ТЕХНИЧЕСКИЕ НАРУШЕНИЯ:\n\n1. Пустое поле 3 (фамилия/должность)\n2. Подпись "semnatura indescifrabila" (нечитаемая подпись)\n3. Несовпадение данных в цифровой записи и на документе\n4. Дублирование номеров безопасности\n\nЭти нарушения делают апостили юридически ничтожными.';
@@ -5000,9 +4123,9 @@
             query +
             '"\n\n📊 Статистика:\n• Всего апостилей: 90\n• Выявлено нарушений: ' +
             fraudCount +
-            ' (' +
+            " (" +
             percent +
-            '%)\n• Статус: ВСЕ НАРУШЕНИЯ - VOID\n\nЗадайте вопрос о: количестве, датах, виновных, статьях закона';
+            "%)\n• Статус: ВСЕ НАРУШЕНИЯ - VOID\n\nЗадайте вопрос о: количестве, датах, виновных, статьях закона";
         }
 
         textEl.textContent = response;
@@ -5010,376 +4133,74 @@
 
       // Print Act of Nullity
       function printActOfNullity() {
-        if (typeof fraudData === 'undefined') {
-          alert(
-            currentLang === 'en' ? 'Data not loaded' : 'Данные не загружены',
-          );
-          return;
-        }
-        var date = new Date().toLocaleDateString(
-          currentLang === 'en' ? 'en-US' : 'ru-RU',
-        );
+        var date = new Date().toLocaleDateString();
         var violations = fraudData.length;
-        var tableContent = '';
-        var isEn = currentLang === 'en';
+        var tableContent = "";
 
         fraudData.forEach(function (d) {
           tableContent +=
-            '<tr>' +
+            "<tr>" +
             '<td style="border: 1px solid black; padding: 5px;">' +
             d.code +
-            '</td>' +
+            "</td>" +
             '<td style="border: 1px solid black; padding: 5px;">' +
             d.date +
-            '</td>' +
+            "</td>" +
             '<td style="border: 1px solid black; padding: 5px;">VOID (Ex Tunc)</td>' +
             '<td style="border: 1px solid black; padding: 5px;">Art. 53 Vienna 1969</td>' +
-            '</tr>';
+            "</tr>";
         });
 
-        var title = isEn
-          ? 'Act of Nullity (Юридическая ничтожность)'
-          : 'Акт о юридической ничтожности (Act of Nullity)';
-        var basis = isEn
-          ? 'Based on imperative norms of Jus Cogens and Vienna Convention 1969'
-          : 'На основании императивных норм Jus Cogens и Венской конвенции 1969 г.';
-        var genDate = isEn ? 'Generation Date:' : 'Дата генерации:';
-        var subject = isEn
-          ? 'Legal Subject (A©tor):'
-          : 'Субъект права (A©tor):';
-        var subjectName = 'Maceret Alexei Arturovich';
-        var intro = isEn
-          ? 'This document confirms that the following documents are legally void (VOID) due to missing required fields (Field 3) per Art. 5 Hague Convention 1961 and Art. 53 VC 1969:'
-          : 'Настоящим подтверждается, что следующие документы признаны юридически ничтожными (VOID) ввиду отсутствия обязательных реквизитов (Поле 3) согласно ст. 5 Гаагской конвенции 1961 г. и ст. 53 ВК 1969 г.:';
-        var colCode = isEn ? 'Security Code' : 'Код (Security Code)';
-        var colDate = isEn ? 'Date' : 'Дата';
-        var colStatus = isEn ? 'Status' : 'Статус';
-        var colBasis = isEn ? 'Legal Basis' : 'Основание';
-        var signature = isEn ? 'A©tor Maceret Alexei' : 'A©tor Maceret Alexei';
-
-        var printWindow = window.open('', '_blank');
+        var printWindow = window.open("", "_blank");
         printWindow.document.write(
-          '<html>' +
-            '<head>' +
-    <meta name="google-site-verification" content="3fxQVVKJVrdtFLg3SHwgstSvn2LIUpPROpgPfLxAQvM" />
-            '<title>ACT OF NULLITY - CASE-MACHERET</title>' +
-            '<style>' +
+          "<html>" +
+            "<head>" +
+            "<title>ACT OF NULLITY - CASE-MACHERET</title>" +
+            "<style>" +
             'body { font-family: "Times New Roman", serif; padding: 40px; line-height: 1.6; }' +
-            '.header { text-align: center; text-transform: uppercase; font-weight: bold; }' +
-            '.stamp { border: 3px solid #ff3366; color: #ff3366; padding: 10px; display: inline-block; transform: rotate(-5deg); font-weight: bold; margin-top: 20px; }' +
-            '</style>' +
-            '</head>' +
-            '<body>' +
+            ".header { text-align: center; text-transform: uppercase; font-weight: bold; }" +
+            ".stamp { border: 3px solid #ff3366; color: #ff3366; padding: 10px; display: inline-block; transform: rotate(-5deg); font-weight: bold; margin-top: 20px; }" +
+            "</style>" +
+            "</head>" +
+            "<body>" +
             '<div class="header">' +
-            '<h2>' +
-            title +
-            '</h2>' +
-            '<p>' +
-            basis +
-            '</p>' +
-            '</div>' +
-            '<p><strong>' +
-            genDate +
-            '</strong> ' +
+            "<h2>Акт о юридической ничтожности (Act of Nullity)</h2>" +
+            "<p>На основании императивных норм Jus Cogens и Венской конвенции 1969 г.</p>" +
+            "</div>" +
+            "<p><strong>Дата генерации:</strong> " +
             date +
-            '</p>' +
-            '<p><strong>' +
-            subject +
-            '</strong> ' +
-            subjectName +
-            '</p>' +
-            '<hr>' +
-            '<p>' +
-            intro +
-            '</p>' +
+            "</p>" +
+            "<p><strong>Субъект права (A©tor):</strong> Мачерет Алексей Артурович</p>" +
+            "<hr>" +
+            "<p>Настоящим подтверждается, что следующие документы признаны юридически ничтожными (VOID) ввиду отсутствия обязательных реквизитов (Поле 3) согласно ст. 5 Гаагской конвенции 1961 г. и ст. 53 ВК 1969 г.:</p>" +
             '<table style="width: 100%; border-collapse: collapse;">' +
-            '<thead>' +
+            "<thead>" +
             '<tr style="background: #eee;">' +
-            '<th style="border: 1px solid black; padding: 5px;">' +
-            colCode +
-            '</th>' +
-            '<th style="border: 1px solid black; padding: 5px;">' +
-            colDate +
-            '</th>' +
-            '<th style="border: 1px solid black; padding: 5px;">' +
-            colStatus +
-            '</th>' +
-            '<th style="border: 1px solid black; padding: 5px;">' +
-            colBasis +
-            '</th>' +
-            '</tr>' +
-            '</thead>' +
-            '<tbody>' +
+            '<th style="border: 1px solid black; padding: 5px;">Код (Security Code)</th>' +
+            '<th style="border: 1px solid black; padding: 5px;">Дата</th>' +
+            '<th style="border: 1px solid black; padding: 5px;">Статус</th>' +
+            '<th style="border: 1px solid black; padding: 5px;">Основание</th>' +
+            "</tr>" +
+            "</thead>" +
+            "<tbody>" +
             tableContent +
-            '</tbody>' +
-            '</table>' +
+            "</tbody>" +
+            "</table>" +
             '<div class="stamp">JUS COGENS VALIDATED<br>VOID AB INITIO</div>' +
-            '<p style="margin-top: 50px;">__________________________<br>' +
-            signature +
-            '</p>' +
-            '<scr' +
-            'ipt>window.print();</scr' +
-            'ipt>' +
-            '</body>' +
-            '</html>',
+            '<p style="margin-top: 50px;">__________________________<br>A©tor Maceret Alexei</p>' +
+            "<scr" +
+            "ipt>window.print();</scr" +
+            "ipt>" +
+            "</body>" +
+            "</html>",
         );
         printWindow.document.close();
       }
 
       // Initialize files panel on load
-      window.addEventListener('load', function () {
+      window.addEventListener("load", function () {
         setTimeout(loadGithubFiles, 500);
       });
-
-      // Language Toggle
-      const translations = {
-        ru: {},
-        en: {},
-      };
-
-      const langLabels = {
-        ru: {
-          forensicBadge: '🔴 FORENSIC AUDIT COMPLETE',
-          totalApostilles: 'Всего Апостилей',
-          violations: 'Нарушений',
-          verified: 'Верифицировано',
-          courts: 'Судов в деле',
-          violationAlert: '🚨 НАРУШЕНИЕ ГААГСКОЙ КОНВЕНЦИИ (Статья 5)',
-          missingSurname:
-            'ОТСУТСТВИЕ ФАМИЛИИ ДОЛЖНОСТНОГО ЛИЦА — апостиль НЕДЕЙСТВИТЕЛЕН',
-          searchPlaceholder: 'Введите код апостиля (например: IT1PD8E29S5F5)',
-          checkApostille: 'Проверить апостиль',
-          citizen: '👤 Гражданин',
-          judge: '⚖️ Судья',
-          lawyer: '📜 Адвокат',
-          investigator: '🔍 Следователь',
-          network: '🌐 Сеть нарушений',
-          aiFiles: '🤖 AI Файлы',
-          jusCogensTitle: '🧠 JUS COGENS NEURO-PROTOCOL',
-          protocolReady: 'Статус: ГОТОВ',
-          violationsFound: 'Нарушений обнаружено:',
-          validCount: 'Действительных:',
-          runProtocol: 'Запустить протокол',
-          echrTitle: '⚖️ ECHR ПРАВОВАЯ ОСНОВА',
-          echrActive: '● АКТИВЕН',
-          showViolations: 'Показать нарушения',
-          art3Title: 'Статья 3 ECHR',
-          art3Desc: 'Запрет пыток и бесчеловечного обращения',
-          art6Title: 'Статья 6 ECHR',
-          art6Desc: 'Право на справедливый суд',
-          art8Title: 'Статья 8 ECHR',
-          art8Desc: 'Право на уважение частной жизни',
-          udhrTitle: '🌍 ВДПЧ - ВСЕОБЩАЯ ДЕКЛАРАЦИЯ ПРАВ ЧЕЛОВЕКА',
-          udhrFundament: '● ФУНДАМЕНТ',
-          show: 'Показать',
-          romeTitle: '⚖️ РИМСКИЙ СТАТУТ МУС',
-          romeActive: '● АКТИВЕН',
-          apply: 'Применить',
-          viennaTitle: '🏛️ ВЕНСКАЯ КОНВЕНЦИЯ 1969',
-          viennaActive: '● АКТИВЕН',
-          voidFilter: '⚠️ ФИЛЬТР VOID',
-          printAct: '🖨️ ПЕЧАТЬ АКТА',
-          quotes: '📜 ЦИТАТЫ ИЗ МЕЖДУНАРОДНЫХ ДОКУМЕНТОВ',
-          evidenceDepartment: '📥 Отдел доказательств',
-          timeline: '📜 Хронология событий - Jus Cogens',
-          howItAffects: '📖 Как это влияет на мои права?',
-          question1: '📋 Вопрос 1: Как выявить нарушение?',
-          question2: '📋 Вопрос 2: Правовая квалификация',
-          question3: '📋 Вопрос 3: Решения по делу',
-          legalBasis: '📜 Правовая база',
-          sampleClaim: '📋 Образец иска',
-          violationChain: '🔗 Цепочка нарушений',
-          departmentsSummary: '📊 Сводка по ведомствам',
-          chronology: '📅 Хронология',
-          cloudStorages: '☁️ Облачные хранилища',
-          githubFiles: '🐙 Файлы GitHub',
-          pdfViewer: '📄 Просмотр PDF',
-          ocrScanner: '🔍 OCR Сканер (распознавание текста)',
-          aiAnalysis: '🧠 AI Анализ апостилей',
-          searchPlaceholderEN: 'Search by apostille code...',
-          fullRegistry: '📑 Полный реестр апостилей',
-        },
-        en: {
-          forensicBadge: '🔴 FORENSIC AUDIT COMPLETE',
-          totalApostilles: 'Total Apostilles',
-          violations: 'Violations',
-          verified: 'Verified',
-          courts: 'Courts in Case',
-          violationAlert: '🚨 THE HAGUE CONVENTION VIOLATION (Article 5)',
-          missingSurname: 'MISSING OFFICIAL SURNAME — apostille INVALID',
-          searchPlaceholder: 'Enter apostille code (e.g., IT1PD8E29S5F5)',
-          checkApostille: 'Check Apostille',
-          citizen: '👤 Citizen',
-          judge: '⚖️ Judge',
-          lawyer: '📜 Lawyer',
-          investigator: '🔍 Investigator',
-          network: '🌐 Violation Network',
-          aiFiles: '🤖 AI Files',
-          jusCogensTitle: '🧠 JUS COGENS NEURO-PROTOCOL',
-          protocolReady: 'Status: READY',
-          violationsFound: 'Violations found:',
-          validCount: 'Valid:',
-          runProtocol: 'Run Protocol',
-          echrTitle: '⚖️ ECHR LEGAL FRAMEWORK',
-          echrActive: '● ACTIVE',
-          showViolations: 'Show Violations',
-          art3Title: 'Article 3 ECHR',
-          art3Desc: 'Prohibition of torture and inhuman treatment',
-          art6Title: 'Article 6 ECHR',
-          art6Desc: 'Right to a fair trial',
-          art8Title: 'Article 8 ECHR',
-          art8Desc: 'Right to respect for private life',
-          udhrTitle: '🌍 UDHR - UNIVERSAL DECLARATION OF HUMAN RIGHTS',
-          udhrFundament: '● FUNDAMENT',
-          show: 'Show',
-          romeTitle: '⚖️ ROME STATUTE ICC',
-          romeActive: '● ACTIVE',
-          apply: 'Apply',
-          viennaTitle: '🏛️ VIENNA CONVENTION 1969',
-          viennaActive: '● ACTIVE',
-          voidFilter: '⚠️ VOID FILTER',
-          printAct: '🖨️ PRINT ACT',
-          quotes: '📜 INTERNATIONAL LAW QUOTES',
-          evidenceDepartment: '📥 Evidence Department',
-          timeline: '📜 Event Timeline - Jus Cogens',
-          howItAffects: '📖 How does this affect my rights?',
-          question1: '📋 Question 1: How to identify violations?',
-          question2: '📋 Question 2: Legal qualification',
-          question3: '📋 Question 3: Case decisions',
-          legalBasis: '📜 Legal Basis',
-          sampleClaim: '📋 Sample Claim',
-          violationChain: '🔗 Violation Chain',
-          departmentsSummary: '📊 Departments Summary',
-          chronology: '📅 Chronology',
-          cloudStorages: '☁️ Cloud Storages',
-          githubFiles: '🐙 GitHub Files',
-          pdfViewer: '📄 PDF Viewer',
-          ocrScanner: '🔍 OCR Scanner',
-          aiAnalysis: '🧠 AI Apostille Analysis',
-          searchPlaceholderEN: 'Search by apostille code...',
-          fullRegistry: '📑 Full Apostille Registry',
-        },
-      };
-
-      function setLang(lang) {
-        currentLang = lang;
-        localStorage.setItem('lang', lang);
-        document
-          .getElementById('btn-ru')
-          .classList.toggle('active', lang === 'ru');
-        document
-          .getElementById('btn-en')
-          .classList.toggle('active', lang === 'en');
-
-        const t = langLabels[lang];
-        document.querySelector('.status-badge').textContent = t.forensicBadge;
-
-        document.querySelectorAll('.stat-label')[0].textContent =
-          t.totalApostilles;
-        document.querySelectorAll('.stat-label')[1].textContent =
-          t.violations + ' (14%)';
-        document.querySelectorAll('.stat-label')[2].textContent = t.verified;
-        document.querySelectorAll('.stat-label')[3].textContent = t.courts;
-
-        document.querySelector('.alert-banner h2').textContent =
-          t.violationAlert;
-        document.querySelector('.alert-banner p strong').textContent =
-          t.missingSurname;
-
-        const tabs = document.querySelectorAll('.role-tab');
-        if (tabs[0]) tabs[0].textContent = t.citizen;
-        if (tabs[1]) tabs[1].textContent = t.judge;
-        if (tabs[2]) tabs[2].textContent = t.lawyer;
-        if (tabs[3]) tabs[3].textContent = t.investigator;
-        if (tabs[4]) tabs[4].textContent = t.network;
-        if (tabs[5]) tabs[5].textContent = t.aiFiles;
-
-        const searchInput = document.getElementById('citizenSearch');
-        if (searchInput) searchInput.placeholder = t.searchPlaceholder;
-
-        // Update section titles and labels
-        const jusCogensTitle = document.querySelector('#jusCogensBanner h3');
-        if (jusCogensTitle) jusCogensTitle.textContent = t.jusCogensTitle;
-
-        const jcStatus = document.getElementById('jcStatus');
-        if (jcStatus) jcStatus.textContent = t.protocolReady;
-
-        const jcViolationsLabel = document.querySelector(
-          '#jusCogensBanner span:nth-child(2)',
-        );
-        const jcViolationsSpan = document.querySelector(
-          '#jusCogensBanner div span:nth-child(1)',
-        );
-        if (jcViolationsSpan) {
-          const parts = jcViolationsSpan.innerHTML.split(':');
-          jcViolationsSpan.innerHTML =
-            t.protocolReady.split(':')[0] + ': ' + parts[1].split(':').pop();
-        }
-
-        const echrTitle = document.querySelector('#echrBanner h3');
-        if (echrTitle) echrTitle.textContent = t.echrTitle;
-
-        const udhrTitle = document.querySelector('#udhrBanner h3');
-        if (udhrTitle) udhrTitle.textContent = t.udhrTitle;
-
-        const romeTitle = document.querySelector('#romeBanner h3');
-        if (romeTitle) romeTitle.textContent = t.romeTitle;
-
-        const viennaTitle = document.querySelector('#viennaBanner h3');
-        if (viennaTitle) viennaTitle.textContent = t.viennaTitle;
-
-        const quotesTitle = document.querySelector('h3');
-        if (quotesTitle && quotesTitle.textContent.includes('ЦИТАТЫ')) {
-          quotesTitle.textContent = t.quotes;
-        }
-
-        // Update Vienna Filter and Print Act buttons
-        const voidFilterBtns = document.querySelectorAll(
-          'button[onclick="applyViennaFilter()"]',
-        );
-        for (const btn of voidFilterBtns) {
-          btn.textContent = t.voidFilter;
-        }
-
-        const printActBtns = document.querySelectorAll(
-          'button[onclick="printActOfNullity()"]',
-        );
-        for (const btn of printActBtns) {
-          btn.textContent = t.printAct;
-        }
-
-        // Update section headers
-        const evidenceSection = document.querySelector('#timeline-section h2');
-        if (
-          evidenceSection &&
-          evidenceSection.textContent.includes('Хронология')
-        ) {
-          evidenceSection.textContent =
-            lang === 'ru'
-              ? '📜 Хронология событий - Jus Cogens'
-              : '📜 Event Timeline - Jus Cogens';
-        }
-
-        const downloadSection = document.querySelector('div > h3');
-        const downloadSections = document.querySelectorAll('div > h3');
-        for (const h3 of downloadSections) {
-          if (
-            h3.textContent.includes('Отдел доказательств') ||
-            h3.textContent.includes('Evidence')
-          ) {
-            h3.textContent =
-              lang === 'ru'
-                ? '📥 Отдел доказательств'
-                : '📥 Evidence Department';
-          }
-        }
-      }
-
-      // Load saved language
-      (function () {
-        const savedLang = localStorage.getItem('lang') || 'ru';
-        setLang(savedLang);
-      })();
     </script>
   </body>
 </html>

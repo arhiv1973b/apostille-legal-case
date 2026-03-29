@@ -40,7 +40,6 @@ This violates **Article 5 of the Hague Convention**, which requires:
 | --- | ------------- | ------------------------- | ---------- | ---------------- |
 | 36  | DLTP7B8ZHWGQ7 | Directia de Arhiva        | 08.07.2022 | Mirzac Iuliana   |
 | 41  | CG0T6Y1TBUEL7 | Curtea Suprema            | 12.07.2022 | Mirzac Iuliana   |
-| 55  | 5PWVD5A28PBS8 | Directia de Arhiva        | 22.09.2022 | Mirzac Iuliana   |
 | 68  | DFVMD2FQLW5N3 | Directia de Arhiva        | 14.12.2022 | Cristina Deleanu |
 | 70  | HQ7X9W62GUJL9 | Penitenciarul Nr.15       | 20.04.2022 | Valeriu Frimu    |
 | 71  | BS7XCZF1EUJG3 | Directia de Arhiva        | 15.07.2022 | Mirzac Iuliana   |
