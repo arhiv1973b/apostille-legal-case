@@ -10,7 +10,7 @@
 2. **Начало конфликта:** Попытка легитимизации подлога на уровне суда 09.04.2026 является детонатором системного кризиса безопасности, затрагивающего страны с правом Вето.
 
 ## 🔗 ДОКАЗАТЕЛЬСТВА ДОСТАВКИ (SERVICE LOG):
-- **Ministerul Justiției:** Registrul № 800 (18.03.2026)
+- **Ministerul Finanțelor:** Registrul № 800 (18.03.2026)
 - **Serviciul Fiscal de Stat:** Registrul № 12793-CR (18.03.2026)
 - **International Notice:** Sent to CNN, European Ombudsman, and EU Publications Office.
 

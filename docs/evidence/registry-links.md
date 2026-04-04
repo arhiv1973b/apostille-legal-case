@@ -1,4 +1,4 @@
-# APOSTILLE ARCHIVE — DIRECT LINKS
+﻿# APOSTILLE ARCHIVE — DIRECT LINKS
 ## Live Registry: https://arhiv1973b.github.io/apostille-archive-english/
 
 ---
@@ -26,7 +26,7 @@ Sample of compliant apostilles from the same registry period (2021–2023), demo
 |------|-----------|------|
 | 3HWVD912FN7H4 | Directia de Arhiva | 15.06.2022 |
 | 3QWY79726SDN4 | Curtea Suprema | 20.06.2022 |
-| 5GTUD58SJQ5N6 | Ministerul Justitiei | 15.08.2022 |
+| 5GTUD58SJQ5N6 | Ministerul Finanțelor | 15.08.2022 |
 | 5OTZ38FVFN8R2 | Curtea de Apel | 01.09.2022 |
 | 6R3U2Y63JZ6M3 | Curtea Suprema | 03.10.2022 |
 
@@ -43,3 +43,4 @@ The complete apostille registry (signed PDF):
 
 *Archive maintained at: https://arhiv1973b.github.io/apostille-archive-english/*  
 *Repository: https://github.com/arhiv1973b/apostille-legal-case*
+
