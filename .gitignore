@@ -12,8 +12,6 @@
 
 # Бинарные PDF > 50MB — исключить из git
 # (апостили в Downloads/Apostilles/ < 1MB — они НЕ исключены)
-Фото_8.pdf
-disability_cert_gr1.pdf
 
 # Системные
 Thumbs.db
