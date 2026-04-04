@@ -4,66 +4,69 @@ DELAY="6363 days (Intentional Concealment)"
 VOID_RATE="14.4% (Void Acts)"
 TOKEN=$(date +%Y%m%d%H%M%S | sha256sum | head -c 16)
 
-echo "🔨 Сборка Jus Cogens Portal + Отчет 1545..."
+# Функция для создания HTML-оберток улик
+generate_evidence_page() {
+    cat <<HTML > "public/$1"
+<!DOCTYPE html>
+<html lang="ro">
+<head><meta charset="UTF-8"><title>$2</title>
+<style>body{font-family:monospace;background:#000;color:#fff;padding:40px;line-height:1.6;} .box{border:2px solid $3;padding:30px;max-width:800px;margin:auto;} .tag{color:$3;font-weight:bold;border:1px solid $3;padding:5px;display:inline-block;margin-bottom:20px;}</style></head>
+<body><div class="box"><div class="tag">$4</div><h1>$2</h1><p>$5</p><hr style="border:0;border-top:1px solid $3;"><a href="index.html" style="color:#00c6ff;"><- ÎNAPOI</a></div></body></html>
+HTML
+}
 
+# Генерируем страницы улик
+generate_evidence_page "disability_evidence.html" "PROBĂ: Dizabilitate Severă (Art. 3 CEDO)" "#ff2244" "EVIDENȚĂ: C013564402308" "Subiect: MACERET ALEXEI. Statut: Gradul I (Sever) - Fără termen. Această probă atestă vulnerabilitatea subiectului în fața torturii instituționale de 6363 zile."
+generate_evidence_page "un_petition_evidence.html" "EVIDENCE: UN OHCHR Petition" "#f0c040" "UNITED NATIONS: 2013073942632" "Status: Stand Up for Human Rights. Confirmation of international escalation regarding procedural sabotage."
+generate_evidence_page "cpt_evidence.html" "УЛИКА: Ответ ЕКПП (CPT) 2012" "#00ff00" "COUNCIL OF EUROPE: STRASBOURG" "Письмо из Секретариата ЕКПП (Йохан Фристедт) подтверждает осведомленность органов СЕ о ситуации с 2012 года."
+
+# Генерируем ГЛАВНУЮ страницу
 cat <<HTML > public/index.html
 <!DOCTYPE html>
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>A©tor: Jus Cogens Portal & Law 1545 Report</title>
+    <title>A©tor: Jus Cogens Portal</title>
     <style>
         body { font-family: monospace; background: #030a0f; color: #00c6ff; padding: 30px; line-height: 1.4; }
         .vault { border: 2px solid #0e3a5c; background: #071624; padding: 25px; margin-bottom: 20px; }
-        .law-box { border-left: 4px solid #ff2244; background: #1a0a0d; padding: 15px; margin: 20px 0; color: #ff99aa; }
-        .critical { color: #ff2244; font-weight: bold; text-transform: uppercase; }
+        .critical { color: #ff2244; font-weight: bold; text-transform: uppercase; border: 1px solid #ff2244; padding: 5px; display: inline-block; margin: 10px 0; }
         .btn { background: #00c6ff; color: #000; padding: 12px 20px; border: none; cursor: pointer; font-weight: bold; text-decoration: none; display: inline-block; margin: 5px; }
-        .btn-gold { background: #f0c040; }
-        h2, h3 { color: #fff; text-shadow: 0 0 10px #00c6ff; }
-        li { margin-bottom: 8px; }
+        .btn-red { background: #ff2244; color: #fff; }
+        .btn-gold { background: #f0c040; color: #000; }
+        .btn-green { background: #00ff00; color: #000; }
     </style>
 </head>
 <body>
     <div class="vault">
         <h1>Pârât: Ministerul Finanțelor RM</h1>
-        <p>📍 <strong>Adresa:</strong> mun. Chișinău, str. Constantin Tănase, 8</p>
-        <p class="critical">⚖️ ОСНОВАНИЕ: СТ. 21.1 ПРИМ ЗАКОНА О СУДОПРОИЗВОДСТВЕ</p>
-        <hr style="border:0; border-top:1px solid #0e3a5c;">
+        <p>📍 Adresa: mun. Chișinău, str. Constantin Tănase, 8</p>
+        <div class="critical">⚖️ LEGEA 1545/1995: PUNCTELE A, B, C, F</div>
+        <hr style="border:0; border-top:1px solid #0e3a5c; margin: 20px 0;">
         
-        <h2>📋 ОТЧЕТ О НАРУШЕНИЯХ (Закон №1545/1995)</h2>
-        <p>Дефектные апостили (VOID Art. 5) применены к файлам, образующим фундамент личности A©tor:</p>
-        
-        <div class="law-box">
-            <strong>Подлежит возмещению ущерб, причиненный вследствие:</strong>
-            <ul>
-                <li><strong>a)</strong> Незаконного задержания и привлечения к ответственности.</li>
-                <li><strong>b)</strong> Незаконного осуждения и <strong>конфискации имущества</strong>.</li>
-                <li><strong>c)</strong> Незаконных обысков, изъятий и ареста на имущество.</li>
-                <li><strong>f) Незаконного изъятия документов на собственность.</strong></li>
-            </ul>
-        </div>
-
-        <h3>📊 АНАЛИТИКА ЦЕЛОСТНОСТИ (SECTOR 9):</h3>
+        <h3>📊 STATUS INTEGRITATE:</h3>
         <ul>
-            <li>🛑 <strong>Временная диверсия:</strong> $DELAY</li>
-            <li>⚠️ <strong>Юридическая ничтожность:</strong> $VOID_RATE (Технический подлог)</li>
-            <li>📑 <strong>Объект атаки:</strong> Права частной собственности, Гражданство, Происхождение.</li>
+            <li>🛑 <strong>Задержка:</strong> $DELAY</li>
+            <li>⚠️ <strong>Ничтожность:</strong> $VOID_RATE (Art. 5 Void)</li>
         </ul>
 
-        <hr style="border:0; border-top:1px solid #0e3a5c;">
+        <hr style="border:0; border-top:1px solid #0e3a5c; margin: 20px 0;">
         
-        <a href="apostille_archive_english.html" class="btn btn-gold">🌍 ENGLISH REGISTRY (ART. 17 ICC)</a>
-        <a href="disability_cert_gr1.pdf" class="btn" target="_blank">📄 PROBĂ ART. 3 CEDO</a>
-        <button onclick="alert('Case Integrity Token: $TOKEN')" class="btn">🛡️ VERIFICĂ SHA-256</button>
+        <a href="disability_evidence.html" class="btn btn-red">🚑 УЛИКА №1: ИНВАЛИДНОСТЬ</a>
+        <a href="un_petition_evidence.html" class="btn btn-gold">🇺🇳 УЛИКА №2: ПЕТИЦИЯ ООН</a>
+        <a href="cpt_evidence.html" class="btn btn-green">🇪🇺 УЛИКА №3: ОТВЕТ ЕКПП</a>
+        
+        <br><br>
+        <a href="apostille_archive_english.html" class="btn">🌍 ENGLISH REGISTRY (ART. 17 ICC)</a>
+        <button onclick="alert('Case Integrity Verified\nToken: $TOKEN')" class="btn">🛡️ SHA-256 VERIFY</button>
     </div>
     <div style="color: #4a7a9b; font-size: 0.8em;">Monitoring Token: $TOKEN | Case Macheret 1997-2026</div>
 </body>
 </html>
 HTML
 
-# Копируем оригиналы без изменений
-cp apostille_archive_english.html public/ 2>/dev/null || true
+# Копируем активы
 cp *.pdf public/ 2>/dev/null || true
 cp *.json public/ 2>/dev/null || true
-cp -r docs public/ 2>/dev/null || true
-echo "✅ Сайт пересобран с учетом Закона №1545."
+cp apostille_archive_english.html public/ 2>/dev/null || true
+echo "✅ Портал A©tor собран."
