@@ -1,23 +1,12 @@
-name: A©tor Archival Engine
-on:
-  push:
-    branches: [ "main", "master", "gh-pages" ]
-  workflow_dispatch:
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+name: A©tor Engine
+on: [push, workflow_dispatch]
+permissions: {contents: write, pages: write, id-token: write}
 jobs:
-  build_and_deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Generate Portal
-        run: |
-          chmod +x ./scripts/generate_wrappers.sh
-          ./scripts/generate_wrappers.sh
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+      - run: chmod +x ./scripts/generate_wrappers.sh && ./scripts/generate_wrappers.sh
+      - uses: actions/upload-pages-artifact@v3
+        with: {path: '.'}
+      - uses: actions/deploy-pages@v4
