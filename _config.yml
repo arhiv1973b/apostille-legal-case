@@ -1,0 +1,13 @@
+title: "A©tor Maceret: Jus Cogens Portal"
+description: "Legal evidence - Case Macheret 1997-2026"
+baseurl: "/apostille-legal-case"
+url: "https://arhiv1973b.github.io"
+exclude:
+  - "*.sh"
+  - "*.bat"
+  - "*.ps1"
+  - "*.py"
+  - "*.tar.gz"
+  - "*.tar"
+  - "backups/"
+  - "AUDIT_LOGS/"
