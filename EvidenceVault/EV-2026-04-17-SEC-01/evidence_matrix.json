@@ -1,0 +1,29 @@
+{
+  "incident_report": {
+    "case_id": "CASE-MACHERET-1997-2026",
+    "stolen_amount": 25210256.15,
+    "currency": "MDL",
+    "primary_evidence": [
+      {
+        "doc_id": "FinComPay-UN-20250502",
+        "description": "UN Support Payment Arrival",
+        "amount": 5000.00,
+        "card_suffix": "4177"
+      },
+      {
+        "doc_id": "FinComPay-BALANCE-20260403",
+        "description": "Pre-theft balance snapshot",
+        "total": 25210256.15,
+        "holder_alias": "IRINA CEBANICA",
+        "legal_owner": "MACERET ALEXEI"
+      }
+    ],
+    "exploit_method": "IDNP_SWAP_BLOCK_AND_DRAIN",
+    "metadata": {
+      "author": "A©tor",
+      "valid_idnp": "2000001159655",
+      "fraud_idnp": "2000001159555",
+      "timestamp": "2026-04-17T01:10:00EEST"
+    }
+  }
+}
