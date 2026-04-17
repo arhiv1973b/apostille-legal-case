@@ -1,0 +1,9 @@
+.vscode/
+.local/
+.cache/
+.m2/
+.nuget/
+.lmstudio/
+AppData/
+Downloads/
+*.log
