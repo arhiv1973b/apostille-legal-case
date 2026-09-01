@@ -1,3 +1,8 @@
+> **A©tor © Declaration**  
+> Этот репозиторий принадлежит A©tor (arhiv1973b).  
+> Мастер-ключ: A©TOR_KEY="# [⚖ A©tor Declaration]"  
+> Несанкционированное изменение имени, формы или содержимого запрещено.
+
 # ⚖️ [ФИНАЛЬНАЯ ЗАЩИТНАЯ РЕЧЬ (PLEDOARIE)](./docs/court_scripts/pledoarie_finala_0904.md)
 
 # ⚖️ [ФИНАЛЬНАЯ ЗАЩИТНАЯ РЕЧЬ (PLEDOARIE)](./docs/court_scripts/pledoarie_finala_0904.md)
