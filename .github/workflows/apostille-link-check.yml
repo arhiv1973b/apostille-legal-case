@@ -2,6 +2,7 @@ name: Apostille Link Check
 
 on:
   schedule:
+    # daily 06:00 UTC
     - cron: "0 6 * * *"
   workflow_dispatch:
   push:
@@ -9,6 +10,11 @@ on:
       - "apostille_archive_english.html"
       - ".github/workflows/apostille-link-check.yml"
       - "scripts/check_apostille_links.py"
+
+permissions:
+  contents: read
+  issues: write
+  actions: read
 
 jobs:
   check-links:
@@ -24,8 +30,52 @@ jobs:
           python-version: "3.12"
 
       - name: Run link checker
+        id: check
         run: |
+          set +e
           python3 scripts/check_apostille_links.py --json-out apostille_link_check_report.json
+          CODE=$?
+          set -e
+          echo "exit_code=$CODE" >> "$GITHUB_OUTPUT"
+          if [ -f apostille_link_check_report.json ]; then
+            OK=$(python3 -c "import json; print(json.load(open('apostille_link_check_report.json'))['ok'])")
+            FAIL=$(python3 -c "import json; print(json.load(open('apostille_link_check_report.json'))['failed'])")
+            TOTAL=$(python3 -c "import json; print(json.load(open('apostille_link_check_report.json'))['total'])")
+            echo "ok=$OK" >> "$GITHUB_OUTPUT"
+            echo "failed=$FAIL" >> "$GITHUB_OUTPUT"
+            echo "total=$TOTAL" >> "$GITHUB_OUTPUT"
+          fi
+          exit $CODE
+
+      - name: Job summary
+        if: always()
+        run: |
+          {
+            echo "## Apostille Link Check"
+            echo ""
+            if [ -f apostille_link_check_report.json ]; then
+              python3 - <<'PY'
+          import json
+          r = json.load(open("apostille_link_check_report.json"))
+          print(f"- **When:** {r.get('generated_at','')}")
+          print(f"- **Total:** {r.get('total')}")
+          print(f"- **OK:** {r.get('ok')}")
+          print(f"- **FAIL:** {r.get('failed')}")
+          print("")
+          fails = r.get("failures") or []
+          if fails:
+              print("### Failed links")
+              for f in fails:
+                  print(f"- `{f.get('url')}` status={f.get('status')} error={f.get('error')}")
+          else:
+              print("All PDF links are healthy.")
+          PY
+            else
+              echo "Report file missing."
+            fi
+            echo ""
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload report
         if: always()
@@ -36,3 +86,76 @@ jobs:
             apostille_link_check_report.json
             apostille_link_check_report.md
           if-no-files-found: ignore
+
+      - name: Notify on failure (GitHub Issue)
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body = '## Apostille PDF link check failed\n\n';
+            body += `**Workflow run:** ${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}\n\n`;
+            body += `**Trigger:** ${context.eventName}\n`;
+            body += `**Ref:** ${context.ref}\n\n`;
+            try {
+              const report = JSON.parse(fs.readFileSync('apostille_link_check_report.json', 'utf8'));
+              body += `| Metric | Value |\n|--------|-------|\n`;
+              body += `| Total | ${report.total} |\n`;
+              body += `| OK | ${report.ok} |\n`;
+              body += `| **FAIL** | **${report.failed}** |\n\n`;
+              const fails = report.failures || [];
+              if (fails.length) {
+                body += '### Broken links\n\n';
+                for (const f of fails) {
+                  body += `- \`${f.url}\` — status=${f.status} error=${f.error || ''}\n`;
+                }
+                body += '\n';
+              }
+            } catch (e) {
+              body += `_Could not read JSON report: ${e.message}_\n\n`;
+            }
+            body += '### Action\n';
+            body += '1. Open the workflow run and download the artifact `apostille-link-check-report`.\n';
+            body += '2. Fix missing/broken PDFs on `apostille-archive-english` or update registry links.\n';
+            body += '3. Re-run **Apostille Link Check** (workflow_dispatch).\n\n';
+            body += '---\n';
+            body += '_Automated by A\u00a9tor Apostille Link Checker • CASE-MACHERET-1997-2026_\n';
+
+            const title = `Apostille link check FAILED — ${new Date().toISOString().slice(0,10)}`;
+            const labels = ['apostille', 'link-check', 'integrity', 'automated'];
+
+            // Reuse open issue with same label if exists (avoid spam)
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'link-check',
+              per_page: 5,
+            });
+            const prior = (existing.data || []).find(i =>
+              (i.title || '').includes('Apostille link check FAILED')
+            );
+            if (prior) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prior.number,
+                body: body,
+              });
+              core.info(`Updated existing issue #${prior.number}`);
+            } else {
+              const issue = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: labels,
+              });
+              core.info(`Created issue #${issue.data.number}`);
+            }
+
+      - name: Fail job if broken links
+        if: failure()
+        run: |
+          echo "::error::One or more apostille PDF links failed. See Job Summary and opened Issue."
+          exit 1
