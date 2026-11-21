@@ -1,0 +1,38 @@
+name: Apostille Link Check
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "apostille_archive_english.html"
+      - ".github/workflows/apostille-link-check.yml"
+      - "scripts/check_apostille_links.py"
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run link checker
+        run: |
+          python3 scripts/check_apostille_links.py --json-out apostille_link_check_report.json
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: apostille-link-check-report
+          path: |
+            apostille_link_check_report.json
+            apostille_link_check_report.md
+          if-no-files-found: ignore
