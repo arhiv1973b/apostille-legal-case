@@ -1,0 +1,151 @@
+name: API Availability Monitor
+
+on:
+  schedule:
+    # every 6 hours
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  actions: read
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run API availability monitor
+        id: mon
+        run: |
+          set +e
+          python3 scripts/monitor_api_availability.py --json-out api_availability_report.json
+          CODE=$?
+          set -e
+          echo "exit_code=$CODE" >> "$GITHUB_OUTPUT"
+          if [ -f api_availability_report.json ]; then
+            python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          r = json.load(open("api_availability_report.json"))
+          print(f"ok={r['ok']}")
+          print(f"failed={r['failed']}")
+          print(f"critical_failed={r['critical_failed']}")
+          PY
+          fi
+          exit $CODE
+
+      - name: Job summary
+        if: always()
+        run: |
+          {
+            echo "## API / Endpoint Availability"
+            echo ""
+            if [ -f api_availability_report.json ]; then
+              python3 - <<'PY'
+          import json
+          r = json.load(open("api_availability_report.json"))
+          print(f"- **When:** {r.get('generated_at','')}")
+          print(f"- **Total:** {r.get('total')}  |  **OK:** {r.get('ok')}  |  **Critical FAIL:** {r.get('critical_failed')}")
+          print("")
+          print("| ID | Group | Status | ms | OK | Error |")
+          print("|----|-------|--------|----|----|-------|")
+          for x in r.get("results") or []:
+              err = (x.get("error") or "").replace("|", "\\|")[:80]
+              print(f"| `{x.get('id')}` | {x.get('group')} | {x.get('status')} | {x.get('ms')} | {x.get('ok')} | {err} |")
+          fails = r.get("critical_failures") or []
+          if fails:
+              print("")
+              print("### Critical failures")
+              for f in fails:
+                  print(f"- **{f.get('id')}** `{f.get('url')}` \u2014 {f.get('error') or f.get('status')}")
+          PY
+            else
+              echo "Report missing."
+            fi
+            echo ""
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-availability-report
+          path: |
+            api_availability_report.json
+            api_availability_report.md
+          if-no-files-found: ignore
+
+      - name: Notify on critical failure (GitHub Issue)
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body = '## API / endpoint availability check failed\n\n';
+            body += `**Workflow run:** ${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}\n\n`;
+            body += `**Trigger:** ${context.eventName}\n\n`;
+            try {
+              const report = JSON.parse(fs.readFileSync('api_availability_report.json', 'utf8'));
+              body += `| Metric | Value |\n|--------|-------|\n`;
+              body += `| Total | ${report.total} |\n`;
+              body += `| OK | ${report.ok} |\n`;
+              body += `| **Critical FAIL** | **${report.critical_failed}** |\n\n`;
+              const fails = report.critical_failures || [];
+              if (fails.length) {
+                body += '### Critical endpoints down\n\n';
+                for (const f of fails) {
+                  body += `- **${f.id}** \`${f.url}\` \u2014 ${f.error || f.status}\n`;
+                  if (f.note) body += `  - _${f.note}_\n`;
+                }
+                body += '\n';
+              }
+              body += '### Context\n';
+              body += '- `apostila.gov.md` SSL failure is a known long-standing defect (certificate chain).\n';
+              body += '- A\u00a9tor archive endpoints (GitHub Pages) must stay green.\n';
+              body += '- ARIJ path: https://eservicii.gov.md/mj/arij/\n\n';
+            } catch (e) {
+              body += `_Could not read report: ${e.message}_\n\n`;
+            }
+            body += '---\n_Automated by A\u00a9tor API Monitor \u2022 CASE-MACHERET-1997-2026_\n';
+
+            const title = `API availability FAILED \u2014 ${new Date().toISOString().slice(0,10)}`;
+            const labels = ['api-monitor', 'availability', 'integrity', 'automated'];
+
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'api-monitor',
+              per_page: 5,
+            });
+            const prior = (existing.data || []).find(i =>
+              (i.title || '').includes('API availability FAILED')
+            );
+            if (prior) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prior.number,
+                body: body,
+              });
+              core.info(`Updated existing issue #${prior.number}`);
+            } else {
+              const issue = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: labels,
+              });
+              core.info(`Created issue #${issue.data.number}`);
+            }
